@@ -16,3 +16,5 @@ describe('Sign Up Tests', ()=>{
         cy.get('.card-title').should('contain','Sign up')
     })
 })
+
+//Just a comment for push's sake
