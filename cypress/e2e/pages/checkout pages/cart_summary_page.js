@@ -16,7 +16,7 @@ export class CartSummaryPage{
     cartTotalTKTHQLK = '$13.99'
     cartTotalTKTPRLK = '$15.27'
 
-    cartTotalTKTVW = '$10.36'
+    cartTotalTKTVW = '$10.14'
 
     cartTotalTKTHQCM = '$11.87'
     cartTotalTKTPRCM = '$9.95'
@@ -91,7 +91,7 @@ export class CartSummaryPage{
         cy.get(this.cartSummaryPageSelectedService).should('contain', '1,000')
         cy.get(this.cartSummaryPagePackagePrice).should('contain','$4.59')
         cy.get(this.cartSummaryPageUpsellName).should('contain', '500')
-        cy.get(this.cartSummaryPageUpsellPrice).should('contain', '$2.22')
+        cy.get(this.cartSummaryPageUpsellPrice).should('contain', '$2.00')
         cy.get(this.cartSummaryPageCrossSellName).should('contain', '100')
         cy.get(this.cartSummaryPageCrossSellPrice).should('contain', '$3.55')
         cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalTKTVW)
