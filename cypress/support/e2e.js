@@ -19,7 +19,8 @@ import './commands'
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
+//Put as an ENV variable
 
 beforeEach(()=>{
-    cy.visit('https://socialboosting.com')
+    cy.visit('')
 })

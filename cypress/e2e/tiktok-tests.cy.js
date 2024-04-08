@@ -32,7 +32,7 @@ const cartSummaryPage = new CartSummaryPage()
 describe('TikTok Service Tests', ()=>{
 
     context('TikTok Followers Tests', () =>{
-        it('The user is able to purchase 250 High Quality Followers', () =>{
+        it.only('The user is able to purchase 250 High Quality Followers', () =>{
             homePage.goToTikTokPage()
             tiktokFollowersPage.buyTikTokHighQualityFollowersFirstPackage() 
             accountInformationPage.verifyQtyAndPriceTKTHQFL()
