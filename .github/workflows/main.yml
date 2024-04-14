@@ -1,4 +1,6 @@
 name: Cypress Tests
+run-name: Cypress Tests - [${{ inputs.CORRELATOR && inputs.CORRELATOR || 'N/A' }}]
+
 on:
   push:
     branches:
