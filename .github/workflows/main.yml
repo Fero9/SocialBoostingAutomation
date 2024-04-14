@@ -8,7 +8,7 @@ on:
       ENVTOTEST:
         description: 'What environment to test?'
         required: true
-        default: 'staging'
+        default: 'stage'
         options:
           - 'stage'
           - 'prod'
