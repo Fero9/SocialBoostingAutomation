@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^13.6.5"
+    "cypress": "^13.6.5",
+    "dotenv": "^16.4.5"
   }
 }

@@ -21,6 +21,10 @@ import './commands'
 
 //Put as an ENV variable
 
+const authToken = Cypress.env('authToken');
 beforeEach(()=>{
+    cy.intercept("*", (req) => {
+        req.headers["cypress-auth"] = authToken;
+    }).as("allRequests");
     cy.visit('')
 })
