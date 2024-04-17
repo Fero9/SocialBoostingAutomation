@@ -19,16 +19,19 @@ on:
         required: false
         
 jobs:
- Cypress-Test:
-   runs-on: ubuntu-latest
-   steps:
-     - name: Checkout GitCode
-       uses: actions/checkout@v2
- 
-     - name: Run Cypress Test
-       uses: cypress-io/github-action@v4
-       env:
+  Cypress-Test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout GitCode
+        uses: actions/checkout@v2
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Cypress Test
+        uses: cypress-io/github-action@v4
+        env:
           AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
-       with:
-         command: npx cypress run --config-file ${{ inputs.ENVTOTEST }}.config.js --spec cypress/e2e/tiktok-tests.cy.js
-         browser: chromium
+        with:
+          command: npx cypress run --config-file ${{ inputs.ENVTOTEST }}.config.js --spec cypress/e2e/tiktok-tests.cy.js
+          browser: chromium
