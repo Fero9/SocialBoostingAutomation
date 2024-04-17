@@ -46,6 +46,10 @@ export class CartSummaryPage{
     //Instagram Reels Views
     cartTotalIGRLVW = "$6.98"
 
+    //YouTube Cart Total
+    cartTotalYTHQSB = '$9.13'
+    cartTotalYTPRSB = '$10.50'
+
     //TikTok Followers
     proceedToPaymentTKTHQFL(){
         cy.get(this.cartSummaryPageSelectedService).should('contain', '250')
@@ -244,6 +248,23 @@ export class CartSummaryPage{
         cy.get(this.cartSummaryPageCrossSellName).should('contain', '100')
         cy.get(this.cartSummaryPageCrossSellPrice).should('contain', '$2.88')
         cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalIGRLVW)
+        cy.get(this.cartSummaryPageSubmitButton).click()
+    }
+
+    //YouTube Subscribers
+    proceedToPaymentYTHQSB(){
+        cy.get(this.cartSummaryPageSelectedService).should('contain', '100')
+        cy.get(this.cartSummaryPagePackagePrice).should('contain','$7.48')
+        cy.get(this.cartSummaryPageUpsellPrice).should('contain', '$1.65')
+        cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalYTHQSB)
+        cy.get(this.cartSummaryPageSubmitButton).click()
+    }
+
+    proceedToPaymentYTPRSB(){
+        cy.get(this.cartSummaryPageSelectedService).should('contain', '100')
+        cy.get(this.cartSummaryPagePackagePrice).should('contain','$8.60')
+        cy.get(this.cartSummaryPageUpsellPrice).should('contain', '$1.90')
+        cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalYTPRSB)
         cy.get(this.cartSummaryPageSubmitButton).click()
     }
 }

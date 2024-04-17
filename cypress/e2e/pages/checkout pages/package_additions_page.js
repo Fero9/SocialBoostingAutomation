@@ -375,4 +375,35 @@ export class PackageAdditionsPage{
         //Continue
         cy.get(this.submit_button).click()
     }
+
+    //YouTube Subscribers
+    addPackageAdditionsYTHQSB(){
+        //Verify if the correct upsell quantity and price are displayed
+        cy.get(this.upsell_amount).should('contain', '25')
+        cy.get(this.upsell_price).should('contain', '$1.65')
+        //Cart quantity and amount
+        cy.get(this.cart_item_quantity_value).should('contain', '100')
+        cy.get(this.cart_amount).should('contain', '$7.48')
+        //Add the upsell to the cart
+        cy.get(this.cart_upsell_package).click()
+        cy.get(this.cart_item_quantity_value).should('contain', '125')
+        cy.get(this.cart_amount).should('contain','$9.13')
+        //Continue
+        cy.get(this.submit_button).click()
+    }
+
+    addPackageAdditionsYTPRSB(){
+        //Verify if the correct upsell quantity and price are displayed
+        cy.get(this.upsell_amount).should('contain', '25')
+        cy.get(this.upsell_price).should('contain', '$1.90')
+        //Cart quantity and amount
+        cy.get(this.cart_item_quantity_value).should('contain', '100')
+        cy.get(this.cart_amount).should('contain', '$8.60')
+        //Add the upsell to the cart
+        cy.get(this.cart_upsell_package).click()
+        cy.get(this.cart_item_quantity_value).should('contain', '125')
+        cy.get(this.cart_amount).should('contain','$10.50')
+        //Continue
+        cy.get(this.submit_button).click()
+    }
 }

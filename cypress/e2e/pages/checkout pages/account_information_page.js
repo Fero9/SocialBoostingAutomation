@@ -10,6 +10,10 @@ export class AccountInformationPage{
     instagram_checkout_account_information_username = '#socialboosting_instagram_checkout_account_information_username'
     instagram_checkout_account_information_email = '#socialboosting_instagram_checkout_account_information_email'
 
+    youtube_checkout_account_information_username = '#youtube_checkout_search'
+    youtube_checkout_account_information_email = '#socialboosting_youtube_checkout_account_information_email'
+    youtube_channel = '[data-sb-identifier="UCwmZiChSryoWQCZMIQezgTg"]'
+
     //TikTok Followers
     verifyQtyAndPriceTKTHQFL(){
         //Verify if the correct quantity and price are displayed
@@ -148,5 +152,26 @@ export class AccountInformationPage{
         //Verify if the correct quantity and price are displayed
         cy.get(this.checkout_service_qty).should('contain','1,000 High Quality Reels-Views')
         cy.get(this.checkout_service_price).should('contain', '$2.88')
+    }
+
+    //YouTube Subscribers
+    verifyQtyAndPriceYTHQSB(){
+        //Verify if the correct quantity and price are displayed
+        cy.get(this.checkout_service_qty).should('contain',"100 High Quality Subscribers")
+        cy.get(this.checkout_service_price).should('contain', '$7.48')
+    }
+
+    verifyQtyAndPriceYTPRSB(){
+        //Verify if the correct quantity and price are displayed
+        cy.get(this.checkout_service_qty).should('contain','100 Premium Subscribers')
+        cy.get(this.checkout_service_price).should('contain', '$8.60')
+    }
+
+    enterYTAccountInformation(){
+        //Populate the account information
+        cy.get(this.youtube_checkout_account_information_username).type('earth')
+        cy.get(this.youtube_channel).first().click()
+        cy.get(this.youtube_checkout_account_information_email).type('frantisek@socialboosting.com')
+        cy.get(this.submit_button).click()
     }
 }
