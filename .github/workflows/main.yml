@@ -34,4 +34,4 @@ jobs:
           AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
         with:
           command: npx cypress run --config-file ${{ inputs.ENVTOTEST }}.config.js --spec cypress/e2e/tiktok-tests.cy.js
-          browser: chromium
+          browser: electron
