@@ -175,4 +175,17 @@ export class AccountInformationPage{
         cy.get(this.youtube_checkout_account_information_email).type('frantisek@socialboosting.com')
         cy.get(this.youtube_submit_button).click()
     }
+
+    //YouTube Likes
+    verifyQtyAndPriceYTHQLK(){
+        //Verify if the correct quantity and price are displayed
+        cy.get(this.checkout_service_qty).should('contain',"100 High Quality Likes")
+        cy.get(this.checkout_service_price).should('contain', '$3.44')
+    }
+
+    verifyQtyAndPriceYTPRLK(){
+        //Verify if the correct quantity and price are displayed
+        cy.get(this.checkout_service_qty).should('contain','100 Premium Likes')
+        cy.get(this.checkout_service_price).should('contain', '$4.44')
+    }
 }
