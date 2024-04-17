@@ -28,7 +28,7 @@ describe('YouTube Service Tests', ()=>{
             accountInformationPage.verifyQtyAndPriceYTHQSB()
             accountInformationPage.enterYTAccountInformation()
             packageAdditionsPage.addPackageAdditionsYTHQSB()
-            cartSummaryPage.proceedToPaymentYTHQSB
+            cartSummaryPage.proceedToPaymentYTHQSB()
         })
 
         it('Verifies that the information on YouTube High Quality Subscribers packages is correct', () =>{
@@ -42,7 +42,7 @@ describe('YouTube Service Tests', ()=>{
             accountInformationPage.verifyQtyAndPriceYTPRSB()
             accountInformationPage.enterYTAccountInformation()
             packageAdditionsPage.addPackageAdditionsYTPRSB()
-            cartSummaryPage.proceedToPaymentYTPRSB
+            cartSummaryPage.proceedToPaymentYTPRSB()
         })
 
         it('Verifies that the information on YouTube Premium Subscribers packages is correct', () =>{

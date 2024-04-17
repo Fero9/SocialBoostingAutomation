@@ -3,6 +3,7 @@ export class AccountInformationPage{
     checkout_service_qty = '.service-qty'
     checkout_service_price = '.price'
     submit_button = '.form__btn'
+    youtube_submit_button = '.form__actions > .form__btn'
 
     tiktok_checkout_account_information_handle = '#socialboosting_tiktok_checkout_account_information_handle'
     tiktok_checkout_account_information_email = '#socialboosting_tiktok_checkout_account_information_email'
@@ -172,6 +173,6 @@ export class AccountInformationPage{
         cy.get(this.youtube_checkout_account_information_username).type('earth')
         cy.get(this.youtube_channel).first().click()
         cy.get(this.youtube_checkout_account_information_email).type('frantisek@socialboosting.com')
-        cy.get(this.submit_button).click()
+        cy.get(this.youtube_submit_button).click()
     }
 }
