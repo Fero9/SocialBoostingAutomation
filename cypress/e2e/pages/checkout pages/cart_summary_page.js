@@ -3,7 +3,7 @@ export class CartSummaryPage{
     cartSummaryPageSelectedService = '#socialboosting_checkout_cart_type_package'
     cartSummaryPagePackagePrice = '.item-unit-price'
     cartSummaryPageUpsellName = ':nth-child(2) > .applied-bump-order-package__name'
-    cartSummaryPageUpsellPrice = ':nth-child(2) > .applied-bump-order-package__pricing > .sale-price'
+    cartSummaryPageUpsellPrice = '.applied-bump-order-package__pricing'
     cartSummaryPageCrossSellName = ':nth-child(3) > .applied-bump-order-package__name'
     cartSummaryPageCrossSellPrice = ':nth-child(3) > .applied-bump-order-package__pricing > .sale-price'
     cartSummaryPageCartTotal = '.cart-amount'
