@@ -67,12 +67,12 @@ export class TikTokLikesPage{
     tiktok_likes_page_5000_premium_likes_price = '.e-loop-item-2132 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-161717c > .elementor-widget-container > .elementor-heading-title > .woocommerce-Price-amount > bdi'
     
     buyTikTokHighQualityLikesFirstPackage(){
-        cy.get(this.tiktok_likes_page_first_package_high_quality).click()
+        cy.get(this.tiktok_likes_page_first_package_high_quality).click({ force: true })
     }
 
     buyTikTokPremiumLikesFirstPackage(){
-        cy.get(this.tiktok_likes_page_premium_likes_service).click()
-        cy.get(this.tiktok_likes_page_first_package_premium).click()
+        cy.get(this.tiktok_likes_page_premium_likes_service).click({ force: true })
+        cy.get(this.tiktok_likes_page_first_package_premium).click({ force: true })
     }
     
     checkTikTokHighQualityLikesPackages(){

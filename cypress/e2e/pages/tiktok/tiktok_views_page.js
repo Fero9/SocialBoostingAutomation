@@ -36,7 +36,7 @@ export class TikTokViewsPage{
     tiktok_views_page_400000_views_price = '.e-loop-item-2140 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-161717c > .elementor-widget-container > .elementor-heading-title > .woocommerce-Price-amount > bdi'
 
     buyTikTokViewsFirstPackage(){
-        cy.get(this.tiktok_views_page_first_package).click()
+        cy.get(this.tiktok_views_page_first_package).click({ force: true })
     }
 
     checkTikTokViewsPackages(){

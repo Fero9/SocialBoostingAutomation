@@ -8,6 +8,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 import { HomePage } from "./pages/home_page"
 import { YouTubeSubscribersPage } from "./pages/youtube/youtube_subscribers_page"
 import { YouTubeLikesPage } from "./pages/youtube/youtube_likes_page"
+import { YouTubeViewsPage } from "./pages/youtube/youtube_views_page"
 import { AccountInformationPage } from "./pages/checkout pages/account_information_page"
 import { PostInformationPage } from "./pages/checkout pages/post_information_page"
 import { PackageAdditionsPage } from "./pages/checkout pages/package_additions_page"
@@ -16,6 +17,7 @@ import { CartSummaryPage } from "./pages/checkout pages/cart_summary_page"
 const homePage = new HomePage()
 const youtubeSubscribersPage = new YouTubeSubscribersPage()
 const youtubeLikesPage = new YouTubeLikesPage()
+const youtubeViewsPage = new YouTubeViewsPage()
 const accountInformationPage = new AccountInformationPage()
 const postInformationPage = new PostInformationPage()
 const packageAdditionsPage = new PackageAdditionsPage()
@@ -66,13 +68,13 @@ describe('YouTube Service Tests', ()=>{
             cartSummaryPage.proceedToPaymentYTHQLK()
         })
 
-        it.only('Verifies that the information on YouTube High Quality Likes packages is correct', () =>{
+        it('Verifies that the information on YouTube High Quality Likes packages is correct', () =>{
             homePage.goToYouTubePage()
             youtubeSubscribersPage.goToYouTubeLikesPage()
             youtubeLikesPage.checkYouTubeHighQualityLikesPackages()
         })
 
-        it.only('The user is able to purchase 100 Premium Likes', () =>{
+        it('The user is able to purchase 100 Premium Likes', () =>{
             homePage.goToYouTubePage()
             youtubeSubscribersPage.goToYouTubeLikesPage()
             youtubeLikesPage.buyYouTubePremiumLikesFirstPackage()
@@ -84,10 +86,30 @@ describe('YouTube Service Tests', ()=>{
             cartSummaryPage.proceedToPaymentYTPRLK()
         })
 
-        it.only('Verifies that the information on YouTube Premium Likes packages is correct', () =>{
+        it('Verifies that the information on YouTube Premium Likes packages is correct', () =>{
             homePage.goToYouTubePage()
             youtubeSubscribersPage.goToYouTubeLikesPage()
             youtubeLikesPage.checkYouTubePremiumLikesPackages()
+        })
+    })
+
+    context('YouTube Views Tests', () =>{
+        it.only('The user is able to purchase 500 High Quality Views', () =>{
+            homePage.goToYouTubePage()
+            youtubeSubscribersPage.goToYouTubeViewsPage()
+            youtubeViewsPage.buyYouTubeHighQualityViewsFirstPackage()
+            accountInformationPage.verifyQtyAndPriceYTHQVW()
+            accountInformationPage.enterYTAccountInformation()
+            cy.wait(5000)
+            postInformationPage.chooseYourVideo()
+            packageAdditionsPage.addPackageAdditionsYTHQVW()
+            cartSummaryPage.proceedToPaymentYTHQVW()
+        })
+
+        it('Verifies that the information on YouTube High Quality Views packages is correct', () =>{
+            homePage.goToYouTubePage()
+            youtubeSubscribersPage.goToYouTubeViewsPage()
+            youtubeViewsPage.checkYouTubeHighQualityViewsPackages()
         })
     })
 })

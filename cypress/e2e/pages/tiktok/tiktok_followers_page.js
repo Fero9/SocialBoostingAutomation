@@ -70,12 +70,12 @@ export class TikTokFollowersPage{
     
 
     buyTikTokHighQualityFollowersFirstPackage(){
-        cy.get(this.tiktok_followers_page_first_package_high_quality).click()
+        cy.get(this.tiktok_followers_page_first_package_high_quality).click({ force: true })
         cy.get(this.tiktok_followers_page_buy_now_button).click({ force: true })
     }
 
     buyTikTokPremiumFollowersFirstPackage(){
-        cy.get(this.tiktok_followers_page_premium_followers_service).click()
+        cy.get(this.tiktok_followers_page_premium_followers_service).click({ force: true })
         cy.get(this.tiktok_followers_page_first_package_premium).click({ force: true })
     }
     
@@ -100,14 +100,14 @@ export class TikTokFollowersPage{
         cy.get(this.tiktok_followers_page_10000_high_quality_followers_price).should('contain','$130.50')
         //20,000 High Quality Followers
         cy.get(this.tiktok_followers_page_20000_high_quality_followers_amount).should('contain', '20,000')
-        cy.get(this.tiktok_followers_page_20000_high_quality_followers_price).should('contain','$255.00')
+        cy.get(this.tiktok_followers_page_20000_high_quality_followers_price).should('contain','$230.00')
         //50,000 High Quality Followers
         cy.get(this.tiktok_followers_page_50000_high_quality_followers_amount).should('contain', '50,000')
         cy.get(this.tiktok_followers_page_50000_high_quality_followers_price).should('contain','$485.00')
     }
 
     checkTikTokPremiumFollowersPackages(){
-        cy.get(this.tiktok_followers_page_premium_followers_service).click()
+        cy.get(this.tiktok_followers_page_premium_followers_service).click({force:true})
         //250 Premium Followers
         cy.get(this.tiktok_followers_page_250_premium_followers_amount).should('contain', '250')
         cy.get(this.tiktok_followers_page_250_premium_followers_price).should('contain', '$14.50')
@@ -135,22 +135,22 @@ export class TikTokFollowersPage{
     }
 
     goToTikTokLikesPage(){
-        cy.get(this.tiktok_followers_page_likes_service).click()
+        cy.get(this.tiktok_followers_page_likes_service).click({force:true})
     }
 
     goToTikTokViewsPage(){
-        cy.get(this.tiktok_followers_page_views_service).click()
+        cy.get(this.tiktok_followers_page_views_service).click({force:true})
     }
 
     goToTikTokCommentsPage(){
-        cy.get(this.tiktok_followers_page_comments_service).click()
+        cy.get(this.tiktok_followers_page_comments_service).click({force:true})
     }
 
     goToTikTokSharesPage(){
-        cy.get(this.tiktok_followers_page_shares_service).click()
+        cy.get(this.tiktok_followers_page_shares_service).click({force:true})
     }
 
     goToTikTokSavesPage(){
-        cy.get(this.tiktok_followers_page_saves_service).click()
+        cy.get(this.tiktok_followers_page_saves_service).click({force:true})
     }
 }

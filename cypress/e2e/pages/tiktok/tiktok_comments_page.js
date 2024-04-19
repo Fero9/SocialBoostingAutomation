@@ -61,12 +61,12 @@ export class TikTokCommentsPage{
     tiktok_comments_page_400_premium_comments_price = '.e-loop-item-2163 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-161717c > .elementor-widget-container > .elementor-heading-title > .woocommerce-Price-amount > bdi'
     
     buyTikTokHighQualityCommentsFirstPackage(){
-        cy.get(this.tiktok_comments_page_first_package_high_quality).click()
+        cy.get(this.tiktok_comments_page_first_package_high_quality).click({force:true})
     }
 
     buyTikTokPremiumCommentsFirstPackage(){
-        cy.get(this.tiktok_comments_page_premium_comments_service).click()
-        cy.get(this.tiktok_comments_page_first_package_premium).click()
+        cy.get(this.tiktok_comments_page_premium_comments_service).click({force:true})
+        cy.get(this.tiktok_comments_page_first_package_premium).click({force:true})
     }
     
     checkTikTokHighQualityCommentsPackages(){

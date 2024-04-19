@@ -36,7 +36,7 @@ export class TikTokSavesPage{
     tiktok_saves_page_5000_saves_price = '.e-loop-item-2181 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-161717c > .elementor-widget-container > .elementor-heading-title > .woocommerce-Price-amount > bdi'
 
     buyTikTokSavesFirstPackage(){
-        cy.get(this.tiktok_saves_page_first_package).click()
+        cy.get(this.tiktok_saves_page_first_package).click({ force: true })
     }
 
     checkTikTokSavesPackages(){

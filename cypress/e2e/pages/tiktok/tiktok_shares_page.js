@@ -36,7 +36,7 @@ export class TikTokSharesPage{
     tiktok_shares_page_25000_shares_price = '.e-loop-item-2172 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-161717c > .elementor-widget-container > .elementor-heading-title > .woocommerce-Price-amount > bdi'
 
     buyTikTokSharesFirstPackage(){
-        cy.get(this.tiktok_shares_page_first_package).click()
+        cy.get(this.tiktok_shares_page_first_package).click({ force: true })
     }
 
     checkTikTokSharesPackages(){

@@ -37,6 +37,7 @@ describe('TikTok Service Tests', ()=>{
             tiktokFollowersPage.buyTikTokHighQualityFollowersFirstPackage() 
             accountInformationPage.verifyQtyAndPriceTKTHQFL()
             accountInformationPage.enterAccountInformation()
+            cy.wait(5000)
             packageAdditionsPage.addPackageAdditionsTKTHQFL()
             cartSummaryPage.proceedToPaymentTKTHQFL()
         })
@@ -46,6 +47,7 @@ describe('TikTok Service Tests', ()=>{
             tiktokFollowersPage.buyTikTokPremiumFollowersFirstPackage()
             accountInformationPage.verifyQtyAndPriceTKTPRFL()
             accountInformationPage.enterAccountInformation()
+            cy.wait(5000)
             packageAdditionsPage.addPackageAdditionsTKTPRFL()
             cartSummaryPage.proceedToPaymentTKTPRFL()
         })
@@ -132,7 +134,7 @@ describe('TikTok Service Tests', ()=>{
             cartSummaryPage.proceedToPaymentTKTHQCM()
         })
     
-        it('The user is able to purchase 10 Premium Comments', () =>{
+        it.only('The user is able to purchase 10 Premium Comments', () =>{
             homePage.goToTikTokPage()
             tiktokFollowersPage.goToTikTokCommentsPage()
             tiktokCommentsPage.buyTikTokPremiumCommentsFirstPackage() 

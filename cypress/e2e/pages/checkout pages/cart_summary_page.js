@@ -2,8 +2,10 @@ export class CartSummaryPage{
 
     cartSummaryPageSelectedService = '#socialboosting_checkout_cart_type_package'
     cartSummaryPagePackagePrice = '.item-unit-price'
-    cartSummaryPageUpsellName = ':nth-child(2) > .applied-bump-order-package__name'
-    cartSummaryPageUpsellPrice = '.applied-bump-order-package__pricing'
+    cartSummaryPageUpsellNameNoCross = '.applied-bump-order-package__name'
+    cartSummaryPageUpsellPriceNoCross = '.sale-price'
+    cartSummaryPageUpsellNameCross = ':nth-child(2) > .applied-bump-order-package__name'
+    cartSummaryPageUpsellPriceCross = ':nth-child(2) > .applied-bump-order-package__pricing > .sale-price'
     cartSummaryPageCrossSellName = ':nth-child(3) > .applied-bump-order-package__name'
     cartSummaryPageCrossSellPrice = ':nth-child(3) > .applied-bump-order-package__pricing > .sale-price'
     cartSummaryPageCartTotal = '.cart-amount'
@@ -58,7 +60,7 @@ export class CartSummaryPage{
     proceedToPaymentTKTHQFL(){
         cy.get(this.cartSummaryPageSelectedService).should('contain', '250')
         cy.get(this.cartSummaryPagePackagePrice).should('contain','$8.50')
-        cy.get(this.cartSummaryPageUpsellPrice).should('contain', '$3.85')
+        cy.get(this.cartSummaryPageUpsellPriceNoCross).should('contain', '$3.85')
         cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalTKTHQFL)
         cy.get(this.cartSummaryPageSubmitButton).click()
     }
@@ -66,7 +68,7 @@ export class CartSummaryPage{
     proceedToPaymentTKTPRFL(){
         cy.get(this.cartSummaryPageSelectedService).should('contain', '250')
         cy.get(this.cartSummaryPagePackagePrice).should('contain','$14.50')
-        cy.get(this.cartSummaryPageUpsellPrice).should('contain', '$6.50')
+        cy.get(this.cartSummaryPageUpsellPriceNoCross).should('contain', '$6.50')
         cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalTKTPRFL)
         cy.get(this.cartSummaryPageSubmitButton).click()
     }
@@ -75,8 +77,8 @@ export class CartSummaryPage{
     proceedToPaymentTKTHQLK(){
         cy.get(this.cartSummaryPageSelectedService).should('contain', '250')
         cy.get(this.cartSummaryPagePackagePrice).should('contain','$8.05')
-        cy.get(this.cartSummaryPageUpsellName).should('contain', '50')
-        cy.get(this.cartSummaryPageUpsellPrice).should('contain', '$1.35')
+        cy.get(this.cartSummaryPageUpsellNameCross).should('contain', '50')
+        cy.get(this.cartSummaryPageUpsellPriceCross).should('contain', '$1.35')
         cy.get(this.cartSummaryPageCrossSellName).should('contain', '1,000')
         cy.get(this.cartSummaryPageCrossSellPrice).should('contain', '$4.59')
         cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalTKTHQLK)
@@ -86,8 +88,8 @@ export class CartSummaryPage{
     proceedToPaymentTKTPRLK(){
         cy.get(this.cartSummaryPageSelectedService).should('contain', '100')
         cy.get(this.cartSummaryPagePackagePrice).should('contain','$7.48')
-        cy.get(this.cartSummaryPageUpsellName).should('contain', '50')
-        cy.get(this.cartSummaryPageUpsellPrice).should('contain', '$3.20')
+        cy.get(this.cartSummaryPageUpsellNameCross).should('contain', '50')
+        cy.get(this.cartSummaryPageUpsellPriceCross).should('contain', '$3.20')
         cy.get(this.cartSummaryPageCrossSellName).should('contain', '1,000')
         cy.get(this.cartSummaryPageCrossSellPrice).should('contain', '$4.59')
         cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalTKTPRLK)
@@ -98,8 +100,8 @@ export class CartSummaryPage{
     proceedToPaymentTKTVW(){
         cy.get(this.cartSummaryPageSelectedService).should('contain', '1,000')
         cy.get(this.cartSummaryPagePackagePrice).should('contain','$4.59')
-        cy.get(this.cartSummaryPageUpsellName).should('contain', '500')
-        cy.get(this.cartSummaryPageUpsellPrice).should('contain', '$2.00')
+        cy.get(this.cartSummaryPageUpsellNameCross).should('contain', '500')
+        cy.get(this.cartSummaryPageUpsellPriceCross).should('contain', '$2.00')
         cy.get(this.cartSummaryPageCrossSellName).should('contain', '100')
         cy.get(this.cartSummaryPageCrossSellPrice).should('contain', '$3.55')
         cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalTKTVW)
@@ -110,8 +112,8 @@ export class CartSummaryPage{
     proceedToPaymentTKTHQCM(){
         cy.get(this.cartSummaryPageSelectedService).should('contain', '10')
         cy.get(this.cartSummaryPagePackagePrice).should('contain','$5.55')
-        cy.get(this.cartSummaryPageUpsellName).should('contain', '5')
-        cy.get(this.cartSummaryPageUpsellPrice).should('contain', '$2.77')
+        cy.get(this.cartSummaryPageUpsellNameCross).should('contain', '5')
+        cy.get(this.cartSummaryPageUpsellPriceCross).should('contain', '$2.77')
         cy.get(this.cartSummaryPageCrossSellName).should('contain', '100')
         cy.get(this.cartSummaryPageCrossSellPrice).should('contain', '$3.55')
         cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalTKTHQCM)
@@ -121,8 +123,8 @@ export class CartSummaryPage{
     proceedToPaymentTKTPRCM(){
         cy.get(this.cartSummaryPageSelectedService).should('contain', '10')
         cy.get(this.cartSummaryPagePackagePrice).should('contain','$6.70')
-        cy.get(this.cartSummaryPageUpsellName).should('contain', '5')
-        cy.get(this.cartSummaryPageUpsellPrice).should('contain', '$3.25')
+        cy.get(this.cartSummaryPageUpsellNameCross).should('contain', '5')
+        cy.get(this.cartSummaryPageUpsellPriceCross).should('contain', '$3.25')
         cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalTKTPRCM)
         cy.get(this.cartSummaryPageSubmitButton).click()
     }
@@ -131,8 +133,8 @@ export class CartSummaryPage{
     proceedToPaymentTKTSHR(){
         cy.get(this.cartSummaryPageSelectedService).should('contain', '100')
         cy.get(this.cartSummaryPagePackagePrice).should('contain','$2.54')
-        cy.get(this.cartSummaryPageUpsellName).should('contain', '50')
-        cy.get(this.cartSummaryPageUpsellPrice).should('contain', '$1.66')
+        cy.get(this.cartSummaryPageUpsellNameCross).should('contain', '50')
+        cy.get(this.cartSummaryPageUpsellPriceCross).should('contain', '$1.66')
         cy.get(this.cartSummaryPageCrossSellName).should('contain', '25')
         cy.get(this.cartSummaryPageCrossSellPrice).should('contain', '$1.11')
         cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalTKTSHR)
@@ -143,8 +145,8 @@ export class CartSummaryPage{
     proceedToPaymentTKTSV(){
         cy.get(this.cartSummaryPageSelectedService).should('contain', '100')
         cy.get(this.cartSummaryPagePackagePrice).should('contain','$2.22')
-        cy.get(this.cartSummaryPageUpsellName).should('contain', '25')
-        cy.get(this.cartSummaryPageUpsellPrice).should('contain', '$0.99')
+        cy.get(this.cartSummaryPageUpsellNameCross).should('contain', '25')
+        cy.get(this.cartSummaryPageUpsellPriceCross).should('contain', '$0.99')
         cy.get(this.cartSummaryPageCrossSellName).should('contain', '50')
         cy.get(this.cartSummaryPageCrossSellPrice).should('contain', '$1.77')
         cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalTKTSV)
