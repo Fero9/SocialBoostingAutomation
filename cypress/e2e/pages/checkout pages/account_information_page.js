@@ -106,14 +106,14 @@ export class AccountInformationPage{
     //Instagram Likes
     verifyQtyAndPriceIGHQLK(){
         //Verify if the correct quantity and price are displayed
-        cy.get(this.checkout_service_qty).should('contain','100 High Quality Likes')
-        cy.get(this.checkout_service_price).should('contain', '$2.88')
+        cy.get(this.checkout_service_qty).should('contain','250 High Quality Likes')
+        cy.get(this.checkout_service_price).should('contain', '$4.59')
     }
 
     verifyQtyAndPriceIGPRLK(){
         //Verify if the correct quantity and price are displayed
-        cy.get(this.checkout_service_qty).should('contain','100 Premium Likes')
-        cy.get(this.checkout_service_price).should('contain', '$4.30')
+        cy.get(this.checkout_service_qty).should('contain','250 Premium Likes')
+        cy.get(this.checkout_service_price).should('contain', '$6.61')
     }
 
     verifyQtyAndPriceIGVFLK(){
@@ -145,8 +145,8 @@ export class AccountInformationPage{
     //Instagram Reels Likes
     verifyQtyAndPriceIGRLLK(){
         //Verify if the correct quantity and price are displayed
-        cy.get(this.checkout_service_qty).should('contain','100 High Quality Reels-Likes')
-        cy.get(this.checkout_service_price).should('contain', '$2.88')
+        cy.get(this.checkout_service_qty).should('contain','250 High Quality Reels-Likes')
+        cy.get(this.checkout_service_price).should('contain', '$4.59')
     }
 
     //Instagram Reels Views

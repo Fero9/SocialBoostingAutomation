@@ -178,7 +178,7 @@ describe('Instagram Service Tests', ()=>{
     })
 
     context('Instagram Reels Likes Tests', ()=>{
-        it('The user is able to purchase 100 Reels Likes', () =>{
+        it('The user is able to purchase 250 Reels Likes', () =>{
             homePage.goToInstagramPage()
             instagramFollowersPage.goToInstagramReelsLikesPage()
             instagramReelsLikesPage.buyInstagramReelsLikesFirstPackage()
@@ -198,7 +198,7 @@ describe('Instagram Service Tests', ()=>{
     })
 
     context('Instagram Reels Views Tests', ()=>{
-        it('The user is able to purchase 100 Reels Views', () =>{
+        it('The user is able to purchase 1000 Reels Views', () =>{
             homePage.goToInstagramPage()
             instagramFollowersPage.goToInstagramReelsViewsPage()
             instagramReelsViewsPage.buyInstagramReelsViewsFirstPackage()

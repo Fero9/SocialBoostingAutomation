@@ -6,14 +6,11 @@ export class InstagramLikesPage{
     instagram_likes_page_premium_likes_service = '[data-tab="js-premium-quality-tab"] > .text-wrapper'
     instagram_likes_page_verified_likes_service = '.hidden-on-mobile > .text-wrapper'
     //Packages
-    instagram_likes_page_first_package_high_quality = '.e-loop-item-2268 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner'
-    instagram_likes_page_first_package_premium = '.e-loop-item-2286 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner'
+    instagram_likes_page_first_package_high_quality = '.e-loop-item-2272 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner'
+    instagram_likes_page_first_package_premium = '.e-loop-item-2287 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner'
     instagram_likes_page_first_package_verified = '.e-loop-item-2294 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner'
 
     //Instagram High Quality likes Attributes
-    //100 High Quality likes
-    instagram_likes_page_100_high_quality_likes_amount = '.e-loop-item-2268 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title'
-    instagram_likes_page_100_high_quality_likes_price = '.e-loop-item-2268 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-161717c > .elementor-widget-container > .elementor-heading-title > .woocommerce-Price-amount > bdi'
     //250 High Quality likes
     instagram_likes_page_250_high_quality_likes_amount = '.e-loop-item-2272 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title'
     instagram_likes_page_250_high_quality_likes_price = '.e-loop-item-2272 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-161717c > .elementor-widget-container > .elementor-heading-title > .woocommerce-Price-amount > bdi'
@@ -40,9 +37,6 @@ export class InstagramLikesPage{
     instagram_likes_page_25000_high_quality_likes_price = '.e-loop-item-2267 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-161717c > .elementor-widget-container > .elementor-heading-title > .woocommerce-Price-amount > bdi'
 
     //instagram Premium likes Attributes
-    //100 Premium likes
-    instagram_likes_page_100_premium_likes_amount = '.e-loop-item-2286 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title'
-    instagram_likes_page_100_premium_likes_price = '.e-loop-item-2286 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-161717c > .elementor-widget-container > .elementor-heading-title > .woocommerce-Price-amount > bdi'
     //250 Premium likes
     instagram_likes_page_250_premium_likes_amount = '.e-loop-item-2287 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title'
     instagram_likes_page_250_premium_likes_price = '.e-loop-item-2287 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-161717c > .elementor-widget-container > .elementor-heading-title > .woocommerce-Price-amount > bdi'
@@ -80,23 +74,20 @@ export class InstagramLikesPage{
     instagram_likes_page_3_verified_likes_price = '.e-loop-item-2293 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-161717c > .elementor-widget-container > .elementor-heading-title > .woocommerce-Price-amount > bdi'
 
     buyInstagramHighQualityLikesFirstPackage(){
-        cy.get(this.instagram_likes_page_first_package_high_quality).click()
+        cy.get(this.instagram_likes_page_first_package_high_quality).click({force:true})
     }
 
     buyInstagramPremiumLikesFirstPackage(){
-        cy.get(this.instagram_likes_page_premium_likes_service).click()
+        cy.get(this.instagram_likes_page_premium_likes_service).click({force:true})
         cy.get(this.instagram_likes_page_first_package_premium).click({force:true})
     }
 
     buyInstagramVerifiedLikesFirstPackage(){
-        cy.get(this.instagram_likes_page_verified_likes_service).click()
+        cy.get(this.instagram_likes_page_verified_likes_service).click({force:true})
         cy.get(this.instagram_likes_page_first_package_verified).click({force:true})
     }
     
     checkInstagramHighQualityLikesPackages(){
-        //100 High Quality likes
-        cy.get(this.instagram_likes_page_100_high_quality_likes_amount).should('contain', '100')
-        cy.get(this.instagram_likes_page_100_high_quality_likes_price).should('contain','$2.88')
         //250 High Quality likes
         cy.get(this.instagram_likes_page_250_high_quality_likes_amount).should('contain', '250')
         cy.get(this.instagram_likes_page_250_high_quality_likes_price).should('contain','$4.59')
@@ -125,9 +116,6 @@ export class InstagramLikesPage{
 
     checkInstagramPremiumLikesPackages(){
         cy.get(this.instagram_likes_page_premium_likes_service).click()
-        //100 Premium likes
-        cy.get(this.instagram_likes_page_100_premium_likes_amount).should('contain', '100')
-        cy.get(this.instagram_likes_page_100_premium_likes_price).should('contain', '$4.31')
         //250 Premium likes
         cy.get(this.instagram_likes_page_250_premium_likes_amount).should('contain', '250')
         cy.get(this.instagram_likes_page_250_premium_likes_price).should('contain', '$6.61')

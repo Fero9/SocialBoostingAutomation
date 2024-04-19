@@ -4,12 +4,9 @@ export class InstagramReelsLikesPage{
     instagram_reels_likes_page_paragraph = '.elementor-element-db2e41d > .elementor-widget-container > p'
 
     //Packages
-    instagram_reels_likes_page_first_package = '.e-loop-item-2440 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner'
+    instagram_reels_likes_page_first_package = '.e-loop-item-2441 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner'
 
     //Instagram reels_likes Attributes
-    //100 Reels Likes
-    instagram_reels_likes_page_100_reels_likes_amount = '.e-loop-item-2440 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title > b'
-    instagram_reels_likes_page_100_reels_likes_price = '.e-loop-item-2440 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-161717c > .elementor-widget-container > .elementor-heading-title > .woocommerce-Price-amount > bdi'
     //250 Reels Likes
     instagram_reels_likes_page_250_reels_likes_amount = '.e-loop-item-2441 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title > b'
     instagram_reels_likes_page_250_reels_likes_price = '.e-loop-item-2441 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-161717c > .elementor-widget-container > .elementor-heading-title > .woocommerce-Price-amount > bdi'
@@ -40,9 +37,6 @@ export class InstagramReelsLikesPage{
     }
 
     checkInstagramReelsLikesPackages(){
-        //100 reels_likes
-        cy.get(this.instagram_reels_likes_page_100_reels_likes_amount).should('contain', '100')
-        cy.get(this.instagram_reels_likes_page_100_reels_likes_price).should('contain','$2.88')
         //250 reels_likes
         cy.get(this.instagram_reels_likes_page_250_reels_likes_amount).should('contain', '250')
         cy.get(this.instagram_reels_likes_page_250_reels_likes_price).should('contain','$4.59')
