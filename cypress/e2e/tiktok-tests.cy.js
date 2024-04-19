@@ -134,7 +134,7 @@ describe('TikTok Service Tests', ()=>{
             cartSummaryPage.proceedToPaymentTKTHQCM()
         })
     
-        it.only('The user is able to purchase 10 Premium Comments', () =>{
+        it('The user is able to purchase 10 Premium Comments', () =>{
             homePage.goToTikTokPage()
             tiktokFollowersPage.goToTikTokCommentsPage()
             tiktokCommentsPage.buyTikTokPremiumCommentsFirstPackage() 
