@@ -5,13 +5,10 @@ export class YouTubeLikesPage{
 
     youtube_likes_page_premium_likes_service = '[data-tab="js-premium-quality-tab"]'
     //Packages
-    youtube_likes_page_first_package_high_quality = '.e-loop-item-2596 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner'
-    youtube_likes_page_first_package_premium = ' .e-loop-item-2605 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner'
+    youtube_likes_page_first_package_high_quality = '.e-loop-item-2597 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner'
+    youtube_likes_page_first_package_premium = ' .e-loop-item-2606 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner'
 
     //youtube High Quality likes Attributes
-    //100 High Quality likes
-    youtube_likes_page_100_high_quality_likes_amount = '.e-loop-item-2596 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title > b'
-    youtube_likes_page_100_high_quality_likes_price = '.e-loop-item-2596 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-161717c > .elementor-widget-container > .elementor-heading-title > .woocommerce-Price-amount > bdi'
     //250 High Quality likes
     youtube_likes_page_250_high_quality_likes_amount = '.e-loop-item-2597 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title > b'
     youtube_likes_page_250_high_quality_likes_price = '.e-loop-item-2597 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-161717c > .elementor-widget-container > .elementor-heading-title > .woocommerce-Price-amount > bdi'
@@ -38,9 +35,6 @@ export class YouTubeLikesPage{
     youtube_likes_page_30000_high_quality_likes_price = '.e-loop-item-2595 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-161717c > .elementor-widget-container > .elementor-heading-title > .woocommerce-Price-amount > bdi'
 
     //youtube Premium likes Attributes
-    //100 Premium likes
-    youtube_likes_page_100_premium_likes_amount = '.e-loop-item-2605 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title > b'
-    youtube_likes_page_100_premium_likes_price = '.e-loop-item-2605 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-161717c > .elementor-widget-container > .elementor-heading-title > .woocommerce-Price-amount > bdi'
     //250 Premium likes
     youtube_likes_page_250_premium_likes_amount = '.e-loop-item-2606 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title > b'
     youtube_likes_page_250_premium_likes_price = '.e-loop-item-2606 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-161717c > .elementor-widget-container > .elementor-heading-title > .woocommerce-Price-amount > bdi'
@@ -67,18 +61,15 @@ export class YouTubeLikesPage{
     youtube_likes_page_30000_premium_likes_price = '.e-loop-item-2604 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-161717c > .elementor-widget-container > .elementor-heading-title > .woocommerce-Price-amount > bdi'
 
     buyYouTubeHighQualityLikesFirstPackage(){
-        cy.get(this.youtube_likes_page_first_package_high_quality).click()
+        cy.get(this.youtube_likes_page_first_package_high_quality).click({ force: true })
     }
 
     buyYouTubePremiumLikesFirstPackage(){
-        cy.get(this.youtube_likes_page_premium_likes_service).click()
+        cy.get(this.youtube_likes_page_premium_likes_service).click({ force: true })
         cy.get(this.youtube_likes_page_first_package_premium).click({ force: true })
     }
     
     checkYouTubeHighQualityLikesPackages(){
-        //100 High Quality likes
-        cy.get(this.youtube_likes_page_100_high_quality_likes_amount).should('contain', '100')
-        cy.get(this.youtube_likes_page_100_high_quality_likes_price).should('contain','$3.44')
         //250 High Quality likes
         cy.get(this.youtube_likes_page_250_high_quality_likes_amount).should('contain', '250')
         cy.get(this.youtube_likes_page_250_high_quality_likes_price).should('contain','$7.77')
@@ -106,9 +97,6 @@ export class YouTubeLikesPage{
     }
 
     checkYouTubePremiumLikesPackages(){
-        //100 Premium likes
-        cy.get(this.youtube_likes_page_100_premium_likes_amount).should('contain', '100')
-        cy.get(this.youtube_likes_page_100_premium_likes_price).should('contain','$4.44')
         //250 Premium likes
         cy.get(this.youtube_likes_page_250_premium_likes_amount).should('contain', '250')
         cy.get(this.youtube_likes_page_250_premium_likes_price).should('contain','$8.88')

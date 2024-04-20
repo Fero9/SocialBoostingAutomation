@@ -36,7 +36,7 @@ export class YouTubeViewsPage{
     youtube_views_page_100000_high_quality_views_price = '.e-loop-item-6432 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-161717c > .elementor-widget-container > .elementor-heading-title > .woocommerce-Price-amount > bdi'
 
     buyYouTubeHighQualityViewsFirstPackage(){
-        cy.get(this.youtube_views_page_first_package_high_quality).click()
+        cy.get(this.youtube_views_page_first_package_high_quality).click({ force: true })
     }
 
     checkYouTubeHighQualityViewsPackages(){

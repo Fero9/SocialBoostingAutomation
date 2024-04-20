@@ -9,76 +9,75 @@ export class YouTubeSubscribersPage{
     youtube_subscribers_page_shares_service = '#menu-1-94da795 > .menu-item-3266 > .elementor-item'
 
     youtube_subscribers_page_premium_subscribers_service = '[data-tab="js-premium-quality-tab"]'
+
     //Packages
     youtube_subscribers_page_first_package_high_quality = '.e-loop-item-2571 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner'
     youtube_subscribers_page_first_package_premium = '.e-loop-item-2580 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner'
 
     //youtube High Quality subscribers Attributes
     //100 High Quality subscribers
-    youtube_subscribers_page_100_high_quality_subscribers_amount = '.e-loop-item-2571 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title'
+    youtube_subscribers_page_100_high_quality_subscribers_amount = '.e-loop-item-2571 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title > b'
     youtube_subscribers_page_100_high_quality_subscribers_price = '.e-loop-item-2571 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-161717c > .elementor-widget-container > .elementor-heading-title > .woocommerce-Price-amount > bdi'
     //300 High Quality subscribers
-    youtube_subscribers_page_300_high_quality_subscribers_amount = '.e-loop-item-2572 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title'
+    youtube_subscribers_page_300_high_quality_subscribers_amount = '.e-loop-item-2572 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title > b'
     youtube_subscribers_page_300_high_quality_subscribers_price = '.e-loop-item-2572 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-161717c > .elementor-widget-container > .elementor-heading-title > .woocommerce-Price-amount > bdi'
     //600 High Quality subscribers
-    youtube_subscribers_page_600_high_quality_subscribers_amount = '.e-loop-item-2573 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title'
+    youtube_subscribers_page_600_high_quality_subscribers_amount = '.e-loop-item-2573 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title > b'
     youtube_subscribers_page_600_high_quality_subscribers_price = '.e-loop-item-2573 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-161717c > .elementor-widget-container > .elementor-heading-title > .woocommerce-Price-amount > bdi'
     //1,000 High Quality subscribers
-    youtube_subscribers_page_1000_high_quality_subscribers_amount = '.e-loop-item-2574 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title'
+    youtube_subscribers_page_1000_high_quality_subscribers_amount = '.e-loop-item-2574 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title > b'
     youtube_subscribers_page_1000_high_quality_subscribers_price = '.e-loop-item-2574 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-161717c > .elementor-widget-container > .elementor-heading-title > .woocommerce-Price-amount > bdi'
     //1,500 High Quality subscribers
-    youtube_subscribers_page_1500_high_quality_subscribers_amount = '.e-loop-item-2566 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title'
+    youtube_subscribers_page_1500_high_quality_subscribers_amount = '.e-loop-item-2566 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title > b'
     youtube_subscribers_page_1500_high_quality_subscribers_price = '.e-loop-item-2566 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-161717c > .elementor-widget-container > .elementor-heading-title > .woocommerce-Price-amount > bdi'
     //2,500 High Quality subscribers
-    youtube_subscribers_page_2500_high_quality_subscribers_amount = '.e-loop-item-2567 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title'
+    youtube_subscribers_page_2500_high_quality_subscribers_amount = '.e-loop-item-2567 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title > b'
     youtube_subscribers_page_2500_high_quality_subscribers_price = '.e-loop-item-2567 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-161717c > .elementor-widget-container > .elementor-heading-title > .woocommerce-Price-amount > bdi'
     //4,000 High Quality subscribers
-    youtube_subscribers_page_4000_high_quality_subscribers_amount = '.e-loop-item-2568 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title'
+    youtube_subscribers_page_4000_high_quality_subscribers_amount = '.e-loop-item-2568 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title > b'
     youtube_subscribers_page_4000_high_quality_subscribers_price = '.e-loop-item-2568 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-161717c > .elementor-widget-container > .elementor-heading-title > .woocommerce-Price-amount > bdi'
     //6,000 High Quality subscribers
-    youtube_subscribers_page_6000_high_quality_subscribers_amount = '.e-loop-item-2569 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title'
+    youtube_subscribers_page_6000_high_quality_subscribers_amount = '.e-loop-item-2569 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title > b'
     youtube_subscribers_page_6000_high_quality_subscribers_price = '.e-loop-item-2569 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-161717c > .elementor-widget-container > .elementor-heading-title > .woocommerce-Price-amount > bdi'
     //10,000 High Quality subscribers
-    youtube_subscribers_page_10000_high_quality_subscribers_amount = '.e-loop-item-2570 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title'
+    youtube_subscribers_page_10000_high_quality_subscribers_amount = '.e-loop-item-2570 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title > b'
     youtube_subscribers_page_10000_high_quality_subscribers_price = '.e-loop-item-2570 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-161717c > .elementor-widget-container > .elementor-heading-title > .woocommerce-Price-amount > bdi'
 
     //youtube Premium subscribers Attributes
     //100 Premium subscribers
-    youtube_subscribers_page_100_premium_subscribers_amount = '.e-loop-item-2580 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title'
+    youtube_subscribers_page_100_premium_subscribers_amount = '.e-loop-item-2580 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title > b'
     youtube_subscribers_page_100_premium_subscribers_price = '.e-loop-item-2580 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-161717c > .elementor-widget-container > .elementor-heading-title > .woocommerce-Price-amount > bdi'
     //300 Premium subscribers
-    youtube_subscribers_page_300_premium_subscribers_amount = '.e-loop-item-2581 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title'
+    youtube_subscribers_page_300_premium_subscribers_amount = '.e-loop-item-2581 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title > b'
     youtube_subscribers_page_300_premium_subscribers_price = '.e-loop-item-2581 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-161717c > .elementor-widget-container > .elementor-heading-title > .woocommerce-Price-amount > bdi'
     //600 Premium subscribers
-    youtube_subscribers_page_600_premium_subscribers_amount = '.e-loop-item-2582 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title'
+    youtube_subscribers_page_600_premium_subscribers_amount = '.e-loop-item-2582 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title > b'
     youtube_subscribers_page_600_premium_subscribers_price = '.e-loop-item-2582 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-161717c > .elementor-widget-container > .elementor-heading-title > .woocommerce-Price-amount > bdi'
     //1,000 Premium subscribers
-    youtube_subscribers_page_1000_premium_subscribers_amount = '.e-loop-item-2583 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title'
+    youtube_subscribers_page_1000_premium_subscribers_amount = '.e-loop-item-2583 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title > b'
     youtube_subscribers_page_1000_premium_subscribers_price = '.e-loop-item-2583 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-161717c > .elementor-widget-container > .elementor-heading-title > .woocommerce-Price-amount > bdi'
     //1,500 Premium subscribers
-    youtube_subscribers_page_1500_premium_subscribers_amount = '.e-loop-item-2575 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title'
+    youtube_subscribers_page_1500_premium_subscribers_amount = '.e-loop-item-2575 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title > b'
     youtube_subscribers_page_1500_premium_subscribers_price = '.e-loop-item-2575 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-161717c > .elementor-widget-container > .elementor-heading-title > .woocommerce-Price-amount > bdi'
     //2,500 Premium subscribers
-    youtube_subscribers_page_2500_premium_subscribers_amount = '.e-loop-item-2576 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title'
+    youtube_subscribers_page_2500_premium_subscribers_amount = '.e-loop-item-2576 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title > b'
     youtube_subscribers_page_2500_premium_subscribers_price = '.e-loop-item-2576 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-161717c > .elementor-widget-container > .elementor-heading-title > .woocommerce-Price-amount > bdi'
     //4,000 Premium subscribers
-    youtube_subscribers_page_4000_premium_subscribers_amount = '.e-loop-item-2577 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title'
+    youtube_subscribers_page_4000_premium_subscribers_amount = '.e-loop-item-2577 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title > b'
     youtube_subscribers_page_4000_premium_subscribers_price = '.e-loop-item-2577 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-161717c > .elementor-widget-container > .elementor-heading-title > .woocommerce-Price-amount > bdi'
     //6,000 Premium subscribers
-    youtube_subscribers_page_6000_premium_subscribers_amount = '.e-loop-item-2578 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title'
+    youtube_subscribers_page_6000_premium_subscribers_amount = '.e-loop-item-2578 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title > b'
     youtube_subscribers_page_6000_premium_subscribers_price = '.e-loop-item-2578 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-161717c > .elementor-widget-container > .elementor-heading-title > .woocommerce-Price-amount > bdi'
     //10,000 Premium subscribers
-    youtube_subscribers_page_10000_premium_subscribers_amount = '.e-loop-item-2579 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title'
+    youtube_subscribers_page_10000_premium_subscribers_amount = '.e-loop-item-2579 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title > b'
     youtube_subscribers_page_10000_premium_subscribers_price = '.e-loop-item-2579 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-161717c > .elementor-widget-container > .elementor-heading-title > .woocommerce-Price-amount > bdi'
-    
-    
 
     buyYouTubeHighQualitySubscribersFirstPackage(){
-        cy.get(this.youtube_subscribers_page_first_package_high_quality).click()
+        cy.get(this.youtube_subscribers_page_first_package_high_quality).click({ force: true })
     }
 
     buyYouTubePremiumSubscribersFirstPackage(){
-        cy.get(this.youtube_subscribers_page_premium_subscribers_service).click()
+        cy.get(this.youtube_subscribers_page_premium_subscribers_service).click({ force: true })
         cy.get(this.youtube_subscribers_page_first_package_premium).click({ force: true })
     }
     
@@ -143,18 +142,18 @@ export class YouTubeSubscribersPage{
     }
 
     goToYouTubeLikesPage(){
-        cy.get(this.youtube_subscribers_page_likes_service).click()
+        cy.get(this.youtube_subscribers_page_likes_service).click({force:true})
     }
 
     goToYouTubeViewsPage(){
-        cy.get(this.youtube_subscribers_page_views_service).click()
+        cy.get(this.youtube_subscribers_page_views_service).click({force:true})
     }
 
     goToYouTubeCommentsPage(){
-        cy.get(this.youtube_subscribers_page_comments_service).click()
+        cy.get(this.youtube_subscribers_page_comments_service).click({force:true})
     }
 
     goToYouTubeSharesPage(){
-        cy.get(this.youtube_subscribers_page_shares_service).click()
+        cy.get(this.youtube_subscribers_page_shares_service).click({force:true})
     }
 }

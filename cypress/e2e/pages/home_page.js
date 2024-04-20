@@ -9,14 +9,15 @@ export class HomePage{
     }
 
     goToTikTokPage(){
-        cy.get(this.home_page_tiktok_widget).click()
+        cy.get(this.home_page_tiktok_widget).click({force:true})
     }
 
     goToInstagramPage(){
-        cy.get(this.home_page_instagram_widget).click()
+        cy.get(this.home_page_instagram_widget).click({force:true})
     }
 
     goToYouTubePage(){
-        cy.get(this.home_page_youtube_widget).click()
+        cy.get(this.home_page_youtube_widget).click({force:true})
+        cy.wait(5000)
     }
 }

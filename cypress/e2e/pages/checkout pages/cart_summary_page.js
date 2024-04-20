@@ -53,8 +53,11 @@ export class CartSummaryPage{
     cartTotalYTPRSB = '$10.50'
 
     //YouTube Likes Cart Total
-    cartTotalYTHQSB = '$4.32'
-    cartTotalYTPRSB = '$5.32'
+    cartTotalYTHQLK = '$9.32'
+    cartTotalYTPRLK = '$10.43'
+
+    //YouTube Views Cart Total
+    cartTotalYTHQVW = '6.74'
 
     //TikTok Followers
     proceedToPaymentTKTHQFL(){
@@ -276,18 +279,27 @@ export class CartSummaryPage{
 
     //YouTube Likes
     proceedToPaymentYTHQLK(){
-        cy.get(this.cartSummaryPageSelectedService).should('contain', '100')
-        cy.get(this.cartSummaryPagePackagePrice).should('contain','$3.44')
-        cy.get(this.cartSummaryPageUpsellPriceCross).should('contain', '$0.88')
-        cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalYTHQSB)
+        cy.get(this.cartSummaryPageSelectedService).should('contain', '250')
+        cy.get(this.cartSummaryPagePackagePrice).should('contain','$7.77')
+        cy.get(this.cartSummaryPageUpsellPriceCross).should('contain', '$1.55')
+        cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalYTHQLK)
         cy.get(this.cartSummaryPageSubmitButton).click()
     }
 
     proceedToPaymentYTPRLK(){
-        cy.get(this.cartSummaryPageSelectedService).should('contain', '100')
-        cy.get(this.cartSummaryPagePackagePrice).should('contain','$4.44')
-        cy.get(this.cartSummaryPageUpsellPriceCross).should('contain', '$0.88')
-        cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalYTPRSB)
+        cy.get(this.cartSummaryPageSelectedService).should('contain', '250')
+        cy.get(this.cartSummaryPagePackagePrice).should('contain','$8.88')
+        cy.get(this.cartSummaryPageUpsellPriceCross).should('contain', '$1.55')
+        cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalYTPRLK)
+        cy.get(this.cartSummaryPageSubmitButton).click()
+    }
+
+    //YouTube Views
+    proceedToPaymentYTHQVW(){
+        cy.get(this.cartSummaryPageSelectedService).should('contain', '500')
+        cy.get(this.cartSummaryPagePackagePrice).should('contain','$5.75')
+        cy.get(this.cartSummaryPageUpsellPriceNoCross).should('contain', '$0.99')
+        cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalYTHQVW)
         cy.get(this.cartSummaryPageSubmitButton).click()
     }
 }

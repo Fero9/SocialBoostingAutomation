@@ -56,13 +56,12 @@ describe('YouTube Service Tests', ()=>{
     })
 
     context('YouTube Likes Tests', () =>{
-        it.only('The user is able to purchase 100 High Quality Likes', () =>{
+        it('The user is able to purchase 100 High Quality Likes', () =>{
             homePage.goToYouTubePage()
             youtubeSubscribersPage.goToYouTubeLikesPage()
             youtubeLikesPage.buyYouTubeHighQualityLikesFirstPackage()
             accountInformationPage.verifyQtyAndPriceYTHQLK()
             accountInformationPage.enterYTAccountInformation()
-            cy.wait(5000)
             postInformationPage.chooseYourVideo()
             packageAdditionsPage.addPackageAdditionsYTHQLK()
             cartSummaryPage.proceedToPaymentYTHQLK()
@@ -80,7 +79,6 @@ describe('YouTube Service Tests', ()=>{
             youtubeLikesPage.buyYouTubePremiumLikesFirstPackage()
             accountInformationPage.verifyQtyAndPriceYTPRLK()
             accountInformationPage.enterYTAccountInformation()
-            cy.wait(5000)
             postInformationPage.chooseYourVideo()
             packageAdditionsPage.addPackageAdditionsYTPRLK()
             cartSummaryPage.proceedToPaymentYTPRLK()
@@ -94,13 +92,12 @@ describe('YouTube Service Tests', ()=>{
     })
 
     context('YouTube Views Tests', () =>{
-        it.only('The user is able to purchase 500 High Quality Views', () =>{
+        it('The user is able to purchase 500 High Quality Views', () =>{
             homePage.goToYouTubePage()
             youtubeSubscribersPage.goToYouTubeViewsPage()
             youtubeViewsPage.buyYouTubeHighQualityViewsFirstPackage()
             accountInformationPage.verifyQtyAndPriceYTHQVW()
             accountInformationPage.enterYTAccountInformation()
-            cy.wait(5000)
             postInformationPage.chooseYourVideo()
             packageAdditionsPage.addPackageAdditionsYTHQVW()
             cartSummaryPage.proceedToPaymentYTHQVW()

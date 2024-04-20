@@ -180,14 +180,14 @@ export class AccountInformationPage{
     //YouTube Likes
     verifyQtyAndPriceYTHQLK(){
         //Verify if the correct quantity and price are displayed
-        cy.get(this.checkout_service_qty).should('contain',"100 High Quality Likes")
-        cy.get(this.checkout_service_price).should('contain', '$3.44')
+        cy.get(this.checkout_service_qty).should('contain',"250 High Quality Likes")
+        cy.get(this.checkout_service_price).should('contain', '$7.77')
     }
 
     verifyQtyAndPriceYTPRLK(){
         //Verify if the correct quantity and price are displayed
-        cy.get(this.checkout_service_qty).should('contain','100 Premium Likes')
-        cy.get(this.checkout_service_price).should('contain', '$4.44')
+        cy.get(this.checkout_service_qty).should('contain','250 Premium Likes')
+        cy.get(this.checkout_service_price).should('contain', '$8.88')
     }
 
     //YouTube Views
