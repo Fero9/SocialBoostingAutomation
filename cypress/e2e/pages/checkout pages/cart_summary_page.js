@@ -59,6 +59,9 @@ export class CartSummaryPage{
     //YouTube Views Cart Total
     cartTotalYTHQVW = '6.74'
 
+    //YouTube Comments Cart Total
+    cartTotalYTHQCM = '4.44' 
+
     //TikTok Followers
     proceedToPaymentTKTHQFL(){
         cy.get(this.cartSummaryPageSelectedService).should('contain', '250')
@@ -300,6 +303,15 @@ export class CartSummaryPage{
         cy.get(this.cartSummaryPagePackagePrice).should('contain','$5.75')
         cy.get(this.cartSummaryPageUpsellPriceNoCross).should('contain', '$0.99')
         cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalYTHQVW)
+        cy.get(this.cartSummaryPageSubmitButton).click()
+    }
+
+    //YouTube Comments
+    proceedToPaymentYTHQCM(){
+        cy.get(this.cartSummaryPageSelectedService).should('contain', '10')
+        cy.get(this.cartSummaryPagePackagePrice).should('contain','$3.33')
+        cy.get(this.cartSummaryPageUpsellPriceNoCross).should('contain', '$1.11')
+        cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalYTHQCM)
         cy.get(this.cartSummaryPageSubmitButton).click()
     }
 }

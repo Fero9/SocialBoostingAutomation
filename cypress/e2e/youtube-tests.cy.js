@@ -9,6 +9,7 @@ import { HomePage } from "./pages/home_page"
 import { YouTubeSubscribersPage } from "./pages/youtube/youtube_subscribers_page"
 import { YouTubeLikesPage } from "./pages/youtube/youtube_likes_page"
 import { YouTubeViewsPage } from "./pages/youtube/youtube_views_page"
+import { YouTubeCommentsPage } from "./pages/youtube/youtube_comments_page"
 import { AccountInformationPage } from "./pages/checkout pages/account_information_page"
 import { PostInformationPage } from "./pages/checkout pages/post_information_page"
 import { PackageAdditionsPage } from "./pages/checkout pages/package_additions_page"
@@ -18,6 +19,7 @@ const homePage = new HomePage()
 const youtubeSubscribersPage = new YouTubeSubscribersPage()
 const youtubeLikesPage = new YouTubeLikesPage()
 const youtubeViewsPage = new YouTubeViewsPage()
+const youtubeCommentsPage = new YouTubeCommentsPage()
 const accountInformationPage = new AccountInformationPage()
 const postInformationPage = new PostInformationPage()
 const packageAdditionsPage = new PackageAdditionsPage()
@@ -107,6 +109,25 @@ describe('YouTube Service Tests', ()=>{
             homePage.goToYouTubePage()
             youtubeSubscribersPage.goToYouTubeViewsPage()
             youtubeViewsPage.checkYouTubeHighQualityViewsPackages()
+        })
+    })
+
+    context('YouTube Comments Tests', () =>{
+        it('The user is able to purchase 10 High Quality Comments', () =>{
+            homePage.goToYouTubePage()
+            youtubeSubscribersPage.goToYouTubeCommentsPage()
+            youtubeCommentsPage.buyYouTubeHighQualityCommentsFirstPackage()
+            accountInformationPage.verifyQtyAndPriceYTHQCM()
+            accountInformationPage.enterYTAccountInformation()
+            postInformationPage.chooseYourVideo()
+            packageAdditionsPage.addPackageAdditionsYTHQCM()
+            cartSummaryPage.proceedToPaymentYTHQCM()
+        })
+
+        it('Verifies that the information on YouTube High Quality Comments packages is correct', () =>{
+            homePage.goToYouTubePage()
+            youtubeSubscribersPage.goToYouTubeCommentsPage()
+            youtubeCommentsPage.checkYouTubeHighQualityCommentsPackages()
         })
     })
 })

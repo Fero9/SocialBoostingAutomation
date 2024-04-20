@@ -196,4 +196,11 @@ export class AccountInformationPage{
         cy.get(this.checkout_service_qty).should('contain',"500 High Quality Views")
         cy.get(this.checkout_service_price).should('contain', '$5.75')
     }
+
+    //YouTube Comments
+    verifyQtyAndPriceYTHQCM(){
+        //Verify if the correct quantity and price are displayed
+        cy.get(this.checkout_service_qty).should('contain',"10 High Quality Comments")
+        cy.get(this.checkout_service_price).should('contain', '$3.33')
+    }
 }

@@ -438,6 +438,7 @@ export class PackageAdditionsPage{
         cy.get(this.submit_button).click()
     }
 
+    //YouTube Views
     addPackageAdditionsYTHQVW(){
         //Verify if the correct upsell quantity and price are displayed
         cy.get(this.upsell_amount).should('contain', '100')
@@ -449,6 +450,22 @@ export class PackageAdditionsPage{
         cy.get(this.cart_upsell_package).click()
         cy.get(this.cart_item_quantity_value).should('contain', '600')
         cy.get(this.cart_amount).should('contain','$6.74')
+        //Continue
+        cy.get(this.submit_button).click()
+    }
+
+    //YouTube Comments
+    addPackageAdditionsYTHQCM(){
+        //Verify if the correct upsell quantity and price are displayed
+        cy.get(this.upsell_amount).should('contain', '5')
+        cy.get(this.upsell_price).should('contain', '$1.11')
+        //Cart quantity and amount
+        cy.get(this.cart_item_quantity_value).should('contain', '10')
+        cy.get(this.cart_amount).should('contain', '$3.33')
+        //Add the upsell to the cart
+        cy.get(this.cart_upsell_package).click()
+        cy.get(this.cart_item_quantity_value).should('contain', '15')
+        cy.get(this.cart_amount).should('contain','$4.44')
         //Continue
         cy.get(this.submit_button).click()
     }
