@@ -10,6 +10,7 @@ import { YouTubeSubscribersPage } from "./pages/youtube/youtube_subscribers_page
 import { YouTubeLikesPage } from "./pages/youtube/youtube_likes_page"
 import { YouTubeViewsPage } from "./pages/youtube/youtube_views_page"
 import { YouTubeCommentsPage } from "./pages/youtube/youtube_comments_page"
+import { YouTubeSharesPage } from "./pages/youtube/youtube_shares_page"
 import { AccountInformationPage } from "./pages/checkout pages/account_information_page"
 import { PostInformationPage } from "./pages/checkout pages/post_information_page"
 import { PackageAdditionsPage } from "./pages/checkout pages/package_additions_page"
@@ -20,6 +21,7 @@ const youtubeSubscribersPage = new YouTubeSubscribersPage()
 const youtubeLikesPage = new YouTubeLikesPage()
 const youtubeViewsPage = new YouTubeViewsPage()
 const youtubeCommentsPage = new YouTubeCommentsPage()
+const youtubeSharesPage = new YouTubeSharesPage()
 const accountInformationPage = new AccountInformationPage()
 const postInformationPage = new PostInformationPage()
 const packageAdditionsPage = new PackageAdditionsPage()
@@ -128,6 +130,25 @@ describe('YouTube Service Tests', ()=>{
             homePage.goToYouTubePage()
             youtubeSubscribersPage.goToYouTubeCommentsPage()
             youtubeCommentsPage.checkYouTubeHighQualityCommentsPackages()
+        })
+    })
+
+    context('YouTube Shares Tests', () =>{
+        it('The user is able to purchase 50 High Quality Shares', () =>{
+            homePage.goToYouTubePage()
+            youtubeSubscribersPage.goToYouTubeSharesPage()
+            youtubeSharesPage.buyYouTubeHighQualitySharesFirstPackage()
+            accountInformationPage.verifyQtyAndPriceYTHQSH()
+            accountInformationPage.enterYTAccountInformation()
+            postInformationPage.chooseYourVideo()
+            packageAdditionsPage.addPackageAdditionsYTHQSH()
+            cartSummaryPage.proceedToPaymentYTHQSH()
+        })
+
+        it('Verifies that the information on YouTube High Quality Shares packages is correct', () =>{
+            homePage.goToYouTubePage()
+            youtubeSubscribersPage.goToYouTubeSharesPage()
+            youtubeSharesPage.checkYouTubeHighQualitySharesPackages()
         })
     })
 })

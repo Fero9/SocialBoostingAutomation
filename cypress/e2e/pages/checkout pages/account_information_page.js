@@ -11,9 +11,15 @@ export class AccountInformationPage{
     instagram_checkout_account_information_username = '#socialboosting_instagram_checkout_account_information_username'
     instagram_checkout_account_information_email = '#socialboosting_instagram_checkout_account_information_email'
 
+    //YouTube Account Information
     youtube_checkout_account_information_username = '#youtube_checkout_search'
     youtube_checkout_account_information_email = '#socialboosting_youtube_checkout_account_information_email'
     youtube_channel = '[data-sb-identifier="UCwmZiChSryoWQCZMIQezgTg"]'
+
+    //Spotify Account Information
+    spotify_checkout_account_information_username = '#spotify_checkout_search'
+    spotify_channel = '[data-sb-identifier="4QQgXkCYTt3BlENzhyNETg"]'
+    spotify_checkout_account_information_email = '#socialboosting_spotify_checkout_account_information_email'
 
     //TikTok Followers
     verifyQtyAndPriceTKTHQFL(){
@@ -202,5 +208,27 @@ export class AccountInformationPage{
         //Verify if the correct quantity and price are displayed
         cy.get(this.checkout_service_qty).should('contain',"10 High Quality Comments")
         cy.get(this.checkout_service_price).should('contain', '$3.33')
+    }
+
+    //YouTube Shares
+    verifyQtyAndPriceYTHQSH(){
+        //Verify if the correct quantity and price are displayed
+        cy.get(this.checkout_service_qty).should('contain',"50 High Quality Shares")
+        cy.get(this.checkout_service_price).should('contain', '$2.22')
+    }
+
+    //Spotify Followers
+    verifyQtyAndPriceSPHQFL(){
+        //Verify if the correct quantity and price are displayed
+        cy.get(this.checkout_service_qty).should('contain',"250 High Quality Followers")
+        cy.get(this.checkout_service_price).should('contain', '$6.66')
+    }
+
+    enterSPAccountInformation(){
+        //Populate the account information
+        cy.get(this.spotify_checkout_account_information_username).type('earth')
+        cy.get(this.spotify_channel).first().click()
+        cy.get(this.spotify_checkout_account_information_email).type('frantisek@socialboosting.com')
+        cy.get(this.submit_button).click()
     }
 }
