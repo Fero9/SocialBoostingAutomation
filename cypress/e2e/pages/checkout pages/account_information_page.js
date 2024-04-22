@@ -231,4 +231,18 @@ export class AccountInformationPage{
         cy.get(this.spotify_checkout_account_information_email).type('frantisek@socialboosting.com')
         cy.get(this.submit_button).click()
     }
+
+    //Spotify Plays
+    verifyQtyAndPriceSPHQPL(){
+        //Verify if the correct quantity and price are displayed
+        cy.get(this.checkout_service_qty).should('contain',"1,000 High Quality Plays")
+        cy.get(this.checkout_service_price).should('contain', '$3.44')
+    }
+
+    //Spotify Listeners
+    verifyQtyAndPriceSPHQLS(){
+        //Verify if the correct quantity and price are displayed
+        cy.get(this.checkout_service_qty).should('contain',"1,000 High Quality Listeners")
+        cy.get(this.checkout_service_price).should('contain', '$14.14')
+    }
 }

@@ -6,6 +6,10 @@ export class SpotifyFollowersPage{
     //Packages
     spotify_followers_page_first_package_high_quality = '.e-loop-item-2486 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner'
 
+    //Services
+    spotify_followers_page_plays_service = '#menu-1-39545b2 > .menu-item-3454 > .elementor-item'
+    spotify_followers_page_listeners_service = '#menu-1-39545b2 > .menu-item-3453 > .elementor-item'
+
     //Spotify High Quality followers Attributes
     //250 High Quality followers
     spotify_followers_page_250_high_quality_followers_amount = '.e-loop-item-2486 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title > b'
@@ -61,5 +65,13 @@ export class SpotifyFollowersPage{
         //32,000 High Quality followers
         cy.get(this.spotify_followers_page_32000_high_quality_followers_amount).should('contain', '32,000')
         cy.get(this.spotify_followers_page_32000_high_quality_followers_price).should('contain','$90.90')
+    }
+
+    goToSpotifyPlaysPage(){
+        cy.get(this.spotify_followers_page_plays_service).click({force:true})
+    }
+
+    goToSpotifyListenersPage(){
+        cy.get(this.spotify_followers_page_listeners_service).click({force:true})
     }
 }
