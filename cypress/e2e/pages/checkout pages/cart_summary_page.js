@@ -74,6 +74,9 @@ export class CartSummaryPage{
     //Spotify Plays Cart Total
     cartTotalSPHQLS = '17.39'
 
+    //SoundCloud Followers Cart Total
+    cartTotalSCHQFL = '2.77'
+
     //TikTok Followers
     proceedToPaymentTKTHQFL(){
         cy.get(this.cartSummaryPageSelectedService).should('contain', '250')
@@ -360,6 +363,15 @@ export class CartSummaryPage{
         cy.get(this.cartSummaryPagePackagePrice).should('contain','$14.14')
         cy.get(this.cartSummaryPageUpsellPriceNoCross).should('contain', '$3.25')
         cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalSPHQLS)
+        cy.get(this.cartSummaryPageSubmitButton).click()
+    }
+
+    //SoundCloud Followers
+    proceedToPaymentSCHQFL(){
+        cy.get(this.cartSummaryPageSelectedService).should('contain', '100')
+        cy.get(this.cartSummaryPagePackagePrice).should('contain','$2.22')
+        cy.get(this.cartSummaryPageUpsellPriceNoCross).should('contain', '$0.55')
+        cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalSCHQFL)
         cy.get(this.cartSummaryPageSubmitButton).click()
     }
 }

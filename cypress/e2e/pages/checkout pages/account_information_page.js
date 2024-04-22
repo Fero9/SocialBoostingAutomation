@@ -21,6 +21,11 @@ export class AccountInformationPage{
     spotify_channel = '[data-sb-identifier="4QQgXkCYTt3BlENzhyNETg"]'
     spotify_checkout_account_information_email = '#socialboosting_spotify_checkout_account_information_email'
 
+    //SoundCloud Account Information
+    soundcloud_checkout_account_information_username = '#soundcloud_checkout_search'
+    soundcloud_channel = '[data-sb-identifier="galactic-earth"]'
+    soundcloud_checkout_account_information_email = '#socialboosting_soundcloud_checkout_account_information_email'
+
     //TikTok Followers
     verifyQtyAndPriceTKTHQFL(){
         //Verify if the correct quantity and price are displayed
@@ -244,5 +249,20 @@ export class AccountInformationPage{
         //Verify if the correct quantity and price are displayed
         cy.get(this.checkout_service_qty).should('contain',"1,000 High Quality Listeners")
         cy.get(this.checkout_service_price).should('contain', '$14.14')
+    }
+
+    //SoundCloud Followers
+    verifyQtyAndPriceSCHQFL(){
+        //Verify if the correct quantity and price are displayed
+        cy.get(this.checkout_service_qty).should('contain',"100 High Quality Followers")
+        cy.get(this.checkout_service_price).should('contain', '$2.22')
+    }
+
+    enterSCAccountInformation(){
+        //Populate the account information
+        cy.get(this.soundcloud_checkout_account_information_username).type('earth')
+        cy.get(this.soundcloud_channel).first().click()
+        cy.get(this.soundcloud_checkout_account_information_email).type('frantisek@socialboosting.com')
+        cy.get(this.submit_button).click()
     }
 }
