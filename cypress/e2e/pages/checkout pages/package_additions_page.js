@@ -11,6 +11,7 @@ export class PackageAdditionsPage{
     cart_upsell_package = '.cart-upsell-package'
     //Cross-Sell Variables
     cross_sell_quantity = '.cart-cross-package__container > div > p > strong'
+    cross_sell_quantity_sc = '.cross-sell-package-addition-button > p > strong'
     cross_sell_price = '.cart-cross-package > :nth-child(3)'
     cart_cross_sell_package = '.cart-cross-package'
 
@@ -546,6 +547,46 @@ export class PackageAdditionsPage{
         cy.get(this.cart_upsell_package).click()
         cy.get(this.cart_item_quantity_value).should('contain', '125')
         cy.get(this.cart_amount).should('contain','$2.77')
+        //Continue
+        cy.get(this.submit_button).click()
+    }
+
+    //SoundCloud Likes
+    addPackageAdditionsSCHQLK(){
+        //Verify if the correct upsell quantity and price are displayed
+        cy.get(this.upsell_amount).should('contain', '25')
+        cy.get(this.upsell_price).should('contain', '$0.55')
+        //Verify if the correct crossell quantity adn price are displayed
+        cy.get(this.cross_sell_quantity_sc).should('contain','500')
+        cy.get(this.cross_sell_price).should('contain','2.22')
+        //Cart quantity and amount
+        cy.get(this.cart_item_quantity_value).should('contain', '100')
+        cy.get(this.cart_amount).should('contain', '$2.22')
+        //Add the upsell to the cart
+        cy.get(this.cart_upsell_package).click()
+        cy.get(this.cart_item_quantity_value).should('contain', '125')
+        cy.get(this.cart_cross_sell_package).click()
+        cy.get(this.cart_amount).should('contain','$4.99')
+        //Continue
+        cy.get(this.submit_button).click()
+    }
+
+    //SoundCloud Plays
+    addPackageAdditionsSCHQPL(){
+        //Verify if the correct upsell quantity and price are displayed
+        cy.get(this.upsell_amount).should('contain', '250')
+        cy.get(this.upsell_price).should('contain', '$1.33')
+        //Verify if the correct crossell quantity adn price are displayed
+        cy.get(this.cross_sell_quantity_sc).should('contain','250')
+        cy.get(this.cross_sell_price).should('contain','3.33')
+        //Cart quantity and amount
+        cy.get(this.cart_item_quantity_value).should('contain', '1,000')
+        cy.get(this.cart_amount).should('contain', '$3.33')
+        //Add the upsell to the cart
+        cy.get(this.cart_upsell_package).click()
+        cy.get(this.cart_item_quantity_value).should('contain', '1,250')
+        cy.get(this.cart_cross_sell_package).click()
+        cy.get(this.cart_amount).should('contain','$7.99')
         //Continue
         cy.get(this.submit_button).click()
     }

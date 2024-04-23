@@ -7,8 +7,8 @@ export class SoundCloudFollowersPage{
     soundcloud_followers_page_first_package_high_quality = '.e-loop-item-2622 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner'
 
     //Services
-    soundcloud_followers_page_likes_service = '#menu-1-ca97ca8 > .menu-item-3334 > .elementor-item'
-    soundcloud_followers_page_plays_service = '#menu-1-ca97ca8 > .menu-item-3333 > .elementor-item'
+    soundcloud_likes_page_likes_service = '#menu-1-ca97ca8 > .menu-item-3334 > .elementor-item'
+    soundcloud_plays_page_plays_service = '#menu-1-ca97ca8 > .menu-item-3333 > .elementor-item'
 
     //soundcloud High Quality followers Attributes
     //100 High Quality followers
@@ -68,10 +68,10 @@ export class SoundCloudFollowersPage{
     }
 
     goToSoundCloudLikesPage(){
-        cy.get(this.soundcloud_followers_page_likes_service).click({force:true})
+        cy.get(this.soundcloud_likes_page_likes_service).click({force:true})
     }
 
     goToSoundCloudPlaysPage(){
-        cy.get(this.soundcloud_followers_page_plays_service).click({force:true})
+        cy.get(this.soundcloud_plays_page_plays_service).click({force:true})
     }
 }

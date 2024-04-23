@@ -77,6 +77,12 @@ export class CartSummaryPage{
     //SoundCloud Followers Cart Total
     cartTotalSCHQFL = '2.77'
 
+    //SoundCloud Likes Cart Total
+    cartTotalSCHQLK = '4.99'
+
+    //SoundCloud Plays Cart Total
+    cartTotalSCHQPL = '7.99'
+
     //TikTok Followers
     proceedToPaymentTKTHQFL(){
         cy.get(this.cartSummaryPageSelectedService).should('contain', '250')
@@ -372,6 +378,30 @@ export class CartSummaryPage{
         cy.get(this.cartSummaryPagePackagePrice).should('contain','$2.22')
         cy.get(this.cartSummaryPageUpsellPriceNoCross).should('contain', '$0.55')
         cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalSCHQFL)
+        cy.get(this.cartSummaryPageSubmitButton).click()
+    }
+
+    //SoundCloud Likes
+    proceedToPaymentSCHQLK(){
+        cy.get(this.cartSummaryPageSelectedService).should('contain', '100')
+        cy.get(this.cartSummaryPagePackagePrice).should('contain','$2.22')
+        cy.get(this.cartSummaryPageUpsellNameCross).should('contain','25')
+        cy.get(this.cartSummaryPageUpsellPriceCross).should('contain', '$0.55')
+        cy.get(this.cartSummaryPageCrossSellName).should('contain','500')
+        cy.get(this.cartSummaryPageCrossSellPrice).should('contain','$2.22')
+        cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalSCHQLK)
+        cy.get(this.cartSummaryPageSubmitButton).click()
+    }
+
+    //SoundCloud Plays
+    proceedToPaymentSCHQPL(){
+        cy.get(this.cartSummaryPageSelectedService).should('contain', '1,000')
+        cy.get(this.cartSummaryPagePackagePrice).should('contain','$3.33')
+        cy.get(this.cartSummaryPageUpsellNameCross).should('contain','250')
+        cy.get(this.cartSummaryPageUpsellPriceCross).should('contain', '$1.33')
+        cy.get(this.cartSummaryPageCrossSellName).should('contain','250')
+        cy.get(this.cartSummaryPageCrossSellPrice).should('contain','$3.33')
+        cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalSCHQPL)
         cy.get(this.cartSummaryPageSubmitButton).click()
     }
 }

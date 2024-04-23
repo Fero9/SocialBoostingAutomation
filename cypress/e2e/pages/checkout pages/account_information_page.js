@@ -265,4 +265,18 @@ export class AccountInformationPage{
         cy.get(this.soundcloud_checkout_account_information_email).type('frantisek@socialboosting.com')
         cy.get(this.submit_button).click()
     }
+
+    //SoundCloud Likes
+    verifyQtyAndPriceSCHQLK(){
+        //Verify if the correct quantity and price are displayed
+        cy.get(this.checkout_service_qty).should('contain',"100 High Quality Likes")
+        cy.get(this.checkout_service_price).should('contain', '$2.22')
+    }
+
+    //SoundCloud Plays
+    verifyQtyAndPriceSCHQPL(){
+        //Verify if the correct quantity and price are displayed
+        cy.get(this.checkout_service_qty).should('contain',"1,000 High Quality Plays")
+        cy.get(this.checkout_service_price).should('contain', '$3.33')
+    }
 }
