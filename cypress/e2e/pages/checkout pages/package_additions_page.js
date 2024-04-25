@@ -590,4 +590,93 @@ export class PackageAdditionsPage{
         //Continue
         cy.get(this.submit_button).click()
     }
+
+    //Threads Followers
+    addPackageAdditionsTHHQFL(){
+        //Verify if the correct upsell quantity and price are displayed
+        cy.get(this.upsell_amount).should('contain', '30')
+        cy.get(this.upsell_price).should('contain', '$2.20')
+        //Cart quantity and amount
+        cy.get(this.cart_item_quantity_value).should('contain', '100')
+        cy.get(this.cart_amount).should('contain', '$5.55')
+        //Add the upsell to the cart
+        cy.get(this.cart_upsell_package).click()
+        cy.get(this.cart_item_quantity_value).should('contain', '130')
+        cy.get(this.cart_amount).should('contain','$7.75')
+        //Continue
+        cy.get(this.submit_button).click()
+    }
+
+    //Threads Likes
+    addPackageAdditionsTHHQLK(){
+        //Verify if the correct upsell quantity and price are displayed
+        cy.get(this.upsell_amount).should('contain', '50')
+        cy.get(this.upsell_price).should('contain', '$2.22')
+        //Verify if the correct crossell quantity adn price are displayed
+        cy.get(this.cross_sell_quantity_sc).should('contain','25')
+        cy.get(this.cross_sell_price).should('contain','1.11')
+        //Cart quantity and amount
+        cy.get(this.cart_item_quantity_value).should('contain', '100')
+        cy.get(this.cart_amount).should('contain', '$5.50')
+        //Add the upsell to the cart
+        cy.get(this.cart_upsell_package).click()
+        cy.get(this.cart_item_quantity_value).should('contain', '150')
+        cy.get(this.cart_cross_sell_package).click()
+        cy.get(this.cart_amount).should('contain','$8.83')
+        //Continue
+        cy.get(this.submit_button).click()
+    }
+
+    //Threads Reposts
+    addPackageAdditionsTHHQRP(){
+        //Verify if the correct upsell quantity and price are displayed
+        cy.get(this.upsell_amount).should('contain', '25')
+        cy.get(this.upsell_price).should('contain', '$1.11')
+        //Verify if the correct crossell quantity adn price are displayed
+        cy.get(this.cross_sell_quantity_sc).should('contain','50')
+        cy.get(this.cross_sell_price).should('contain','2.22')
+        //Cart quantity and amount
+        cy.get(this.cart_item_quantity_value).should('contain', '100')
+        cy.get(this.cart_amount).should('contain', '$4.44')
+        //Add the upsell to the cart
+        cy.get(this.cart_upsell_package).click()
+        cy.get(this.cart_item_quantity_value).should('contain', '125')
+        cy.get(this.cart_cross_sell_package).click()
+        cy.get(this.cart_amount).should('contain','$7.77')
+        //Continue
+        cy.get(this.submit_button).click()
+    }
+
+    //Twitter Followers
+    addPackageAdditionsTTHQFL(){
+        //Verify if the correct upsell quantity and price are displayed
+        cy.get(this.upsell_amount).should('contain', '50')
+        cy.get(this.upsell_price).should('contain', '$1.44')
+        //Cart quantity and amount
+        cy.get(this.cart_item_quantity_value).should('contain', '250')
+        cy.get(this.cart_amount).should('contain', '$8.88')
+        //Add the upsell to the cart
+        cy.get(this.cart_upsell_package).click()
+        cy.get(this.cart_item_quantity_value).should('contain', '300')
+        cy.get(this.cart_amount).should('contain','$10.32')
+        //Continue
+        cy.get(this.submit_button).click()
+    }
+
+    //Twitter Likes
+    addPackageAdditionsTTHQLK(){
+        //Verify if the correct upsell quantity and price are displayed
+        cy.get(this.upsell_amount).should('contain', '15')
+        cy.get(this.upsell_price).should('contain', '$1.00')
+        //Cart quantity and amount
+        cy.get(this.cart_item_quantity_value).should('contain', '50')
+        cy.get(this.cart_amount).should('contain', '$2.22')
+        //Add the upsell to the cart
+        cy.get(this.cart_upsell_package).click()
+        cy.get(this.cart_item_quantity_value).should('contain', '65')
+        cy.get(this.cart_amount).should('contain','$3.22')
+        //Continue
+        cy.get(this.submit_button).click()
+    }
+
 }

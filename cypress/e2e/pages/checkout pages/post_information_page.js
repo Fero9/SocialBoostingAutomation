@@ -7,6 +7,8 @@ export class PostInformationPage{
 
     soundcloud_track = '[data-index="1"] > .checkbox-alt > .soundcloud-label'
 
+    postURL = '#socialboosting_checkout_item_information_customURL'
+
     chooseYourVideo(){
         cy.get(this.post_information_page_video).click()
         cy.get(this.post_information_page_submit_button).click()
@@ -19,6 +21,16 @@ export class PostInformationPage{
 
     chooseYourSCTrack(){
         cy.get(this.soundcloud_track).click()
+        cy.get(this.post_information_page_submit_button).click()
+    }
+
+    postInformation(){
+        cy.get(this.postURL).type('https://www.threads.net/@badpostblunt/post/C6HJ4WJO1wy')
+        cy.get(this.post_information_page_submit_button).click()
+    }
+
+    chooseTheTweet(){
+        cy.get('[data-index="1"]').click()
         cy.get(this.post_information_page_submit_button).click()
     }
 }

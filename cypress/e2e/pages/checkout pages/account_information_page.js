@@ -26,6 +26,16 @@ export class AccountInformationPage{
     soundcloud_channel = '[data-sb-identifier="galactic-earth"]'
     soundcloud_checkout_account_information_email = '#socialboosting_soundcloud_checkout_account_information_email'
 
+    //Threads Account Information
+    threads_checkout_account_information_username = '#socialboosting_threads_checkout_account_information_username'
+    threads_checkout_account_information_email = '#socialboosting_threads_checkout_account_information_email'
+
+    //Twitter Account Information
+    twitter_checkout_account_information_username = '#socialboosting_twitter_checkout_account_information_userId'
+    twitter_profile = '[data-sb-identifier="elonmusk"]' 
+    twitter_checkout_account_information_email = '#socialboosting_twitter_checkout_account_information_email'
+    
+
     //TikTok Followers
     verifyQtyAndPriceTKTHQFL(){
         //Verify if the correct quantity and price are displayed
@@ -278,5 +288,76 @@ export class AccountInformationPage{
         //Verify if the correct quantity and price are displayed
         cy.get(this.checkout_service_qty).should('contain',"1,000 High Quality Plays")
         cy.get(this.checkout_service_price).should('contain', '$3.33')
+    }
+
+    //Threads Followers
+    verifyQtyAndPriceTHHQFL(){
+        //Verify if the correct quantity and price are displayed
+        cy.get(this.checkout_service_qty).should('contain',"100 High Quality Followers")
+        cy.get(this.checkout_service_price).should('contain', '$5.55')
+    }
+
+    enterTHAccountInformation(){
+        //Populate the account information
+        cy.get(this.threads_checkout_account_information_username).type('earth')
+        cy.get(this.threads_checkout_account_information_email).type('frantisek@socialboosting.com')
+        cy.get(this.submit_button).click()
+    }
+
+    //Threads Likes
+    verifyQtyAndPriceTHHQLK(){
+        //Verify if the correct quantity and price are displayed
+        cy.get(this.checkout_service_qty).should('contain',"100 High Quality Likes")
+        cy.get(this.checkout_service_price).should('contain', '$5.50')
+    }
+
+    //Threads Reposts
+    verifyQtyAndPriceTHHQRP(){
+        //Verify if the correct quantity and price are displayed
+        cy.get(this.checkout_service_qty).should('contain',"100 High Quality Reposts")
+        cy.get(this.checkout_service_price).should('contain', '$4.44')
+    }
+
+    //Twitter Followers
+    verifyQtyAndPriceTTHQFL(){
+        //Verify if the correct quantity and price are displayed
+        cy.get(this.checkout_service_qty).should('contain',"250 High Quality Followers")
+        cy.get(this.checkout_service_price).should('contain', '$8.88')
+    }
+
+    enterTTAccountInformation(){
+        //Populate the account information
+        cy.get(this.twitter_checkout_account_information_username).type('elon')
+        cy.get(this.twitter_profile).first().click()
+        cy.get(this.twitter_checkout_account_information_email).type('frantisek@socialboosting.com')
+        cy.get(this.submit_button).click()
+    }
+
+    enterTTAccountInformationNoSearch(){
+        //Populate the account information
+        cy.get(this.twitter_checkout_account_information_username).type('elon')
+        cy.get(this.twitter_checkout_account_information_email).type('frantisek@socialboosting.com')
+        cy.get(this.submit_button).click()
+    }
+
+    //Twitter Likes
+    verifyQtyAndPriceTTHQLK(){
+        //Verify if the correct quantity and price are displayed
+        cy.get(this.checkout_service_qty).should('contain',"50 High Quality Likes")
+        cy.get(this.checkout_service_price).should('contain', '$2.22')
+    }
+
+    //Twitter Views
+    verifyQtyAndPriceTTHQVW(){
+        //Verify if the correct quantity and price are displayed
+        cy.get(this.checkout_service_qty).should('contain',"1,000 High Quality Views")
+        cy.get(this.checkout_service_price).should('contain', '$4.44')
+    }
+
+    //Twitter Reposts
+    verifyQtyAndPriceTTHQRP(){
+        //Verify if the correct quantity and price are displayed
+        cy.get(this.checkout_service_qty).should('contain',"50 High Quality Retweets")
+        cy.get(this.checkout_service_price).should('contain', '$2.22')
     }
 }

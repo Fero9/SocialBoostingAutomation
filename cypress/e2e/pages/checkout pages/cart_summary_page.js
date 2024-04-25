@@ -83,6 +83,28 @@ export class CartSummaryPage{
     //SoundCloud Plays Cart Total
     cartTotalSCHQPL = '7.99'
 
+    //Threads Followers Cart Total
+    cartTotalTHHQFL = '7.75'
+
+    //Threads Likes Cart Total
+    cartTotalTHHQLK = '8.83'
+
+    //Threads Reposts Cart Total
+    cartTotalTHHQRP = '7.77'
+
+    //Twitter Followers Cart Total
+    cartTotalTTHQFL = '10.32'
+
+    //Twitter Likes Cart Total
+    cartTotalTTHQLK = '3.22'
+
+    //Twitter Views Cart Total
+    cartTotalTTHQVW = '10.32'
+
+    //Twitter Reposts Cart Total
+    cartTotalTTHQRP = '10.32'
+
+
     //TikTok Followers
     proceedToPaymentTKTHQFL(){
         cy.get(this.cartSummaryPageSelectedService).should('contain', '250')
@@ -403,5 +425,76 @@ export class CartSummaryPage{
         cy.get(this.cartSummaryPageCrossSellPrice).should('contain','$3.33')
         cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalSCHQPL)
         cy.get(this.cartSummaryPageSubmitButton).click()
+    }
+
+    //Threads Followers
+    proceedToPaymentTHHQFL(){
+        cy.get(this.cartSummaryPageSelectedService).should('contain', '100')
+        cy.get(this.cartSummaryPagePackagePrice).should('contain','$5.55')
+        cy.get(this.cartSummaryPageUpsellPriceNoCross).should('contain', '$2.20')
+        cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalTHHQFL)
+        cy.get(this.cartSummaryPageSubmitButton).click()
+    }
+
+    //Threads Likes
+    proceedToPaymentTHHQLK(){
+        cy.get(this.cartSummaryPageSelectedService).should('contain', '100')
+        cy.get(this.cartSummaryPagePackagePrice).should('contain','$5.50')
+        cy.get(this.cartSummaryPageUpsellNameCross).should('contain','50')
+        cy.get(this.cartSummaryPageUpsellPriceCross).should('contain', '$2.22')
+        cy.get(this.cartSummaryPageCrossSellName).should('contain','25')
+        cy.get(this.cartSummaryPageCrossSellPrice).should('contain','$1.11')
+        cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalTHHQLK)
+        cy.get(this.cartSummaryPageSubmitButton).click()
+    }
+
+    //Threads Reposts
+    proceedToPaymentTHHQRP(){
+        cy.get(this.cartSummaryPageSelectedService).should('contain', '100')
+        cy.get(this.cartSummaryPagePackagePrice).should('contain','$4.44')
+        cy.get(this.cartSummaryPageUpsellNameCross).should('contain','25')
+        cy.get(this.cartSummaryPageUpsellPriceCross).should('contain', '$1.11')
+        cy.get(this.cartSummaryPageCrossSellName).should('contain','50')
+        cy.get(this.cartSummaryPageCrossSellPrice).should('contain','$2.22')
+        cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalTHHQRP)
+        cy.get(this.cartSummaryPageSubmitButton).click()
+    }
+
+    //Twitter Followers
+    proceedToPaymentTTHQFL(){
+        cy.get(this.cartSummaryPageSelectedService).should('contain', '250')
+        cy.get(this.cartSummaryPagePackagePrice).should('contain','$8.88')
+        cy.get(this.cartSummaryPageUpsellPriceNoCross).should('contain', '$1.44')
+        cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalTTHQFL)
+        cy.get(this.cartSummaryPageSubmitButton).click({force:true})
+    }
+
+    //Twitter Likes
+    proceedToPaymentTTHQLK(){
+        cy.get(this.cartSummaryPageSelectedService).should('contain', '50')
+        cy.get(this.cartSummaryPagePackagePrice).should('contain','$2.22')
+        cy.get(this.cartSummaryPageUpsellPriceNoCross).should('contain', '$1.00')
+        cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalTTHQLK)
+        cy.get(this.cartSummaryPageSubmitButton).click({force:true})
+    }
+
+    
+
+    //Twitter Views
+    proceedToPaymentTTHQVW(){
+        cy.get(this.cartSummaryPageSelectedService).should('contain', '250')
+        cy.get(this.cartSummaryPagePackagePrice).should('contain','$8.88')
+        cy.get(this.cartSummaryPageUpsellPriceNoCross).should('contain', '$1.44')
+        cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalTTHQVW)
+        cy.get(this.cartSummaryPageSubmitButton).click({force:true})
+    }
+
+    //Twitter Views
+    proceedToPaymentTTHQRT(){
+        cy.get(this.cartSummaryPageSelectedService).should('contain', '250')
+        cy.get(this.cartSummaryPagePackagePrice).should('contain','$8.88')
+        cy.get(this.cartSummaryPageUpsellPriceNoCross).should('contain', '$1.44')
+        cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalTTHQRT)
+        cy.get(this.cartSummaryPageSubmitButton).click({force:true})
     }
 }
