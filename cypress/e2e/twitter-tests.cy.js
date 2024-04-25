@@ -25,7 +25,7 @@ const postInformationPage = new PostInformationPage()
 const packageAdditionsPage = new PackageAdditionsPage()
 const cartSummaryPage = new CartSummaryPage()
 
-describe('Threads Service Tests', ()=>{
+describe('Twitter Service Tests', ()=>{
 
 
     context('Twitter Followers Tests', () =>{

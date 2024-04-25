@@ -49,10 +49,10 @@ export class PackageAdditionsPage{
     //TikTok Likes
     addPackageAdditionsTKTHQLK(){
         //Verify if the correct upsell quantity and price are displayed
-        cy.get(this.upsell_tiktok_likes_amount).should('contain', '50')
+        cy.get(this.upsell_amount).should('contain', '50')
         cy.get(this.upsell_price).should('contain', '$1.35')
         //Verify if the correct crosssell quantity and price are displayed
-        cy.get(this.cross_sell_quantity).should('contain', '1,000')
+        cy.get(this.cross_sell_quantity_sc).should('contain', '1,000')
         cy.get(this.cross_sell_price).should('contain', '$4.59')
         //Cart quantity and amount
         cy.get(this.cart_item_quantity_value).should('contain', '250')
@@ -73,7 +73,7 @@ export class PackageAdditionsPage{
         cy.get(this.upsell_amount).should('contain', '50')
         cy.get(this.upsell_price).should('contain', '$3.20')
         //Verify if the correct crosssell quantity and price are displayed
-        cy.get(this.cross_sell_quantity).should('contain', '1,000')
+        cy.get(this.cross_sell_quantity_sc).should('contain', '1,000')
         cy.get(this.cross_sell_price).should('contain', '$4.59')
         //Cart quantity and amount
         cy.get(this.cart_item_quantity_value).should('contain', '100')
@@ -95,7 +95,7 @@ export class PackageAdditionsPage{
         cy.get(this.upsell_amount).should('contain', '500')
         cy.get(this.upsell_price).should('contain', '$2.00')
         //Verify if the correct crosssell quantity and price are displayed
-        cy.get(this.cross_sell_quantity).should('contain', '100')
+        cy.get(this.cross_sell_quantity_sc).should('contain', '100')
         cy.get(this.cross_sell_price).should('contain', '$3.55')
         //Cart quantity and amount
         cy.get(this.cart_item_quantity_value).should('contain', '1,000')
@@ -117,7 +117,7 @@ export class PackageAdditionsPage{
         cy.get(this.upsell_amount).should('contain', '5')
         cy.get(this.upsell_price).should('contain', '$2.77')
         //Verify if the correct crosssell quantity and price are displayed
-        cy.get(this.cross_sell_quantity).should('contain', '100')
+        cy.get(this.cross_sell_quantity_sc).should('contain', '100')
         cy.get(this.cross_sell_price).should('contain', '$3.55')
         //Cart quantity and amount
         cy.get(this.cart_item_quantity_value).should('contain', '10')
@@ -135,7 +135,7 @@ export class PackageAdditionsPage{
 
     addPackageAdditionsTKTPRCM(){
         //Verify if the correct upsell quantity and price are displayed
-        cy.get(this.upsell_tiktok_likes_amount).should('contain', '5')
+        cy.get(this.upsell_amount).should('contain', '5')
         cy.get(this.upsell_price).should('contain', '$3.25')
         //Cart quantity and amount
         cy.get(this.cart_item_quantity_value).should('contain', '10')
@@ -154,7 +154,7 @@ export class PackageAdditionsPage{
         cy.get(this.upsell_amount).should('contain', '50')
         cy.get(this.upsell_price).should('contain', '$1.66')
         //Verify if the correct crosssell quantity and price are displayed
-        cy.get(this.cross_sell_quantity).should('contain', '25')
+        cy.get(this.cross_sell_quantity_sc).should('contain', '25')
         cy.get(this.cross_sell_price).should('contain', '$1.11')
         //Cart quantity and amount
         cy.get(this.cart_item_quantity_value).should('contain', '100')
@@ -176,7 +176,7 @@ export class PackageAdditionsPage{
         cy.get(this.upsell_amount).should('contain', '25')
         cy.get(this.upsell_price).should('contain', '$0.99')
         //Verify if the correct crosssell quantity and price are displayed
-        cy.get(this.cross_sell_quantity).should('contain', '50')
+        cy.get(this.cross_sell_quantity_sc).should('contain', '50')
         cy.get(this.cross_sell_price).should('contain', '$1.77')
         //Cart quantity and amount
         cy.get(this.cart_item_quantity_value).should('contain', '100')
@@ -229,7 +229,7 @@ export class PackageAdditionsPage{
         cy.get(this.upsell_amount).should('contain', '100')
         cy.get(this.upsell_price).should('contain', '$2.35')
         //Verify if the correct crosssell quantity and price are displayed
-        cy.get(this.cross_sell_quantity).should('contain', '2,500')
+        cy.get(this.cross_sell_quantity_sc).should('contain', '2,500')
         cy.get(this.cross_sell_price).should('contain', '$6.66')
         //Cart quantity and amount
         cy.get(this.cart_item_quantity_value).should('contain', '250')
@@ -250,7 +250,7 @@ export class PackageAdditionsPage{
         cy.get(this.upsell_amount).should('contain', '100')
         cy.get(this.upsell_price).should('contain', '$3.55')
         //Verify if the correct crosssell quantity and price are displayed
-        cy.get(this.cross_sell_quantity).should('contain', '2,500')
+        cy.get(this.cross_sell_quantity_sc).should('contain', '2,500')
         cy.get(this.cross_sell_price).should('contain', '$6.66')
         //Cart quantity and amount
         cy.get(this.cart_item_quantity_value).should('contain', '250')
@@ -280,7 +280,7 @@ export class PackageAdditionsPage{
         cy.get(this.upsell_amount).should('contain', '500')
         cy.get(this.upsell_price).should('contain', '$1.75')
         //Verify if the correct crosssell quantity and price are displayed
-        cy.get(this.cross_sell_quantity).should('contain', '100')
+        cy.get(this.cross_sell_quantity_sc).should('contain', '100')
         cy.get(this.cross_sell_price).should('contain', '$2.22')
         //Cart quantity and amount
         cy.get(this.cart_item_quantity_value).should('contain', '1,000')
@@ -302,7 +302,7 @@ export class PackageAdditionsPage{
         cy.get(this.upsell_amount).should('contain', '2')
         cy.get(this.upsell_price).should('contain', '$1.11')
         //Verify if the correct crosssell quantity and price are displayed
-        cy.get(this.cross_sell_quantity).should('contain', '50')
+        cy.get(this.cross_sell_quantity_sc).should('contain', '50')
         cy.get(this.cross_sell_price).should('contain', '$1.22')
         //Cart quantity and amount
         cy.get(this.cart_item_quantity_value).should('contain', '5')
@@ -339,7 +339,7 @@ export class PackageAdditionsPage{
         cy.get(this.upsell_amount).should('contain', '100')
         cy.get(this.upsell_price).should('contain', '$2.40')
         //Verify if the correct crosssell quantity and price are displayed
-        cy.get(this.cross_sell_quantity).should('contain', '2,500')
+        cy.get(this.cross_sell_quantity_sc).should('contain', '2,500')
         cy.get(this.cross_sell_price).should('contain', '$5.55')
         //Cart quantity and amount
         cy.get(this.cart_item_quantity_value).should('contain', '250')
@@ -361,7 +361,7 @@ export class PackageAdditionsPage{
         cy.get(this.upsell_amount).should('contain', '500')
         cy.get(this.upsell_price).should('contain', '$1.22')
         //Verify if the correct crosssell quantity and price are displayed
-        cy.get(this.cross_sell_quantity).should('contain', '100')
+        cy.get(this.cross_sell_quantity_sc).should('contain', '100')
         cy.get(this.cross_sell_price).should('contain', '$2.88')
         //Cart quantity and amount
         cy.get(this.cart_item_quantity_value).should('contain', '1,000')

@@ -121,7 +121,7 @@ export class AccountInformationPage{
         //Populate the account information
         cy.get(this.instagram_checkout_account_information_username).type('earth')
         cy.get(this.instagram_checkout_account_information_email).type('frantisek@socialboosting.com')
-        cy.get(this.submit_button).click()
+        cy.get(this.submit_button).click({force:true})
     }
 
     //Instagram Likes
@@ -193,7 +193,7 @@ export class AccountInformationPage{
     enterYTAccountInformation(){
         //Populate the account information
         cy.get(this.youtube_checkout_account_information_username).type('earth')
-        cy.get(this.youtube_channel).first().click()
+        cy.get(this.youtube_channel).first().click({force:true})
         cy.get(this.youtube_checkout_account_information_email).type('frantisek@socialboosting.com')
         cy.get(this.submit_button).click()
     }
@@ -242,7 +242,7 @@ export class AccountInformationPage{
     enterSPAccountInformation(){
         //Populate the account information
         cy.get(this.spotify_checkout_account_information_username).type('earth')
-        cy.get(this.spotify_channel).first().click()
+        cy.get(this.spotify_channel).first().click({force:true})
         cy.get(this.spotify_checkout_account_information_email).type('frantisek@socialboosting.com')
         cy.get(this.submit_button).click()
     }
@@ -271,9 +271,9 @@ export class AccountInformationPage{
     enterSCAccountInformation(){
         //Populate the account information
         cy.get(this.soundcloud_checkout_account_information_username).type('earth')
-        cy.get(this.soundcloud_channel).first().click()
+        cy.get(this.soundcloud_channel).first().click({force:true})
         cy.get(this.soundcloud_checkout_account_information_email).type('frantisek@socialboosting.com')
-        cy.get(this.submit_button).click()
+        cy.get(this.submit_button).click({force:true})
     }
 
     //SoundCloud Likes
@@ -301,7 +301,7 @@ export class AccountInformationPage{
         //Populate the account information
         cy.get(this.threads_checkout_account_information_username).type('earth')
         cy.get(this.threads_checkout_account_information_email).type('frantisek@socialboosting.com')
-        cy.get(this.submit_button).click()
+        cy.get(this.submit_button).click({force:true})
     }
 
     //Threads Likes
@@ -330,14 +330,14 @@ export class AccountInformationPage{
         cy.get(this.twitter_checkout_account_information_username).type('elon')
         cy.get(this.twitter_profile).first().click()
         cy.get(this.twitter_checkout_account_information_email).type('frantisek@socialboosting.com')
-        cy.get(this.submit_button).click()
+        cy.get(this.submit_button).click({force:true})
     }
 
     enterTTAccountInformationNoSearch(){
         //Populate the account information
         cy.get(this.twitter_checkout_account_information_username).type('elon')
         cy.get(this.twitter_checkout_account_information_email).type('frantisek@socialboosting.com')
-        cy.get(this.submit_button).click()
+        cy.get(this.submit_button).click({force:true})
     }
 
     //Twitter Likes

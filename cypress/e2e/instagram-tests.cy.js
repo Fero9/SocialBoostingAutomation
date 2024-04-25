@@ -64,25 +64,23 @@ describe('Instagram Service Tests', ()=>{
     
 
     context('Instagram Likes Tests', ()=>{
-        it('The user is able to purchase 100 High Quality Likes', () =>{
+        it('The user is able to purchase 250 High Quality Likes', () =>{
             homePage.goToInstagramPage()
             instagramFollowersPage.goToInstagramLikesPage()
             instagramLikesPage.buyInstagramHighQualityLikesFirstPackage()
             accountInformationPage.verifyQtyAndPriceIGHQLK()
             accountInformationPage.enterIGAccountInformation()
-            cy.wait(5000)
             postInformationPage.chooseYourVideo()
             packageAdditionsPage.addPackageAdditionsIGHQLK()
             cartSummaryPage.proceedToPaymentIGHQLK()
         })
     
-        it('The user is able to purchase 100 Premium Likes', () =>{
+        it('The user is able to purchase 250 Premium Likes', () =>{
             homePage.goToInstagramPage()
             instagramFollowersPage.goToInstagramLikesPage()
             instagramLikesPage.buyInstagramPremiumLikesFirstPackage()
             accountInformationPage.verifyQtyAndPriceIGPRLK()
             accountInformationPage.enterIGAccountInformation()
-            cy.wait(5000)
             postInformationPage.chooseYourVideo()
             packageAdditionsPage.addPackageAdditionsIGPRLK()
             cartSummaryPage.proceedToPaymentIGPRLK()
@@ -94,7 +92,6 @@ describe('Instagram Service Tests', ()=>{
             instagramLikesPage.buyInstagramVerifiedLikesFirstPackage()
             accountInformationPage.verifyQtyAndPriceIGVFLK()
             accountInformationPage.enterIGAccountInformation()
-            cy.wait(5000)
             postInformationPage.chooseYourVideo()
             packageAdditionsPage.addPackageAdditionsIGVFLK()
             cartSummaryPage.proceedToPaymentIGVFLK()
