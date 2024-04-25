@@ -99,10 +99,10 @@ export class CartSummaryPage{
     cartTotalTTHQLK = '3.22'
 
     //Twitter Views Cart Total
-    cartTotalTTHQVW = '10.32'
+    cartTotalTTHQVW = '3.88'
 
-    //Twitter Reposts Cart Total
-    cartTotalTTHQRP = '10.32'
+    //Twitter Retweets Cart Total
+    cartTotalTTHQRT = '2.88'
 
 
     //TikTok Followers
@@ -482,18 +482,18 @@ export class CartSummaryPage{
 
     //Twitter Views
     proceedToPaymentTTHQVW(){
-        cy.get(this.cartSummaryPageSelectedService).should('contain', '250')
-        cy.get(this.cartSummaryPagePackagePrice).should('contain','$8.88')
-        cy.get(this.cartSummaryPageUpsellPriceNoCross).should('contain', '$1.44')
+        cy.get(this.cartSummaryPageSelectedService).should('contain', '1,000')
+        cy.get(this.cartSummaryPagePackagePrice).should('contain','$2.33')
+        cy.get(this.cartSummaryPageUpsellPriceNoCross).should('contain', '$1.55')
         cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalTTHQVW)
         cy.get(this.cartSummaryPageSubmitButton).click({force:true})
     }
 
     //Twitter Views
     proceedToPaymentTTHQRT(){
-        cy.get(this.cartSummaryPageSelectedService).should('contain', '250')
-        cy.get(this.cartSummaryPagePackagePrice).should('contain','$8.88')
-        cy.get(this.cartSummaryPageUpsellPriceNoCross).should('contain', '$1.44')
+        cy.get(this.cartSummaryPageSelectedService).should('contain', '50')
+        cy.get(this.cartSummaryPagePackagePrice).should('contain','$2.22')
+        cy.get(this.cartSummaryPageUpsellPriceNoCross).should('contain', '$0.66')
         cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalTTHQRT)
         cy.get(this.cartSummaryPageSubmitButton).click({force:true})
     }

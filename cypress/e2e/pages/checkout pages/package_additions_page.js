@@ -679,4 +679,36 @@ export class PackageAdditionsPage{
         cy.get(this.submit_button).click()
     }
 
+    //Twitter Views
+    addPackageAdditionsTTHQVW(){
+        //Verify if the correct upsell quantity and price are displayed
+        cy.get(this.upsell_amount).should('contain', '500')
+        cy.get(this.upsell_price).should('contain', '$1.55')
+        //Cart quantity and amount
+        cy.get(this.cart_item_quantity_value).should('contain', '1,000')
+        cy.get(this.cart_amount).should('contain', '$2.33')
+        //Add the upsell to the cart
+        cy.get(this.cart_upsell_package).click()
+        cy.get(this.cart_item_quantity_value).should('contain', '1,500')
+        cy.get(this.cart_amount).should('contain','$3.88')
+        //Continue
+        cy.get(this.submit_button).click()
+    }
+
+    //Twitter Retweets
+    addPackageAdditionsTTHQRT(){
+        //Verify if the correct upsell quantity and price are displayed
+        cy.get(this.upsell_amount).should('contain', '15')
+        cy.get(this.upsell_price).should('contain', '$0.66')
+        //Cart quantity and amount
+        cy.get(this.cart_item_quantity_value).should('contain', '50')
+        cy.get(this.cart_amount).should('contain', '$2.22')
+        //Add the upsell to the cart
+        cy.get(this.cart_upsell_package).click()
+        cy.get(this.cart_item_quantity_value).should('contain', '65')
+        cy.get(this.cart_amount).should('contain','$2.88')
+        //Continue
+        cy.get(this.submit_button).click()
+    }
+
 }

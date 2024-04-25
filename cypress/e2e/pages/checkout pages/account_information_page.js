@@ -351,11 +351,11 @@ export class AccountInformationPage{
     verifyQtyAndPriceTTHQVW(){
         //Verify if the correct quantity and price are displayed
         cy.get(this.checkout_service_qty).should('contain',"1,000 High Quality Views")
-        cy.get(this.checkout_service_price).should('contain', '$4.44')
+        cy.get(this.checkout_service_price).should('contain', '$2.33')
     }
 
-    //Twitter Reposts
-    verifyQtyAndPriceTTHQRP(){
+    //Twitter Retweets
+    verifyQtyAndPriceTTHQRT(){
         //Verify if the correct quantity and price are displayed
         cy.get(this.checkout_service_qty).should('contain',"50 High Quality Retweets")
         cy.get(this.checkout_service_price).should('contain', '$2.22')
