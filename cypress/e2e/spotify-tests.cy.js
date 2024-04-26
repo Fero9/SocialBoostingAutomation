@@ -68,7 +68,6 @@ describe('Spotify Service Tests', ()=>{
             spotifyListenersPage.buySpotifyHighQualityListenersFirstPackage()
             accountInformationPage.verifyQtyAndPriceSPHQLS()
             accountInformationPage.enterSPAccountInformation()
-            postInformationPage.chooseYourTrack()
             packageAdditionsPage.addPackageAdditionsSPHQLS()
             cartSummaryPage.proceedToPaymentSPHQLS()
         })
