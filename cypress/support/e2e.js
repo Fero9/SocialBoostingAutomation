@@ -22,8 +22,14 @@ import './commands'
 //Put as an ENV variable
 
 const authToken = Cypress.env('authToken');
-beforeEach(()=>{
+beforeEach(() => {
     cy.intercept("*", (req) => {
+        //Disable convert experiments
+        const url = new URL(req.url, window.location.origin);
+        if (!url.searchParams.has('convert_optout')) {
+            url.searchParams.append('convert_optout', '1');
+        }
+        req.url = url.toString();
         req.headers["cypress-auth"] = authToken;
     }).as("allRequests");
     cy.visit('')

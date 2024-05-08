@@ -7,6 +7,6 @@ module.exports = defineConfig({
     authToken: process.env.AUTH_TOKEN,
   },
   e2e: {
-    baseUrl: "https://wpstaging.socialboosting.com/",
+    baseUrl: "https://wpstaging.socialboosting.com/?convert_optout=1",
   },
 });

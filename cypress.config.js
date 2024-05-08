@@ -10,7 +10,7 @@ module.exports = defineConfig({
     authToken
   },
   e2e: {
-    baseUrl: 'https://wpstaging.socialboosting.com',
+    baseUrl: 'https://wpstaging.socialboosting.com?convert_optout=1',
     setupNodeEvents(on, config) {
       // implement node event listeners here
       on('task', {
