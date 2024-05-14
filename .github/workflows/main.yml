@@ -21,6 +21,10 @@ on:
 jobs:
   Cypress-Test:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        containers: [1, 2, 3]
     steps:
       - name: Checkout GitCode
         uses: actions/checkout@v2
@@ -32,6 +36,8 @@ jobs:
         uses: cypress-io/github-action@v4
         env:
           AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
+          SPLIT: ${{ strategy.job-total }}
+          SPLIT_INDEX: ${{ strategy.job-index }}
         with:
           command: npx cypress run --config-file ${{ inputs.ENVTOTEST }}.config.js --spec cypress/e2e/tiktok-tests.cy.js
           browser: electron

@@ -13,5 +13,8 @@
   "dependencies": {
     "cypress": "^13.6.5",
     "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "cypress-split": "^1.23.2"
   }
 }
