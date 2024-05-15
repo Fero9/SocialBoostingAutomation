@@ -2,13 +2,11 @@ const { defineConfig } = require("cypress");
 const dotenv = require("dotenv");
 dotenv.config();
 
-const cypressSplit = require('cypress-split')
-
 // Retrieve authentication token from environment variable
 const authToken = process.env.AUTH_TOKEN;
 
 module.exports = defineConfig({
-  projectId: "o5xe9k",
+  projectId: "5e2ny4",
 
   env: {
     authToken
@@ -16,10 +14,6 @@ module.exports = defineConfig({
   e2e: {
     baseUrl: 'https://wpstaging.socialboosting.com?convert_optout=1',
     setupNodeEvents(on, config) {
-      cypressSplit(on, config)
-      // IMPORTANT: return the config object
-      return config
-      // implement node event listeners here
     },
   },
   viewportHeight: 1080,

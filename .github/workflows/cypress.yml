@@ -35,13 +35,14 @@ jobs:
       - name: Run Cypress Test
         uses: cypress-io/github-action@v4
         with:
-          command: npx cypress run --config-file ${{ inputs.ENVTOTEST }}.config.js
-          browser: electron
           # Records to Cypress Cloud
           # https://docs.cypress.io/guides/cloud/projects#Set-up-a-project-to-record
           record: true
           parallel: true # Runs test in parallel using settings above
+          command: npx cypress run --config-file ${{ inputs.ENVTOTEST }}.config.js
+          browser: electron
         env:
-          AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
+          
