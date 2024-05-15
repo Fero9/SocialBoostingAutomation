@@ -1,6 +1,8 @@
 const {defineConfig } = require('cypress')
 
 module.exports = defineConfig({
+    projectId: "5e2ny4",
+    
     e2e: {
         baseUrl:"https://www.socialboosting.com?convert_optout=1"
     },
