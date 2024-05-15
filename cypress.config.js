@@ -8,6 +8,8 @@ const cypressSplit = require('cypress-split')
 const authToken = process.env.AUTH_TOKEN;
 
 module.exports = defineConfig({
+  projectId: "o5xe9k",
+
   env: {
     authToken
   },
