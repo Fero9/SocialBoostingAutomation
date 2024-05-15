@@ -1,7 +1,0 @@
-import './instagram-tests.cy'
-import './tiktok-tests.cy'
-import './spotify-tests.cy'
-import './youtube-tests.cy'
-import './soundcloud-tests.cy'
-import './twitter-tests.cy'
-import './threads-tests.cy'
