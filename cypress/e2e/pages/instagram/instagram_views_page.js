@@ -34,7 +34,7 @@ export class InstagramViewsPage{
 
     buyInstagramViewsFirstPackage(){
         cy.get(this.instagram_views_page_first_package).click({force:true})
-        cy.get(".e-loop-item-2338 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-14c3d2f > .elementor-widget-container > .elementor-button-wrapper > .elementor-button").click()
+        cy.get(".e-loop-item-2338 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-14c3d2f > .elementor-widget-container > .elementor-button-wrapper > .elementor-button").click({force:true})
     }
 
     checkInstagramViewsPackages(){

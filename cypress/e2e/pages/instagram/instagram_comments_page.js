@@ -68,7 +68,7 @@ export class InstagramCommentsPage{
     
     buyInstagramHighQualityCommentsFirstPackage(){
         cy.get(this.instagram_comments_page_first_package_high_quality).click({force:true})
-        cy.get(".e-loop-item-2370 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-14c3d2f > .elementor-widget-container > .elementor-button-wrapper > .elementor-button").click()
+        cy.get(".e-loop-item-2370 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-14c3d2f > .elementor-widget-container > .elementor-button-wrapper > .elementor-button").click({force:true})
     }
 
     buyInstagramPremiumCommentsFirstPackage(){

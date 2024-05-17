@@ -37,12 +37,11 @@ jobs:
         with:
           # Records to Cypress Cloud
           # https://docs.cypress.io/guides/cloud/projects#Set-up-a-project-to-record
-          record: true
+          record: false
           parallel: true # Runs test in parallel using settings above
-          command: npx cypress run --config-file ${{ inputs.ENVTOTEST }}.config.js --record --key fbfe4024-3cbb-40a7-b666-3301baa763dd --spec cypress/e2e/instagram-tests.cy.js
+          command: npx cypress run --config-file ${{ inputs.ENVTOTEST }}.config.js --spec cypress/e2e/instagram-tests.cy.js
           browser: electron
         env:
-          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
           
