@@ -13,6 +13,7 @@ export class InstagramFollowersPage{
     //Packages
     instagram_followers_page_first_package_high_quality = '.e-loop-item-2193 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner'
     instagram_followers_page_first_package_premium = '.e-loop-item-2202 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner'
+    instagram_followers_page_buy_now_button_premium_followers = '.e-loop-item-2193 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-161717c > .elementor-widget-container > .elementor-button-wrapper > .elementor-button'
 
     //Instagram High Quality Followers Attributes
     //500 High Quality Followers
@@ -55,11 +56,13 @@ export class InstagramFollowersPage{
     instagram_followers_page_20000_premium_followers_price = '.e-loop-item-2200 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-161717c > .elementor-widget-container > .elementor-heading-title > .woocommerce-Price-amount > bdi'
 
     buyInstagramHighQualityFollowersFirstPackage(){
-        cy.get(this.instagram_followers_page_first_package_high_quality).click()
+        cy.get(this.instagram_followers_page_first_package_high_quality).click({force:true})
+        //Convert affects this
+        cy.get(".e-loop-item-2193 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-14c3d2f > .elementor-widget-container > .elementor-button-wrapper > .elementor-button").click()
     }
 
     buyInstagramPremiumFollowersFirstPackage(){
-        cy.get(this.instagram_followers_page_premium_followers_service).click()
+        cy.get(this.instagram_followers_page_premium_followers_service).click({force:true})
         cy.get(this.instagram_followers_page_first_package_premium).click({force:true})
     }
     

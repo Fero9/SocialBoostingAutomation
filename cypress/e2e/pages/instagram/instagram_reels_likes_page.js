@@ -33,7 +33,8 @@ export class InstagramReelsLikesPage{
     instagram_reels_likes_page_25000_reels_likes_price = '.e-loop-item-2436 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-161717c > .elementor-widget-container > .elementor-heading-title > .woocommerce-Price-amount > bdi' 
 
     buyInstagramReelsLikesFirstPackage(){
-        cy.get(this.instagram_reels_likes_page_first_package).click()
+        cy.get(this.instagram_reels_likes_page_first_package).click({force:true})
+        cy.get(".e-loop-item-2441 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-14c3d2f > .elementor-widget-container > .elementor-button-wrapper > .elementor-button").click()
     }
 
     checkInstagramReelsLikesPackages(){

@@ -67,18 +67,19 @@ export class InstagramCommentsPage{
     instagram_comments_page_400_premium_comments_price = '.e-loop-item-2396 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-161717c > .elementor-widget-container > .elementor-heading-title > .woocommerce-Price-amount > bdi'
     
     buyInstagramHighQualityCommentsFirstPackage(){
-        cy.get(this.instagram_comments_page_first_package_high_quality).click()
+        cy.get(this.instagram_comments_page_first_package_high_quality).click({force:true})
+        cy.get(".e-loop-item-2370 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-14c3d2f > .elementor-widget-container > .elementor-button-wrapper > .elementor-button").click()
     }
 
     buyInstagramPremiumCommentsFirstPackage(){
-        cy.get(this.instagram_comments_page_premium_comments_service).click()
+        cy.get(this.instagram_comments_page_premium_comments_service).click({force:true})
         cy.get(this.instagram_comments_page_first_package_premium).click({force:true})
     }
     
     checkInstagramHighQualityCommentsPackages(){
         //5 High Quality comments
         cy.get(this.instagram_comments_page_5_high_quality_comments_amount).should('contain', '5')
-        cy.get(this.instagram_comments_page_5_high_quality_comments_price).should('contain','$2.33')
+        cy.get(this.instagram_comments_page_5_high_quality_comments_price).should('contain','$2.99')
         //10 High Quality comments
         cy.get(this.instagram_comments_page_10_high_quality_comments_amount).should('contain', '10')
         cy.get(this.instagram_comments_page_10_high_quality_comments_price).should('contain','$5.55')
@@ -109,7 +110,7 @@ export class InstagramCommentsPage{
         cy.get(this.instagram_comments_page_premium_comments_service).click()
         //5 Premium comments
         cy.get(this.instagram_comments_page_5_premium_comments_amount).should('contain', '5')
-        cy.get(this.instagram_comments_page_5_premium_comments_price).should('contain', '$3.33')
+        cy.get(this.instagram_comments_page_5_premium_comments_price).should('contain', '$3.99')
         //10 Premium comments
         cy.get(this.instagram_comments_page_10_premium_comments_amount).should('contain', '10')
         cy.get(this.instagram_comments_page_10_premium_comments_price).should('contain', '$6.66')

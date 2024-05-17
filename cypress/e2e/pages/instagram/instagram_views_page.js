@@ -33,7 +33,8 @@ export class InstagramViewsPage{
     instagram_views_page_1000000_views_price = '.e-loop-item-2330 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-161717c > .elementor-widget-container > .elementor-heading-title > .woocommerce-Price-amount > bdi'
 
     buyInstagramViewsFirstPackage(){
-        cy.get(this.instagram_views_page_first_package).click()
+        cy.get(this.instagram_views_page_first_package).click({force:true})
+        cy.get(".e-loop-item-2338 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-14c3d2f > .elementor-widget-container > .elementor-button-wrapper > .elementor-button").click()
     }
 
     checkInstagramViewsPackages(){

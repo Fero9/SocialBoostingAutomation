@@ -154,13 +154,13 @@ export class AccountInformationPage{
     verifyQtyAndPriceIGHQCM(){
         //Verify if the correct quantity and price are displayed
         cy.get(this.checkout_service_qty).should('contain','5 High Quality Comments')
-        cy.get(this.checkout_service_price).should('contain', '$2.33')
+        cy.get(this.checkout_service_price).should('contain', '$2.99')
     }
 
     verifyQtyAndPriceIGPRCM(){
         //Verify if the correct quantity and price are displayed
         cy.get(this.checkout_service_qty).should('contain','5 Premium Comments')
-        cy.get(this.checkout_service_price).should('contain', '$3.33')
+        cy.get(this.checkout_service_price).should('contain', '$3.99')
     }
 
     //Instagram Reels Likes

@@ -8,6 +8,8 @@ export class CartSummaryPage{
     cartSummaryPageUpsellPriceCross = ':nth-child(2) > .applied-bump-order-package__pricing > .sale-price'
     cartSummaryPageCrossSellName = ':nth-child(3) > .applied-bump-order-package__name'
     cartSummaryPageCrossSellPrice = ':nth-child(3) > .applied-bump-order-package__pricing > .sale-price'
+    cartSummaryPageCrossSellNameTwo = ':nth-child(4) > .applied-bump-order-package__name'
+    cartSummaryPageCrossSellPriceTwo = ':nth-child(4) > .applied-bump-order-package__pricing > .sale-price'
     cartSummaryPageCartTotal = '.cart-amount'
     cartSummaryPageSubmitButton = '#proceed-to-payment > .form__btn'
 
@@ -234,10 +236,10 @@ export class CartSummaryPage{
     proceedToPaymentIGPRLK(){
         cy.get(this.cartSummaryPageSelectedService).should('contain', '250')
         cy.get(this.cartSummaryPagePackagePrice).should('contain','$6.61')
-        cy.get(this.cartSummaryPageUpsellNameCross).should('contain', '100')
-        cy.get(this.cartSummaryPageUpsellPriceCross).should('contain', '$3.55')
-        cy.get(this.cartSummaryPageCrossSellName).should('contain', '2,500')
-        cy.get(this.cartSummaryPageCrossSellPrice).should('contain', '$6.66')
+        cy.get(this.cartSummaryPageCrossSellName).should('contain', '100')
+        cy.get(this.cartSummaryPageCrossSellPrice).should('contain', '$3.55')
+        cy.get(this.cartSummaryPageCrossSellNameTwo).should('contain', '2,500')
+        cy.get(this.cartSummaryPageCrossSellPriceTwo).should('contain', '$6.66')
         cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalIGPRLK)
         cy.get(this.cartSummaryPageSubmitButton).click()
     }

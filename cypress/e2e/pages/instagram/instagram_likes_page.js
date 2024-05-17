@@ -3,12 +3,15 @@ export class InstagramLikesPage{
     instagram_likes_page_heading = '.elementor-element-4012fb6 > .elementor-widget-container > .elementor-heading-title'
     instagram_likes_page_paragraph = '.elementor-element-cd0355b > .elementor-widget-container > p'
 
-    instagram_likes_page_premium_likes_service = '[data-tab="js-premium-quality-tab"] > .text-wrapper'
-    instagram_likes_page_verified_likes_service = '.hidden-on-mobile > .text-wrapper'
+    instagram_likes_page_premium_likes_service = '[data-tab="js-premium-quality-tab"]'
+    instagram_likes_page_verified_likes_service = '.hidden-on-mobile'
     //Packages
     instagram_likes_page_first_package_high_quality = '.e-loop-item-2272 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner'
     instagram_likes_page_first_package_premium = '.e-loop-item-2287 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner'
     instagram_likes_page_first_package_verified = '.e-loop-item-2294 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner'
+    instagram_likes_page_buy_now_button_high_quality = '.e-loop-item-2272 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-button-wrapper > .elementor-button'
+    instagram_likes_page_buy_now_button_premium = '.e-loop-item-2287 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-button-wrapper > .elementor-button'
+    instagram_likes_page_buy_now_button_verified = '.e-loop-item-2294 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-button-wrapper > .elementor-button'
 
     //Instagram High Quality likes Attributes
     //250 High Quality likes
@@ -75,11 +78,13 @@ export class InstagramLikesPage{
 
     buyInstagramHighQualityLikesFirstPackage(){
         cy.get(this.instagram_likes_page_first_package_high_quality).click({force:true})
+        cy.get(".e-loop-item-2272 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-14c3d2f > .elementor-widget-container > .elementor-button-wrapper > .elementor-button").click()
     }
 
     buyInstagramPremiumLikesFirstPackage(){
         cy.get(this.instagram_likes_page_premium_likes_service).click({force:true})
         cy.get(this.instagram_likes_page_first_package_premium).click({force:true})
+        //cy.get(".e-loop-item-2287 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-14c3d2f > .elementor-widget-container > .elementor-button-wrapper > .elementor-button").click()
     }
 
     buyInstagramVerifiedLikesFirstPackage(){
