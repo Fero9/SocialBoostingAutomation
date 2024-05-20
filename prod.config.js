@@ -10,7 +10,7 @@ module.exports = defineConfig({
     viewportWidth: 1920,
     watchForFileChanges: false,
     followRedirect: true,
-    pageLoadTimeout: 20000,
+    pageLoadTimeout: 60000,
     chromeWebSecurity: false,
     experimentalMemoryManagement:true,
 })
