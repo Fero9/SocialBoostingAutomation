@@ -1,0 +1,10 @@
+{
+  "suites": 5,
+  "tests": 13,
+  "passes": 5,
+  "pending": 0,
+  "failures": 8,
+  "start": "2024-05-20T13:12:37.612Z",
+  "duration": 277299,
+  "file": "cypress\\e2e\\tiktok-tests.cy.js"
+}

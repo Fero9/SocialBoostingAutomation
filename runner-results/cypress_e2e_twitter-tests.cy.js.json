@@ -1,0 +1,10 @@
+{
+  "suites": 5,
+  "tests": 8,
+  "passes": 4,
+  "pending": 0,
+  "failures": 4,
+  "start": "2024-05-20T13:10:14.260Z",
+  "duration": 113270,
+  "file": "cypress\\e2e\\twitter-tests.cy.js"
+}

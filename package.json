@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress run",
+    "cypress:run": "npx cypress run",
     "dev": "node frantisek.socialboosting.com:3000",
-    "cy:parallel":"cypress-parallel -d cypress/e2e/ -t 2 -s test"
+    "cy:parallel":"cypress-parallel -d cypress/e2e/ -t 4 -s cypress:run"
   },
   "keywords": [],
   "author": "",
