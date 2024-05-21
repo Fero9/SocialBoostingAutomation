@@ -56,14 +56,14 @@ export class InstagramFollowersPage{
     instagram_followers_page_20000_premium_followers_price = '.e-loop-item-2200 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-161717c > .elementor-widget-container > .elementor-heading-title > .woocommerce-Price-amount > bdi'
 
     buyInstagramHighQualityFollowersFirstPackage(){
-        cy.get(this.instagram_followers_page_first_package_high_quality).click({force:true})
+        cy.get(this.instagram_followers_page_first_package_high_quality).should('be.visible').click({force:true})
         //Convert affects this
         cy.get(".e-loop-item-2193 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-14c3d2f > .elementor-widget-container > .elementor-button-wrapper > .elementor-button").click({force:true})
     }
 
     buyInstagramPremiumFollowersFirstPackage(){
-        cy.get(this.instagram_followers_page_premium_followers_service).click({force:true})
-        cy.get(this.instagram_followers_page_first_package_premium).click({force:true})
+        cy.get(this.instagram_followers_page_premium_followers_service).should('be.visible').click({force:true})
+        cy.get(this.instagram_followers_page_first_package_premium).should('be.visible').click({force:true})
     }
     
     checkInstagramHighQualityFollowersPackages(){

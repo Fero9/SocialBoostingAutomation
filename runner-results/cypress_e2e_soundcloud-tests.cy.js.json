@@ -1,10 +1,10 @@
 {
-  "suites": 4,
-  "tests": 6,
-  "passes": 2,
+  "suites": 3,
+  "tests": 4,
+  "passes": 1,
   "pending": 0,
-  "failures": 4,
-  "start": "2024-05-20T13:07:28.018Z",
-  "duration": 88298,
+  "failures": 3,
+  "start": "2024-05-21T12:49:11.329Z",
+  "duration": 227172,
   "file": "cypress\\e2e\\soundcloud-tests.cy.js"
 }

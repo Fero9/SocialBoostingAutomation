@@ -1,10 +1,10 @@
 {
-  "suites": 4,
-  "tests": 6,
-  "passes": 3,
+  "suites": 3,
+  "tests": 3,
+  "passes": 1,
   "pending": 0,
-  "failures": 3,
-  "start": "2024-05-20T13:08:59.446Z",
-  "duration": 72171,
+  "failures": 2,
+  "start": "2024-05-21T12:49:14.443Z",
+  "duration": 77207,
   "file": "cypress\\e2e\\spotify-tests.cy.js"
 }

@@ -1,10 +1,10 @@
 {
-  "suites": 5,
-  "tests": 12,
-  "passes": 6,
+  "suites": 3,
+  "tests": 8,
+  "passes": 4,
   "pending": 0,
-  "failures": 6,
-  "start": "2024-05-20T13:12:10.856Z",
-  "duration": 220611,
+  "failures": 4,
+  "start": "2024-05-21T12:53:03.140Z",
+  "duration": 267333,
   "file": "cypress\\e2e\\youtube-tests.cy.js"
 }

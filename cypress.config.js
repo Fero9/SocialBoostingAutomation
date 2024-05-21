@@ -12,7 +12,8 @@ module.exports = defineConfig({
     authToken
   },
   e2e: {
-    baseUrl: 'https://wpstaging.socialboosting.com?convert_optout=1',
+    baseUrl: 'https://wpstaging.socialboosting.com',
+    //?convert_optout=1
     setupNodeEvents(on, config) {
     },
   },
@@ -20,7 +21,7 @@ module.exports = defineConfig({
   viewportWidth: 1920,
   watchForFileChanges: false,
   followRedirect: true,
-  pageLoadTimeout: 60000,
+  pageLoadTimeout: 20000,
   chromeWebSecurity: false,
   experimentalMemoryManagement: true,
 });

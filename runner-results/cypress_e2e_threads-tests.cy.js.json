@@ -1,10 +1,10 @@
 {
-  "suites": 4,
-  "tests": 6,
-  "passes": 3,
+  "suites": 2,
+  "tests": 2,
+  "passes": 0,
   "pending": 0,
-  "failures": 3,
-  "start": "2024-05-20T13:11:15.589Z",
-  "duration": 78957,
+  "failures": 2,
+  "start": "2024-05-21T12:50:33.300Z",
+  "duration": 67805,
   "file": "cypress\\e2e\\threads-tests.cy.js"
 }

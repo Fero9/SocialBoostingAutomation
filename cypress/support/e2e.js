@@ -26,6 +26,7 @@ beforeEach(() => {
     cy.intercept("*", (req) => {
         //Disable convert experiments
         const url = new URL(req.url, window.location.origin);
+        
         if (!url.searchParams.has('convert_optout')) {
             url.searchParams.append('convert_optout', '1');
         }

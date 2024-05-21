@@ -77,19 +77,19 @@ export class InstagramLikesPage{
     instagram_likes_page_3_verified_likes_price = '.e-loop-item-2293 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-161717c > .elementor-widget-container > .elementor-heading-title > .woocommerce-Price-amount > bdi'
 
     buyInstagramHighQualityLikesFirstPackage(){
-        cy.get(this.instagram_likes_page_first_package_high_quality).click({force:true})
+        cy.get(this.instagram_likes_page_first_package_high_quality).should('be.visible').click({force:true})
         cy.get(".e-loop-item-2272 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-14c3d2f > .elementor-widget-container > .elementor-button-wrapper > .elementor-button").click()
     }
 
     buyInstagramPremiumLikesFirstPackage(){
-        cy.get(this.instagram_likes_page_premium_likes_service).click({force:true})
-        cy.get(this.instagram_likes_page_first_package_premium).click({force:true})
+        cy.get(this.instagram_likes_page_premium_likes_service).should('be.visible').click({force:true})
+        cy.get(this.instagram_likes_page_first_package_premium).should('be.visible').click({force:true})
         cy.get(".e-loop-item-2287 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-14c3d2f > .elementor-widget-container > .elementor-button-wrapper > .elementor-button").click({force:true})
     }
 
     buyInstagramVerifiedLikesFirstPackage(){
-        cy.get(this.instagram_likes_page_verified_likes_service).click({force:true})
-        cy.get(this.instagram_likes_page_first_package_verified).click({force:true})
+        cy.get(this.instagram_likes_page_verified_likes_service).should('be.visible').click({force:true})
+        cy.get(this.instagram_likes_page_first_package_verified).should('be.visible').click({force:true})
     }
     
     checkInstagramHighQualityLikesPackages(){
