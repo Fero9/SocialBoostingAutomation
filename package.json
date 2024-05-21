@@ -6,17 +6,17 @@
   "scripts": {
     "cypress:run": "npx cypress run",
     "dev": "node frantisek.socialboosting.com:3000",
-    "cy:parallel":"cypress-parallel -d cypress/e2e/ -t 4 -s cypress:run"
+    "cy:parallel": "cypress-parallel -d cypress/e2e/ -t 4 -s cypress:run"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^13.6.5",
     "cypress-parallel": "^0.14.0",
     "dotenv": "^16.4.5"
   },
   "devDependencies": {
+    "cypress": "^13.9.0",
     "cypress-split": "^1.23.2"
   }
 }
