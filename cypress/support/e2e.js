@@ -33,8 +33,25 @@ beforeEach(() => {
         req.url = url.toString();
         req.headers["cypress-auth"] = authToken;
     }).as("allRequests");
-    cy.visit('')
+    // Separate chaining for cy.visit and cy.wait
+    cy.visit('', { timeout: 60000, retryOnNetworkFailure: true, retryOnStatusCodeFailure: true });
+    cy.wait("@allRequests").then((interceptions) => {
+        // Ensure interceptions is an array and then iterate
+        if (Array.isArray(interceptions)) {
+            interceptions.forEach((interception) => {
+                cy.log(`Intercepting request: ${interception.request.method} ${interception.request.url}`);
+            });
+        
+            const lastRequestEndTime = interceptions[interceptions.length - 1].response.timestamp;
+            const firstRequestStartTime = interceptions[0].request.timestamp;
+            const totalRequestTime = lastRequestEndTime - firstRequestStartTime;
+            cy.log(`Total time for all requests: ${totalRequestTime} ms`);
+        } else {
+            cy.log("No interceptions found."); // Handle the case where no requests were intercepted
+        }
+    });
 })
+
 
 afterEach(function onAfterEach() {
     if (this.currentTest.state === 'failed') {

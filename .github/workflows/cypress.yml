@@ -1,47 +1,66 @@
-name: Cypress Tests
-run-name: Cypress Tests - [${{ inputs.CORRELATOR && inputs.CORRELATOR || 'N/A' }}]
 
-on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:
-    inputs:
-      ENVTOTEST:
-        description: 'What environment to test?'
-        required: true
-        default: 'stage'
-        options:
-          - 'stage'
-          - 'prod'
-      CORRELATOR:
-        description: 'Correlator ID (for finding this run later)'
-        required: false
-        
-jobs:
-  Cypress-Test:
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        containers: [1]
-    steps:
-      - name: Checkout GitCode
-        uses: actions/checkout@v2
-
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Run Cypress Test
-        uses: cypress-io/github-action@v5
-        with:
-          # Records to Cypress Cloud
-          # https://docs.cypress.io/guides/cloud/projects#Set-up-a-project-to-record
-          record: false
-          parallel: true # Runs test in parallel using settings above
-          command: npm run cy:parallel --config-file ${{ inputs.ENVTOTEST }}.config.js
-          browser: electron
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
+          
+          name: Cypress Tests
+          run-name: Cypress Tests - [${{ inputs.CORRELATOR && inputs.CORRELATOR || 'N/A' }}]
+          
+          on:
+            push:
+              branches:
+                - main
+            workflow_dispatch:
+              inputs:
+                ENVTOTEST:
+                  description: "What environment to test?"
+                  required: true
+                  default: "stage"
+                options:
+                    - "stage"
+                      - "prod"
+                CORRELATOR:
+                  description: "Correlator ID (for finding this run later)"
+                  required: false
+          
+          jobs:
+            Cypress-Test:
+              runs-on: ubuntu-latest
+              strategy:
+                fail-fast: false
+              steps:
+                - name: Checkout GitCode
+                  uses: actions/checkout@v3  # Use the latest version of the checkout action
+          
+                - name: Cache Node Modules
+                  uses: actions/cache@v3  # Cache dependencies to speed up subsequent runs
+                  id: cache-npm
+                  with:
+                    path: node_modules
+                    key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+                    restore-keys: |
+                      ${{ runner.os }}-node-
+          
+                - name: Install Dependencies (if cache not found)
+                  if: steps.cache-npm.outputs.cache-hit != 'true'
+                  run: npm install --prefer-offline  # Use --prefer-offline for faster installs when possible
+          
+                - name: Run Cypress Tests
+                  uses: cypress-io/github-action@v5
+                  with:
+                    record: false
+                    parallel: true  # Run tests in parallel if you have a Cypress Cloud plan
+                    group: "UI-Chrome"  # Group tests for better reporting (Cypress Cloud)
+                    command: npm run cy:parallel --config-file ${{ inputs.ENVTOTEST }}.config.js
+                    browser: electron
+                    env:
+                      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                      AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
+          
+                - name: Store Test Artifacts (Optional)
+                  uses: actions/upload-artifact@v3  # Upload test results, screenshots, videos (if generated)
+                  if: failure() || always() 
+                  with:
+                    name: cypress-artifacts
+                    path: |
+                      cypress/videos
+                      cypress/screenshots
+                      cypress/results
           
