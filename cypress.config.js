@@ -6,16 +6,16 @@ dotenv.config();
 const authToken = process.env.AUTH_TOKEN;
 
 module.exports = defineConfig({
-  projectId: "5e2ny4",
+  //projectId: "5e2ny4",
 
   env: {
     authToken
   },
   e2e: {
-    baseUrl: 'https://wpstaging.socialboosting.com',
-    //?convert_optout=1
+    baseUrl: 'https://wpstaging.socialboosting.com?convert_optout=1',
     setupNodeEvents(on, config) {
     },
+    specPattern: 'cypress/e2e/*.cy.js'
   },
   viewportHeight: 1080,
   viewportWidth: 1920,

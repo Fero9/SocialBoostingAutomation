@@ -35,3 +35,12 @@ beforeEach(() => {
     }).as("allRequests");
     cy.visit('')
 })
+
+afterEach(function onAfterEach() {
+    if (this.currentTest.state === 'failed') {
+      cy.setCookie('shouldSkip', 'true');
+      //set cookie to skip tests for further specs
+      Cypress.runner.stop();
+      //this will skip tests only for current spec
+    }
+  });
