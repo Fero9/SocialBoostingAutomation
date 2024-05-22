@@ -13,9 +13,9 @@
                   description: "What environment to test?"
                   required: true
                   default: "stage"
-                options:
+                  options:
                     - "stage"
-                      - "prod"
+                    - "prod"
                 CORRELATOR:
                   description: "Correlator ID (for finding this run later)"
                   required: false
