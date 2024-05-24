@@ -16,7 +16,7 @@ import { InstagramViewsPage } from "./pages/instagram/instagram_views_page"
 import { InstagramCommentsPage } from "./pages/instagram/instagram_comments_page"
 import { InstagramReelsLikesPage } from "./pages/instagram/instagram_reels_likes_page"
 import { InstagramReelsViewsPage } from "./pages/instagram/instagram_reels_views_page"
-
+import { slowCypressDown } from 'cypress-slow-down'
 
 const homePage = new HomePage()
 const accountInformationPage = new AccountInformationPage()
@@ -31,8 +31,7 @@ const instagramReelsLikesPage = new InstagramReelsLikesPage()
 const instagramReelsViewsPage = new InstagramReelsViewsPage()
 
 describe('Instagram Service Tests', ()=>{
-
-    context('Instagram Followers Tests', () =>{
+    context.only('Instagram Followers Tests', () =>{
         it('The user is able to purchase 500 High Quality Followers', () =>{
             homePage.goToInstagramPage()
             instagramFollowersPage.buyInstagramHighQualityFollowersFirstPackage()
@@ -63,11 +62,10 @@ describe('Instagram Service Tests', ()=>{
     })
     
 
-    context('Instagram Likes Tests', ()=>{
+    context.only('Instagram Likes Tests', ()=>{
         it('The user is able to purchase 250 High Quality Likes', () =>{
             homePage.goToInstagramPage()
             instagramFollowersPage.goToInstagramLikesPage()
-            cy.wait(2000)
             instagramLikesPage.buyInstagramHighQualityLikesFirstPackage()
             accountInformationPage.verifyQtyAndPriceIGHQLK()
             accountInformationPage.enterIGAccountInformation()
@@ -79,7 +77,6 @@ describe('Instagram Service Tests', ()=>{
         it('The user is able to purchase 250 Premium Likes', () =>{
             homePage.goToInstagramPage()
             instagramFollowersPage.goToInstagramLikesPage()
-            cy.wait(2000)
             instagramLikesPage.buyInstagramPremiumLikesFirstPackage()
             accountInformationPage.verifyQtyAndPriceIGPRLK()
             accountInformationPage.enterIGAccountInformation()
@@ -91,7 +88,6 @@ describe('Instagram Service Tests', ()=>{
         it('The user is able to purchase 1 Verified Like', () =>{
             homePage.goToInstagramPage()
             instagramFollowersPage.goToInstagramLikesPage()
-            cy.wait(2000)
             instagramLikesPage.buyInstagramVerifiedLikesFirstPackage()
             accountInformationPage.verifyQtyAndPriceIGVFLK()
             accountInformationPage.enterIGAccountInformation()

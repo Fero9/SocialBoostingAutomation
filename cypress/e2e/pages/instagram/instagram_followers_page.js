@@ -58,7 +58,6 @@ export class InstagramFollowersPage{
     buyInstagramHighQualityFollowersFirstPackage(){
         cy.get(this.instagram_followers_page_first_package_high_quality).click({force:true})
         //Convert affects this
-        cy.get(".e-loop-item-2193 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-14c3d2f > .elementor-widget-container > .elementor-button-wrapper > .elementor-button").click({force:true})
     }
 
     buyInstagramPremiumFollowersFirstPackage(){

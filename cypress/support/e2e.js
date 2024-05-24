@@ -21,6 +21,13 @@ import './commands'
 
 //Put as an ENV variable
 
+
+beforeEach(() =>{
+    cy.visit('https://socialboosting.com?convert_optout=1')
+})
+
+
+/*
 const authToken = Cypress.env('authToken');
 beforeEach(() => {
     cy.intercept("*", (req) => {
@@ -34,7 +41,8 @@ beforeEach(() => {
         req.headers["cypress-auth"] = authToken;
     }).as("allRequests");
     // Separate chaining for cy.visit and cy.wait
-    cy.visit('', { timeout: 60000, retryOnNetworkFailure: true, retryOnStatusCodeFailure: true });
+    cy.visit('')//, { timeout: 60000, retryOnNetworkFailure: true, retryOnStatusCodeFailure: true });
+
     cy.wait("@allRequests").then((interceptions) => {
         // Ensure interceptions is an array and then iterate
         if (Array.isArray(interceptions)) {
@@ -49,10 +57,15 @@ beforeEach(() => {
         } else {
             cy.log("No interceptions found."); // Handle the case where no requests were intercepted
         }
-    });
+    });;
+
 })
 
+*/
 
+
+
+/*
 afterEach(function onAfterEach() {
     if (this.currentTest.state === 'failed') {
       cy.setCookie('shouldSkip', 'true');
@@ -61,3 +74,4 @@ afterEach(function onAfterEach() {
       //this will skip tests only for current spec
     }
   });
+*/

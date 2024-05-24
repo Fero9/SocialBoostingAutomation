@@ -26,7 +26,7 @@ const cartSummaryPage = new CartSummaryPage()
 describe('Threads Service Tests', ()=>{
 
 
-    context('Threads Followers Tests', () =>{
+    context.only('Threads Followers Tests', () =>{
         it('The user is able to purchase 100 High Quality Followers', () =>{
             homePage.goToThreadsPage()
             threadsFollowersPage.buyThreadsHighQualityFollowersFirstPackage()

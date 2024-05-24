@@ -31,7 +31,7 @@ const cartSummaryPage = new CartSummaryPage()
 
 describe('TikTok Service Tests', ()=>{
 
-    context('TikTok Followers Tests', () =>{
+    context.only('TikTok Followers Tests', () =>{
         it('The user is able to purchase 250 High Quality Followers', () =>{
             homePage.goToTikTokPage()
             tiktokFollowersPage.buyTikTokHighQualityFollowersFirstPackage() 
@@ -63,7 +63,7 @@ describe('TikTok Service Tests', ()=>{
         })
     })
 
-    context('TikTok Likes Tests', ()=>{
+    context.only('TikTok Likes Tests', ()=>{
         it('The user is able to purchase 250 High Quality Likes', () =>{
             homePage.goToTikTokPage()
             tiktokFollowersPage.goToTikTokLikesPage()
@@ -101,7 +101,7 @@ describe('TikTok Service Tests', ()=>{
         })
     })
     
-    context('TikTok Views Tests', ()=>{
+    context.only('TikTok Views Tests', ()=>{
         it('The user is able to purchase 1,000 Views', () =>{
             homePage.goToTikTokPage()
             tiktokFollowersPage.goToTikTokViewsPage()

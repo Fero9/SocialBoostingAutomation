@@ -28,7 +28,7 @@ const cartSummaryPage = new CartSummaryPage()
 describe('Twitter Service Tests', ()=>{
 
 
-    context('Twitter Followers Tests', () =>{
+    context.only('Twitter Followers Tests', () =>{
         it('The user is able to purchase 250 High Quality Followers', () =>{
             homePage.goToTwitterPage()
             twitterFollowersPage.buyTwitterHighQualityFollowersFirstPackage()
@@ -82,7 +82,7 @@ describe('Twitter Service Tests', ()=>{
         })
     })
 
-    context('Twitter Retweets Tests', () =>{
+    context.only('Twitter Retweets Tests', () =>{
         it('The user is able to purchase 50 High Quality Retweets', () =>{
             homePage.goToTwitterPage()
             twitterFollowersPage.goToTwitterRetweetsPage()

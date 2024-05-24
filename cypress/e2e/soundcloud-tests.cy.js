@@ -26,7 +26,7 @@ const cartSummaryPage = new CartSummaryPage()
 describe('SoundCloud Service Tests', ()=>{
 
 
-    context('SoundCloud Followers Tests', () =>{
+    context.only('SoundCloud Followers Tests', () =>{
         it('The user is able to purchase 100 High Quality Followers', () =>{
             homePage.goToSoundCloudPage()
             soundcloudFollowersPage.buySoundCloudHighQualityFollowersFirstPackage()
@@ -42,7 +42,7 @@ describe('SoundCloud Service Tests', ()=>{
         })
     })
 
-    context('SoundCloud Likes Tests', () =>{
+    context.only('SoundCloud Likes Tests', () =>{
         it('The user is able to purchase 100 High Quality Likes', () =>{
             homePage.goToSoundCloudPage()
             soundcloudFollowersPage.goToSoundCloudLikesPage()

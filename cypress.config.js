@@ -12,7 +12,8 @@ module.exports = defineConfig({
     authToken
   },
   e2e: {
-    baseUrl: 'https://wpstaging.socialboosting.com?convert_optout=1',
+    baseUrl: 'https://socialboosting.com?convert_optout=1',
+    //wpstaging.
     setupNodeEvents(on, config) {
     },
     specPattern: 'cypress/e2e/*.cy.js'
@@ -24,4 +25,5 @@ module.exports = defineConfig({
   pageLoadTimeout: 20000,
   chromeWebSecurity: false,
   experimentalMemoryManagement: true,
+  experimentalSingleTabRunMode: true,
 });

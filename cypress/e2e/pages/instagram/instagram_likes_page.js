@@ -78,13 +78,11 @@ export class InstagramLikesPage{
 
     buyInstagramHighQualityLikesFirstPackage(){
         cy.get(this.instagram_likes_page_first_package_high_quality).click({force:true})
-        cy.get(".e-loop-item-2272 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-14c3d2f > .elementor-widget-container > .elementor-button-wrapper > .elementor-button").click()
     }
 
     buyInstagramPremiumLikesFirstPackage(){
         cy.get(this.instagram_likes_page_premium_likes_service).click({force:true})
         cy.get(this.instagram_likes_page_first_package_premium).click({force:true})
-        cy.get(".e-loop-item-2287 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-14c3d2f > .elementor-widget-container > .elementor-button-wrapper > .elementor-button").click({force:true})
     }
 
     buyInstagramVerifiedLikesFirstPackage(){

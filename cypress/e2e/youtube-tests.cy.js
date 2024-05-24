@@ -29,7 +29,7 @@ const cartSummaryPage = new CartSummaryPage()
 
 describe('YouTube Service Tests', ()=>{
 
-    context('YouTube Subscribers Tests', () =>{
+    context.only('YouTube Subscribers Tests', () =>{
         it('The user is able to purchase 100 High Quality Subscribers', () =>{
             homePage.goToYouTubePage()
             youtubeSubscribersPage.buyYouTubeHighQualitySubscribersFirstPackage()
@@ -59,7 +59,7 @@ describe('YouTube Service Tests', ()=>{
         })
     })
 
-    context('YouTube Likes Tests', () =>{
+    context.only('YouTube Likes Tests', () =>{
         it('The user is able to purchase 100 High Quality Likes', () =>{
             homePage.goToYouTubePage()
             youtubeSubscribersPage.goToYouTubeLikesPage()

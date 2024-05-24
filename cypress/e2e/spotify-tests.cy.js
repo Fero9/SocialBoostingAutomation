@@ -26,7 +26,7 @@ const cartSummaryPage = new CartSummaryPage()
 describe('Spotify Service Tests', ()=>{
 
 
-    context('Spotify Followers Tests', () =>{
+    context.only('Spotify Followers Tests', () =>{
         it('The user is able to purchase 250 High Quality Followers', () =>{
             homePage.goToSpotifyPage()
             spotifyFollowersPage.buySpotifyHighQualityFollowersFirstPackage()
@@ -42,7 +42,7 @@ describe('Spotify Service Tests', ()=>{
         })
     })
 
-    context('Spotify Plays Tests', () =>{
+    context.only('Spotify Plays Tests', () =>{
         it('The user is able to purchase 1,000 High Quality Plays', () =>{
             homePage.goToSpotifyPage()
             spotifyFollowersPage.goToSpotifyPlaysPage()
