@@ -5,18 +5,18 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:
-    inputs:
-      ENVTOTEST:
-        description: 'What environment to test?'
-        required: false
-        default: 'stage'
-        options:
-          - 'stage'
-          - 'prod'
-      CORRELATOR:
-        description: 'Correlator ID (for finding this run later)'
-        required: false
+  #workflow_dispatch:
+    #inputs:
+      #ENVTOTEST:
+        #description: 'What environment to test?'
+        #required: true
+        #default: 'stage'
+        #options:
+         # - 'stage'
+         # - 'prod'
+      #CORRELATOR:
+        #description: 'Correlator ID (for finding this run later)'
+        #required: false
         
 jobs:
   Cypress-Test:
