@@ -39,7 +39,7 @@ jobs:
           # https://docs.cypress.io/guides/cloud/projects#Set-up-a-project-to-record
           record: false
           parallel: true # Runs test in parallel using settings above
-          command: npm run cy:parallel --config-file ${{ inputs.ENVTOTEST }}.config.js
+          command: npm run cy:parallel # --config-file ${{ inputs.ENVTOTEST }}.config.js
           browser: electron
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
