@@ -9,7 +9,7 @@ on:
     inputs:
       ENVTOTEST:
         description: 'What environment to test?'
-        required: true
+        required: false
         default: 'stage'
         options:
           - 'stage'
