@@ -3,7 +3,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 module.exports = defineConfig({
-  projectId: "5e2ny4",
+  projectId: "4dcma4",
   
   env: {
     authToken: process.env.AUTH_TOKEN,
@@ -16,7 +16,7 @@ module.exports = defineConfig({
   viewportWidth: 1920,
   watchForFileChanges: false,
   followRedirect: true,
-  pageLoadTimeout: 60000,
+  pageLoadTimeout: 20000,
   chromeWebSecurity: false,
   experimentalMemoryManagement: true,
 });
