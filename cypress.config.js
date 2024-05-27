@@ -6,6 +6,7 @@ dotenv.config();
 const authToken = process.env.AUTH_TOKEN;
 
 module.exports = defineConfig({
+  projectId: '4dcma4',
   //projectId: "5e2ny4",
 
   env: {
