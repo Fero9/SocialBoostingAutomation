@@ -46,22 +46,22 @@ export class SoundCloudFollowersPage{
         cy.get(this.soundcloud_followers_page_100_high_quality_followers_price).should('contain','$2.22')
         //250 High Quality followers
         cy.get(this.soundcloud_followers_page_250_high_quality_followers_amount).should('contain', '250')
-        cy.get(this.soundcloud_followers_page_250_high_quality_followers_price).should('contain','$5.55')
+        cy.get(this.soundcloud_followers_page_250_high_quality_followers_price).should('contain','$5.00')
         //500 High Quality followers
         cy.get(this.soundcloud_followers_page_500_high_quality_followers_amount).should('contain', '500')
-        cy.get(this.soundcloud_followers_page_500_high_quality_followers_price).should('contain','$5.66')
+        cy.get(this.soundcloud_followers_page_500_high_quality_followers_price).should('contain','$9.00')
         //1,000 High Quality followers
         cy.get(this.soundcloud_followers_page_1000_high_quality_followers_amount).should('contain', '1,000')
-        cy.get(this.soundcloud_followers_page_1000_high_quality_followers_price).should('contain','$15.15')
+        cy.get(this.soundcloud_followers_page_1000_high_quality_followers_price).should('contain','$16.00')
         //1,500 High Quality followers
         cy.get(this.soundcloud_followers_page_1500_high_quality_followers_amount).should('contain', '1,500')
-        cy.get(this.soundcloud_followers_page_1500_high_quality_followers_price).should('contain','$20.20')
+        cy.get(this.soundcloud_followers_page_1500_high_quality_followers_price).should('contain','$22.00')
         //2,500 High Quality followers
         cy.get(this.soundcloud_followers_page_2500_high_quality_followers_amount).should('contain', '2,500')
-        cy.get(this.soundcloud_followers_page_2500_high_quality_followers_price).should('contain','$30.30')
+        cy.get(this.soundcloud_followers_page_2500_high_quality_followers_price).should('contain','$33.00')
         //5,000 High Quality followers
         cy.get(this.soundcloud_followers_page_5000_high_quality_followers_amount).should('contain', '5,000')
-        cy.get(this.soundcloud_followers_page_5000_high_quality_followers_price).should('contain','$48.48')
+        cy.get(this.soundcloud_followers_page_5000_high_quality_followers_price).should('contain','$49.00')
         //7,500 High Quality followers
         cy.get(this.soundcloud_followers_page_7500_high_quality_followers_amount).should('contain', '7,500')
         cy.get(this.soundcloud_followers_page_7500_high_quality_followers_price).should('contain','$64.64')

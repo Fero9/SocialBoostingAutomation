@@ -42,22 +42,22 @@ export class SoundCloudPlaysPage{
         cy.get(this.soundcloud_plays_page_1000_high_quality_plays_price).should('contain','$3.33')
         //2,500 High Quality plays
         cy.get(this.soundcloud_plays_page_2500_high_quality_plays_amount).should('contain', '2,500')
-        cy.get(this.soundcloud_plays_page_2500_high_quality_plays_price).should('contain','$5.55')
+        cy.get(this.soundcloud_plays_page_2500_high_quality_plays_price).should('contain','$7.00')
         //5,000 High Quality plays
         cy.get(this.soundcloud_plays_page_5000_high_quality_plays_amount).should('contain', '5,000')
-        cy.get(this.soundcloud_plays_page_5000_high_quality_plays_price).should('contain','$8.88')
+        cy.get(this.soundcloud_plays_page_5000_high_quality_plays_price).should('contain','$11.00')
         //10,000 High Quality plays
         cy.get(this.soundcloud_plays_page_10000_high_quality_plays_amount).should('contain', '10,000')
-        cy.get(this.soundcloud_plays_page_10000_high_quality_plays_price).should('contain','$14.14')
+        cy.get(this.soundcloud_plays_page_10000_high_quality_plays_price).should('contain','$17.00')
         //15,000 High Quality plays
         cy.get(this.soundcloud_plays_page_15000_high_quality_plays_amount).should('contain', '15,000')
-        cy.get(this.soundcloud_plays_page_15000_high_quality_plays_price).should('contain','$16.16')
+        cy.get(this.soundcloud_plays_page_15000_high_quality_plays_price).should('contain','$22.00')
         //25,000 High Quality plays
         cy.get(this.soundcloud_plays_page_25000_high_quality_plays_amount).should('contain', '25,000')
-        cy.get(this.soundcloud_plays_page_25000_high_quality_plays_price).should('contain','$21.21')
+        cy.get(this.soundcloud_plays_page_25000_high_quality_plays_price).should('contain','$27.00')
         //35,000 High Quality plays
         cy.get(this.soundcloud_plays_page_35000_high_quality_plays_amount).should('contain', '35,000')
-        cy.get(this.soundcloud_plays_page_35000_high_quality_plays_price).should('contain','$28.28')
+        cy.get(this.soundcloud_plays_page_35000_high_quality_plays_price).should('contain','$32.00')
         //50,000 High Quality plays
         cy.get(this.soundcloud_plays_page_50000_high_quality_plays_amount).should('contain', '50,000')
         cy.get(this.soundcloud_plays_page_50000_high_quality_plays_price).should('contain','$35.35')

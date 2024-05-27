@@ -77,13 +77,13 @@ export class CartSummaryPage{
     cartTotalSPHQLS = '17.39'
 
     //SoundCloud Followers Cart Total
-    cartTotalSCHQFL = '2.77'
+    cartTotalSCHQFL = '2.72'
 
     //SoundCloud Likes Cart Total
     cartTotalSCHQLK = '4.99'
 
     //SoundCloud Plays Cart Total
-    cartTotalSCHQPL = '7.99'
+    cartTotalSCHQPL = '9.08'
 
     //Threads Followers Cart Total
     cartTotalTHHQFL = '7.75'
@@ -400,7 +400,7 @@ export class CartSummaryPage{
     proceedToPaymentSCHQFL(){
         cy.get(this.cartSummaryPageSelectedService).should('contain', '100')
         cy.get(this.cartSummaryPagePackagePrice).should('contain','$2.22')
-        cy.get(this.cartSummaryPageUpsellPriceNoCross).should('contain', '$0.55')
+        cy.get(this.cartSummaryPageUpsellPriceNoCross).should('contain', '$0.50')
         cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalSCHQFL)
         cy.get(this.cartSummaryPageSubmitButton).click()
     }
@@ -409,10 +409,10 @@ export class CartSummaryPage{
     proceedToPaymentSCHQLK(){
         cy.get(this.cartSummaryPageSelectedService).should('contain', '100')
         cy.get(this.cartSummaryPagePackagePrice).should('contain','$2.22')
-        cy.get(this.cartSummaryPageUpsellNameCross).should('contain','25')
-        cy.get(this.cartSummaryPageUpsellPriceCross).should('contain', '$0.55')
-        cy.get(this.cartSummaryPageCrossSellName).should('contain','500')
-        cy.get(this.cartSummaryPageCrossSellPrice).should('contain','$2.22')
+        cy.get(this.cartSummaryPageCrossSellName).should('contain','25')
+        cy.get(this.cartSummaryPageCrossSellPrice).should('contain', '$0.55')
+        cy.get(this.cartSummaryPageCrossSellNameTwo).should('contain','500')
+        cy.get(this.cartSummaryPageCrossSellPriceTwo).should('contain','$2.22')
         cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalSCHQLK)
         cy.get(this.cartSummaryPageSubmitButton).click()
     }
@@ -421,10 +421,10 @@ export class CartSummaryPage{
     proceedToPaymentSCHQPL(){
         cy.get(this.cartSummaryPageSelectedService).should('contain', '1,000')
         cy.get(this.cartSummaryPagePackagePrice).should('contain','$3.33')
-        cy.get(this.cartSummaryPageUpsellNameCross).should('contain','250')
-        cy.get(this.cartSummaryPageUpsellPriceCross).should('contain', '$1.33')
         cy.get(this.cartSummaryPageCrossSellName).should('contain','250')
-        cy.get(this.cartSummaryPageCrossSellPrice).should('contain','$3.33')
+        cy.get(this.cartSummaryPageCrossSellPrice).should('contain', '$0.75')
+        cy.get(this.cartSummaryPageCrossSellNameTwo).should('contain','250')
+        cy.get(this.cartSummaryPageCrossSellPriceTwo).should('contain','$5.00')
         cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalSCHQPL)
         cy.get(this.cartSummaryPageSubmitButton).click()
     }

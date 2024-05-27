@@ -45,27 +45,27 @@ export class SoundCloudLikesPage{
         cy.get(this.soundcloud_likes_page_100_high_quality_likes_price).should('contain','$2.22')
         //250 High Quality likes
         cy.get(this.soundcloud_likes_page_250_high_quality_likes_amount).should('contain', '250')
-        cy.get(this.soundcloud_likes_page_250_high_quality_likes_price).should('contain','$3.33')
+        cy.get(this.soundcloud_likes_page_250_high_quality_likes_price).should('contain','$5.00')
         //500 High Quality likes
         cy.get(this.soundcloud_likes_page_500_high_quality_likes_amount).should('contain', '500')
-        cy.get(this.soundcloud_likes_page_500_high_quality_likes_price).should('contain','$5.55')
+        cy.get(this.soundcloud_likes_page_500_high_quality_likes_price).should('contain','$8.00')
         //1,000 High Quality likes
         cy.get(this.soundcloud_likes_page_1000_high_quality_likes_amount).should('contain', '1,000')
-        cy.get(this.soundcloud_likes_page_1000_high_quality_likes_price).should('contain','$9.99')
+        cy.get(this.soundcloud_likes_page_1000_high_quality_likes_price).should('contain','$13.00')
         //1,500 High Quality likes
         cy.get(this.soundcloud_likes_page_1500_high_quality_likes_amount).should('contain', '1,500')
-        cy.get(this.soundcloud_likes_page_1500_high_quality_likes_price).should('contain','$12.12')
+        cy.get(this.soundcloud_likes_page_1500_high_quality_likes_price).should('contain','$15.00')
         //2,500 High Quality likes
         cy.get(this.soundcloud_likes_page_2500_high_quality_likes_amount).should('contain', '2,500')
         cy.get(this.soundcloud_likes_page_2500_high_quality_likes_price).should('contain','$18.18')
         //5,000 High Quality likes
         cy.get(this.soundcloud_likes_page_5000_high_quality_likes_amount).should('contain', '5,000')
-        cy.get(this.soundcloud_likes_page_5000_high_quality_likes_price).should('contain','$25.25')
+        cy.get(this.soundcloud_likes_page_5000_high_quality_likes_price).should('contain','$27.00')
         //7,500 High Quality likes
         cy.get(this.soundcloud_likes_page_7500_high_quality_likes_amount).should('contain', '7,500')
-        cy.get(this.soundcloud_likes_page_7500_high_quality_likes_price).should('contain','$32.32')
+        cy.get(this.soundcloud_likes_page_7500_high_quality_likes_price).should('contain','$31.00')
         //10,000 High Quality likes
         cy.get(this.soundcloud_likes_page_10000_high_quality_likes_amount).should('contain', '10,000')
-        cy.get(this.soundcloud_likes_page_10000_high_quality_likes_price).should('contain','$38.38')
+        cy.get(this.soundcloud_likes_page_10000_high_quality_likes_price).should('contain','$36.00')
     }
 }
