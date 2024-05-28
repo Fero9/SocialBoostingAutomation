@@ -36,12 +36,9 @@ jobs:
       - name: Run Cypress Test
         uses: cypress-io/github-action@v5
         with:
-          # Records to Cypress Cloud
-          # https://docs.cypress.io/guides/cloud/projects#Set-up-a-project-to-record
-          record: false
-          parallel: true # Runs test in parallel using settings above
-          command: npx cypress run --record --key d976bb44-008c-42dc-826b-116dc6445010 --parallel  --config-file ${{ inputs.ENVTOTEST }}.config.js
+          command: npx cypress run --config-file ${{ inputs.ENVTOTEST }}.config.js
           browser: electron
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SPLIT: ${{ strategy.job-total}}
+          SPLIT_INDEX: ${{ strategy.job-index}}
           AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
