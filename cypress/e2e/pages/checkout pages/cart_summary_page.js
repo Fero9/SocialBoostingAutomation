@@ -86,7 +86,7 @@ export class CartSummaryPage{
     cartTotalSCHQPL = '9.08'
 
     //Threads Followers Cart Total
-    cartTotalTHHQFL = '7.75'
+    cartTotalTHHQFL = '7.05'
 
     //Threads Likes Cart Total
     cartTotalTHHQLK = '8.83'
@@ -225,10 +225,10 @@ export class CartSummaryPage{
     proceedToPaymentIGHQLK(){
         cy.get(this.cartSummaryPageSelectedService).should('contain', '250')
         cy.get(this.cartSummaryPagePackagePrice).should('contain','$4.59')
-        cy.get(this.cartSummaryPageUpsellNameCross).should('contain', '100')
-        cy.get(this.cartSummaryPageUpsellPriceCross).should('contain', '$2.35')
-        cy.get(this.cartSummaryPageCrossSellName).should('contain', '2,500')
-        cy.get(this.cartSummaryPageCrossSellPrice).should('contain', '$6.66')
+        cy.get(this.cartSummaryPageCrossSellName).should('contain', '100')
+        cy.get(this.cartSummaryPageCrossSellPrice).should('contain', '$2.35')
+        cy.get(this.cartSummaryPageCrossSellNameTwo).should('contain', '2,500')
+        cy.get(this.cartSummaryPageCrossSellPriceTwo).should('contain', '$6.66')
         cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalIGHQLK)
         cy.get(this.cartSummaryPageSubmitButton).click()
     }
@@ -433,7 +433,7 @@ export class CartSummaryPage{
     proceedToPaymentTHHQFL(){
         cy.get(this.cartSummaryPageSelectedService).should('contain', '100')
         cy.get(this.cartSummaryPagePackagePrice).should('contain','$5.55')
-        cy.get(this.cartSummaryPageUpsellPriceNoCross).should('contain', '$2.20')
+        cy.get(this.cartSummaryPageUpsellPriceNoCross).should('contain', '$1.50')
         cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalTHHQFL)
         cy.get(this.cartSummaryPageSubmitButton).click()
     }

@@ -24,7 +24,6 @@ module.exports = defineConfig({
     pageLoadTimeout: 20000,
     chromeWebSecurity: false,
     experimentalMemoryManagement: true,
-    experimentalSingleTabRunMode: true,
     setupNodeEvents(on, config) {
       cypressSplit(on, config)
       // IMPORTANT: return the config object
