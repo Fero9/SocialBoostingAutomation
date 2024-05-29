@@ -412,14 +412,14 @@ export class PackageAdditionsPage{
     addPackageAdditionsYTHQLK(){
         //Verify if the correct upsell quantity and price are displayed
         cy.get(this.upsell_amount).should('contain', '50')
-        cy.get(this.upsell_price).should('contain', '$1.55')
+        cy.get(this.upsell_price).should('contain', '$1.40')
         //Cart quantity and amount
         cy.get(this.cart_item_quantity_value).should('contain', '250')
         cy.get(this.cart_amount).should('contain', '$7.77')
         //Add the upsell to the cart
         cy.get(this.cart_upsell_package).click()
         cy.get(this.cart_item_quantity_value).should('contain', '300')
-        cy.get(this.cart_amount).should('contain','$9.32')
+        cy.get(this.cart_amount).should('contain','$9.17')
         //Continue
         cy.get(this.submit_button).click()
     }

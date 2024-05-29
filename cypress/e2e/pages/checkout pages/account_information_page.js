@@ -14,7 +14,7 @@ export class AccountInformationPage{
     //YouTube Account Information
     youtube_checkout_account_information_username = '#youtube_checkout_search'
     youtube_checkout_account_information_email = '#socialboosting_youtube_checkout_account_information_email'
-    youtube_channel = '[data-sb-identifier="UCwmZiChSryoWQCZMIQezgTg"]'
+    youtube_channel = '[data-sb-identifier="UCVrN23cf8SmtNIBK2C4Axbg"]'
 
     //Spotify Account Information
     spotify_checkout_account_information_username = '#spotify_checkout_search'

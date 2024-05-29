@@ -78,22 +78,22 @@ export class YouTubeLikesPage{
         cy.get(this.youtube_likes_page_500_high_quality_likes_price).should('contain','$11.11')
         //1,000 High Quality likes
         cy.get(this.youtube_likes_page_1000_high_quality_likes_amount).should('contain', '1,000')
-        cy.get(this.youtube_likes_page_1000_high_quality_likes_price).should('contain','$18.18')
+        cy.get(this.youtube_likes_page_1000_high_quality_likes_price).should('contain','$19.40')
         //1,500 High Quality likes
         cy.get(this.youtube_likes_page_2500_high_quality_likes_amount).should('contain', '2,500')
-        cy.get(this.youtube_likes_page_2500_high_quality_likes_price).should('contain','$35.35')
+        cy.get(this.youtube_likes_page_2500_high_quality_likes_price).should('contain','$39.00')
         //5,000 High Quality likes
         cy.get(this.youtube_likes_page_5000_high_quality_likes_amount).should('contain', '5,000')
-        cy.get(this.youtube_likes_page_5000_high_quality_likes_price).should('contain','$57.57')
+        cy.get(this.youtube_likes_page_5000_high_quality_likes_price).should('contain','$63.00')
         //10,000 High Quality likes
         cy.get(this.youtube_likes_page_10000_high_quality_likes_amount).should('contain', '10,000')
-        cy.get(this.youtube_likes_page_10000_high_quality_likes_price).should('contain','$90.90')
+        cy.get(this.youtube_likes_page_10000_high_quality_likes_price).should('contain','$110.00')
         //15,000 High Quality likes
         cy.get(this.youtube_likes_page_15000_high_quality_likes_amount).should('contain', '15,000')
-        cy.get(this.youtube_likes_page_15000_high_quality_likes_price).should('contain','$130.13')
+        cy.get(this.youtube_likes_page_15000_high_quality_likes_price).should('contain','$150.00')
         //30,000 High Quality likes
         cy.get(this.youtube_likes_page_30000_high_quality_likes_amount).should('contain', '30,000')
-        cy.get(this.youtube_likes_page_30000_high_quality_likes_price).should('contain','$200.20')
+        cy.get(this.youtube_likes_page_30000_high_quality_likes_price).should('contain','$225.00')
     }
 
     checkYouTubePremiumLikesPackages(){
@@ -102,19 +102,19 @@ export class YouTubeLikesPage{
         cy.get(this.youtube_likes_page_250_premium_likes_price).should('contain','$8.88')
         //500 Premium likes
         cy.get(this.youtube_likes_page_500_premium_likes_amount).should('contain', '500')
-        cy.get(this.youtube_likes_page_500_premium_likes_price).should('contain','$13.13')
+        cy.get(this.youtube_likes_page_500_premium_likes_price).should('contain','$15.00')
         //1,000 Premium likes
         cy.get(this.youtube_likes_page_1000_premium_likes_amount).should('contain', '1,000')
-        cy.get(this.youtube_likes_page_1000_premium_likes_price).should('contain','$22.22')
+        cy.get(this.youtube_likes_page_1000_premium_likes_price).should('contain','$25.00')
         //2,500 Premium likes
         cy.get(this.youtube_likes_page_2500_premium_likes_amount).should('contain', '2,500')
-        cy.get(this.youtube_likes_page_2500_premium_likes_price).should('contain','$43.43')
+        cy.get(this.youtube_likes_page_2500_premium_likes_price).should('contain','$55.00')
         //5,000 Premium likes
         cy.get(this.youtube_likes_page_5000_premium_likes_amount).should('contain', '5,000')
-        cy.get(this.youtube_likes_page_5000_premium_likes_price).should('contain','$71.71')
+        cy.get(this.youtube_likes_page_5000_premium_likes_price).should('contain','$90.00')
         //10,000 Premium likes
         cy.get(this.youtube_likes_page_10000_premium_likes_amount).should('contain', '10,000')
-        cy.get(this.youtube_likes_page_10000_premium_likes_price).should('contain','$112.12')
+        cy.get(this.youtube_likes_page_10000_premium_likes_price).should('contain','$144.00')
         //15,000 Premium likes
         cy.get(this.youtube_likes_page_15000_premium_likes_amount).should('contain', '15,000')
         cy.get(this.youtube_likes_page_15000_premium_likes_price).should('contain','$162.16')

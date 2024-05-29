@@ -55,7 +55,7 @@ export class CartSummaryPage{
     cartTotalYTPRSB = '$10.50'
 
     //YouTube Likes Cart Total
-    cartTotalYTHQLK = '$9.32'
+    cartTotalYTHQLK = '$9.17'
     cartTotalYTPRLK = '$10.43'
 
     //YouTube Views Cart Total
@@ -329,7 +329,7 @@ export class CartSummaryPage{
     proceedToPaymentYTHQLK(){
         cy.get(this.cartSummaryPageSelectedService).should('contain', '250')
         cy.get(this.cartSummaryPagePackagePrice).should('contain','$7.77')
-        cy.get(this.cartSummaryPageUpsellPriceCross).should('contain', '$1.55')
+        cy.get(this.cartSummaryPageUpsellPriceNoCross).should('contain', '$1.40')
         cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalYTHQLK)
         cy.get(this.cartSummaryPageSubmitButton).click()
     }
@@ -337,7 +337,7 @@ export class CartSummaryPage{
     proceedToPaymentYTPRLK(){
         cy.get(this.cartSummaryPageSelectedService).should('contain', '250')
         cy.get(this.cartSummaryPagePackagePrice).should('contain','$8.88')
-        cy.get(this.cartSummaryPageUpsellPriceCross).should('contain', '$1.55')
+        cy.get(this.cartSummaryPageUpsellPriceNoCross).should('contain', '$1.55')
         cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalYTPRLK)
         cy.get(this.cartSummaryPageSubmitButton).click()
     }
