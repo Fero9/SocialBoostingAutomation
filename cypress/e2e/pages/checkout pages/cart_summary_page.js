@@ -95,7 +95,7 @@ export class CartSummaryPage{
     cartTotalTHHQRP = '7.77'
 
     //Twitter Followers Cart Total
-    cartTotalTTHQFL = '10.32'
+    cartTotalTTHQFL = '10.48'
 
     //Twitter Likes Cart Total
     cartTotalTTHQLK = '3.22'
@@ -466,7 +466,7 @@ export class CartSummaryPage{
     proceedToPaymentTTHQFL(){
         cy.get(this.cartSummaryPageSelectedService).should('contain', '250')
         cy.get(this.cartSummaryPagePackagePrice).should('contain','$8.88')
-        cy.get(this.cartSummaryPageUpsellPriceNoCross).should('contain', '$1.44')
+        cy.get(this.cartSummaryPageUpsellPriceNoCross).should('contain', '$1.60')
         cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalTTHQFL)
         cy.get(this.cartSummaryPageSubmitButton).click({force:true})
     }

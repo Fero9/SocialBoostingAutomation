@@ -31,7 +31,7 @@ export class AccountInformationPage{
     threads_checkout_account_information_email = '#socialboosting_threads_checkout_account_information_email'
 
     //Twitter Account Information
-    twitter_checkout_account_information_username = '#socialboosting_twitter_checkout_account_information_userId'
+    twitter_checkout_account_information_username = '#twitter_checkout_search'
     twitter_profile = '[data-sb-identifier="elonmusk"]' 
     twitter_checkout_account_information_email = '#socialboosting_twitter_checkout_account_information_email'
     
@@ -337,6 +337,7 @@ export class AccountInformationPage{
         //Populate the account information
         cy.get(this.twitter_checkout_account_information_username).type('elon')
         cy.get(this.twitter_checkout_account_information_email).type('frantisek@socialboosting.com')
+        cy.get(this.twitter_profile).click({force:true})
         cy.get(this.submit_button).click({force:true})
     }
 

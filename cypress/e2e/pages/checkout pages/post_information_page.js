@@ -30,7 +30,8 @@ export class PostInformationPage{
     }
 
     chooseTheTweet(){
-        cy.get('[data-index="1"]').click()
+        //cy.get('[data-index="1"]').click()
+        cy.get('#socialboosting_checkout_item_information_customURL').type('https://x.com/elonmusk/status/1519480761749016577')
         cy.get(this.post_information_page_submit_button).click()
     }
 }

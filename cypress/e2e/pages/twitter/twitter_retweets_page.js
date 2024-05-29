@@ -39,21 +39,21 @@ export class TwitterRetweetsPage{
         cy.get(this.twitter_retweets_page_50_high_quality_retweets_price).should('contain','$2.22')
         //100 High Quality retweets
         cy.get(this.twitter_retweets_page_100_high_quality_retweets_amount).should('contain', '100')
-        cy.get(this.twitter_retweets_page_100_high_quality_retweets_price).should('contain','$2.77')
+        cy.get(this.twitter_retweets_page_100_high_quality_retweets_price).should('contain','$3.50')
         //250 High Quality retweets
         cy.get(this.twitter_retweets_page_250_high_quality_retweets_amount).should('contain', '250')
-        cy.get(this.twitter_retweets_page_250_high_quality_retweets_price).should('contain','$5.55')
+        cy.get(this.twitter_retweets_page_250_high_quality_retweets_price).should('contain','$5.00')
         //500 High Quality retweets
         cy.get(this.twitter_retweets_page_500_high_quality_retweets_amount).should('contain', '500')
-        cy.get(this.twitter_retweets_page_500_high_quality_retweets_price).should('contain','$9.99')
+        cy.get(this.twitter_retweets_page_500_high_quality_retweets_price).should('contain','$12.00')
         //1,000 High Quality retweets
         cy.get(this.twitter_retweets_page_1000_high_quality_retweets_amount).should('contain', '1,000')
-        cy.get(this.twitter_retweets_page_1000_high_quality_retweets_price).should('contain','$17.17')
+        cy.get(this.twitter_retweets_page_1000_high_quality_retweets_price).should('contain','$20.00')
         //2,500 High Quality retweets
         cy.get(this.twitter_retweets_page_2500_high_quality_retweets_amount).should('contain', '2,500')
         cy.get(this.twitter_retweets_page_2500_high_quality_retweets_price).should('contain','$42.42')
         //5,000 High Quality retweets
         cy.get(this.twitter_retweets_page_5000_high_quality_retweets_amount).should('contain', '5,000')
-        cy.get(this.twitter_retweets_page_5000_high_quality_retweets_price).should('contain','$84.84')
+        cy.get(this.twitter_retweets_page_5000_high_quality_retweets_price).should('contain','$75.00')
     }
 }
