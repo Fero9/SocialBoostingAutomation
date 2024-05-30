@@ -32,7 +32,7 @@ const instagramReelsViewsPage = new InstagramReelsViewsPage()
 
 describe('Instagram Service Tests', ()=>{
     context.only('Instagram Followers Tests', () =>{
-        it('The user is able to purchase 500 High Quality Followers', () =>{
+        it.only('The user is able to purchase 500 High Quality Followers', () =>{
             homePage.goToInstagramPage()
             instagramFollowersPage.buyInstagramHighQualityFollowersFirstPackage()
             accountInformationPage.verifyQtyAndPriceIGHQFL()
@@ -62,7 +62,7 @@ describe('Instagram Service Tests', ()=>{
     })
     
 
-    context.only('Instagram Likes Tests', ()=>{
+    context('Instagram Likes Tests', ()=>{
         it('The user is able to purchase 250 High Quality Likes', () =>{
             homePage.goToInstagramPage()
             instagramFollowersPage.goToInstagramLikesPage()

@@ -66,15 +66,15 @@ export class AccountInformationPage{
 
     verifyQtyAndPriceTKTPRLK(){
         //Verify if the correct quantity and price are displayed
-        cy.get(this.checkout_service_qty).should('contain','100 Premium Likes')
-        cy.get(this.checkout_service_price).should('contain', '$7.48')
+        cy.get(this.checkout_service_qty).should('contain','250 Premium Likes')
+        cy.get(this.checkout_service_price).should('contain', '$11.49')
     }
 
     //TikTok Views
     verifyQtyAndPriceTKTVW(){
         //Verify if the correct quantity and price are displayed
         cy.get(this.checkout_service_qty).should('contain','1,000 High Quality Views')
-        cy.get(this.checkout_service_price).should('contain', '$4.59')
+        cy.get(this.checkout_service_price).should('contain', '$4.99')
     }
 
     //TikTok Comments

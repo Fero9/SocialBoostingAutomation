@@ -6,7 +6,7 @@ export class TikTokLikesPage{
     tiktok_likes_page_premium_likes_service = '[data-tab="js-premium-quality-tab"] > .text-wrapper'
     //Packages
     tiktok_likes_page_first_package_high_quality = '.e-loop-item-2123 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner'
-    tiktok_likes_page_first_package_premium = '.e-loop-item-2133 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner'
+    tiktok_likes_page_first_package_premium = '.e-loop-item-2134 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner'
 
     //TikTok High Quality likes Attributes
     //250 High Quality likes
@@ -38,9 +38,6 @@ export class TikTokLikesPage{
     tiktok_likes_page_7500_high_quality_likes_price = '.e-loop-item-2122 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-161717c > .elementor-widget-container > .elementor-heading-title > .woocommerce-Price-amount > bdi'
 
     //TikTok Premium likes Attributes
-    //100 Premium likes
-    tiktok_likes_page_100_premium_likes_amount = '.e-loop-item-2133 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title'
-    tiktok_likes_page_100_premium_likes_price = '.e-loop-item-2133 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-161717c > .elementor-widget-container > .elementor-heading-title > .woocommerce-Price-amount > bdi'
     //250 Premium likes
     tiktok_likes_page_250_premium_likes_amount = '.e-loop-item-2134 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-fb3963d > .elementor-widget-container > .elementor-heading-title'
     tiktok_likes_page_250_premium_likes_price = '.e-loop-item-2134 > .elementor-section-wrap > .elementor-element-3355098 > .e-con-inner > .elementor-element-161717c > .elementor-widget-container > .elementor-heading-title > .woocommerce-Price-amount > bdi'
@@ -107,9 +104,6 @@ export class TikTokLikesPage{
 
     checkTikTokPremiumLikesPackages(){
         cy.get(this.tiktok_likes_page_premium_likes_service).click()
-        //100 Premium likes
-        cy.get(this.tiktok_likes_page_100_premium_likes_amount).should('contain', '100')
-        cy.get(this.tiktok_likes_page_100_premium_likes_price).should('contain', '$7.48')
         //250 Premium likes
         cy.get(this.tiktok_likes_page_250_premium_likes_amount).should('contain', '250')
         cy.get(this.tiktok_likes_page_250_premium_likes_price).should('contain', '$11.49')

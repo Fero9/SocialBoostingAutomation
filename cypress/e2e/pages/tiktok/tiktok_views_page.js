@@ -42,19 +42,19 @@ export class TikTokViewsPage{
     checkTikTokViewsPackages(){
         //1,000 views
         cy.get(this.tiktok_views_page_1000_views_amount).should('contain', '1,000')
-        cy.get(this.tiktok_views_page_1000_views_price).should('contain','$4.60')
+        cy.get(this.tiktok_views_page_1000_views_price).should('contain','$4.99')
         //10000 views
         cy.get(this.tiktok_views_page_10000_views_amount).should('contain', '10,000')
-        cy.get(this.tiktok_views_page_10000_views_price).should('contain','$8.05')
+        cy.get(this.tiktok_views_page_10000_views_price).should('contain','$9.99')
         //15000 views
         cy.get(this.tiktok_views_page_15000_views_amount).should('contain', '15,000')
-        cy.get(this.tiktok_views_page_15000_views_price).should('contain','$10.35')
+        cy.get(this.tiktok_views_page_15000_views_price).should('contain','$14.99')
         //20,000 views
         cy.get(this.tiktok_views_page_20000_views_amount).should('contain', '20,000')
-        cy.get(this.tiktok_views_page_20000_views_price).should('contain','$12.65')
+        cy.get(this.tiktok_views_page_20000_views_price).should('contain','$19.99')
         //30,000 views
         cy.get(this.tiktok_views_page_30000_views_amount).should('contain', '30,000')
-        cy.get(this.tiktok_views_page_30000_views_price).should('contain','$19.55')
+        cy.get(this.tiktok_views_page_30000_views_price).should('contain','$23.99')
         //50,000 views
         cy.get(this.tiktok_views_page_50000_views_amount).should('contain', '50,000')
         cy.get(this.tiktok_views_page_50000_views_price).should('contain','$30.48')
