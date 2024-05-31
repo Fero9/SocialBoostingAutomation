@@ -121,7 +121,7 @@ describe('TikTok Service Tests', ()=>{
         })
     })
     
-    context('TikTok Comments Tests', () =>{
+    context.only('TikTok Comments Tests', () =>{
         it('The user is able to purchase 10 High Quality Comments', () =>{
             homePage.goToTikTokPage()
             tiktokFollowersPage.goToTikTokCommentsPage()

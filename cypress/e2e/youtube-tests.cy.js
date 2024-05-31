@@ -95,7 +95,7 @@ describe('YouTube Service Tests', ()=>{
         })
     })
 
-    context('YouTube Views Tests', () =>{
+    context.only('YouTube Views Tests', () =>{
         it('The user is able to purchase 500 High Quality Views', () =>{
             homePage.goToYouTubePage()
             youtubeSubscribersPage.goToYouTubeViewsPage()

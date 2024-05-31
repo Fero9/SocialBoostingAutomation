@@ -26,7 +26,7 @@ const cartSummaryPage = new CartSummaryPage()
 describe('SoundCloud Service Tests', ()=>{
 
 
-    context('SoundCloud Followers Tests', () =>{
+    context.only('SoundCloud Followers Tests', () =>{
         it('The user is able to purchase 100 High Quality Followers', () =>{
             homePage.goToSoundCloudPage()
             soundcloudFollowersPage.buySoundCloudHighQualityFollowersFirstPackage()

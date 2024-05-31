@@ -82,7 +82,7 @@ describe('Twitter Service Tests', ()=>{
         })
     })
 
-    context.only('Twitter Retweets Tests', () =>{
+    context('Twitter Retweets Tests', () =>{
         it('The user is able to purchase 50 High Quality Retweets', () =>{
             homePage.goToTwitterPage()
             twitterFollowersPage.goToTwitterRetweetsPage()

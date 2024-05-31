@@ -42,7 +42,7 @@ describe('Spotify Service Tests', ()=>{
         })
     })
 
-    context.only('Spotify Plays Tests', () =>{
+    context('Spotify Plays Tests', () =>{
         it('The user is able to purchase 1,000 High Quality Plays', () =>{
             homePage.goToSpotifyPage()
             spotifyFollowersPage.goToSpotifyPlaysPage()
