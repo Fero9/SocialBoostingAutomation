@@ -277,9 +277,9 @@ export class CartSummaryPage{
 
     proceedToPaymentIGPRCM(){
         cy.get(this.cartSummaryPageSelectedService).should('contain', '5')
-        cy.get(this.cartSummaryPagePackagePrice).should('contain','$3.33')
-        cy.get(this.cartSummaryPageUpsellNameCross).should('contain', '2')
-        cy.get(this.cartSummaryPageUpsellPriceCross).should('contain', '$1.66')
+        cy.get(this.cartSummaryPagePackagePrice).should('contain','$3.99')
+        cy.get(this.cartSummaryPageCrossSellName).should('contain', '2')
+        cy.get(this.cartSummaryPageCrossSellPrice).should('contain', '$1.66')
         cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalIGPRCM)
         cy.get(this.cartSummaryPageSubmitButton).click()
     }
