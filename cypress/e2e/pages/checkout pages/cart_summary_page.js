@@ -42,7 +42,7 @@ export class CartSummaryPage{
 
     //Instagram Comments
     cartTotalIGHQCM = "$5.32"
-    cartTotalIGPRCM = "$4.99"
+    cartTotalIGPRCM = "$5.65"
 
     //Instagram Reels Likes
     cartTotalIGRLLK = "$12.54"

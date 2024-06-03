@@ -328,7 +328,7 @@ export class PackageAdditionsPage{
         //Add the upsell to the cart
         cy.get(this.cart_upsell_package).click()
         cy.get(this.cart_item_quantity_value).should('contain', '7')
-        cy.get(this.cart_amount).should('contain','$4.99')
+        cy.get(this.cart_amount).should('contain','$5.65')
         //Continue
         cy.get(this.submit_button).click()
     }
