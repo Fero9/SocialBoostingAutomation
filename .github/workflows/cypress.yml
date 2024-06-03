@@ -33,6 +33,23 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
+      - name: Get current GitHub runner IP Address
+        id: get-ip
+        run: echo "ip_address=$(curl -s https://api64.ipify.org?format=json | jq -r '.ip')" >> $GITHUB_OUTPUT
+
+      - name: Whitelist CF WAF for the GitHub runner
+        run: |
+          echo "Runner IP is ${{ steps.get-ip.outputs.ip_address }}, zone_id is ${{ vars.CF_ZONE_ID }}, filter_id is ${{ vars.CF_WAF_FILTER_ID }}"
+          curl -X POST -H "Content-Type: application/json" \
+            -H "Authorization: Bearer ${{ secrets.CF_API_KEY }}" \
+            -d '[
+                  {
+                    "id": "${{ vars.CF_WAF_FILTER_ID }}",
+                    "expression": "(http.host in {\"wpstaging.socialboosting.com\" \"main-staging.socialboosting.com\" \"sb-core-staging.socialboosting.com\"} and ip.src in {${{ steps.get-ip.outputs.ip_address }}})"
+                }
+            ]' \
+            "https://api.cloudflare.com/client/v4/zones/${{ vars.CF_ZONE_ID }}/filters/rules"
+
       - name: Run Cypress Test
         uses: cypress-io/github-action@v5
         with:
@@ -42,3 +59,4 @@ jobs:
           SPLIT: ${{ strategy.job-total}}
           SPLIT_INDEX: ${{ strategy.job-index}}
           AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
+          
