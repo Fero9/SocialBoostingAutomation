@@ -90,10 +90,10 @@ export class TikTokCommentsPage{
         cy.get(this.tiktok_comments_page_200_high_quality_comments_price).should('contain','$48.50')
         //300 High Quality comments
         cy.get(this.tiktok_comments_page_300_high_quality_comments_amount).should('contain', '300')
-        cy.get(this.tiktok_comments_page_300_high_quality_comments_price).should('contain','$70.50')
+        cy.get(this.tiktok_comments_page_300_high_quality_comments_price).should('contain','$65.00')
         //400 High Quality comments
         cy.get(this.tiktok_comments_page_400_high_quality_comments_amount).should('contain', '400')
-        cy.get(this.tiktok_comments_page_400_high_quality_comments_price).should('contain','$85.55')
+        cy.get(this.tiktok_comments_page_400_high_quality_comments_price).should('contain','$77.00')
     }
 
     checkTikTokPremiumCommentsPackages(){

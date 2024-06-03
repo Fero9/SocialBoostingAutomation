@@ -22,7 +22,7 @@ export class CartSummaryPage{
 
     cartTotalTKTVW = '$10.54'
 
-    cartTotalTKTHQCM = '$11.87'
+    cartTotalTKTHQCM = '$11.60'
     cartTotalTKTPRCM = '$9.95'
 
     cartTotalTKTSHR = '$5.31'
@@ -41,7 +41,7 @@ export class CartSummaryPage{
     cartTotalIGVW = "$8.00"
 
     //Instagram Comments
-    cartTotalIGHQCM = "$4.66"
+    cartTotalIGHQCM = "$5.32"
     cartTotalIGPRCM = "$4.99"
 
     //Instagram Reels Likes
@@ -163,10 +163,10 @@ export class CartSummaryPage{
     proceedToPaymentTKTHQCM(){
         cy.get(this.cartSummaryPageSelectedService).should('contain', '10')
         cy.get(this.cartSummaryPagePackagePrice).should('contain','$5.55')
-        cy.get(this.cartSummaryPageUpsellNameCross).should('contain', '5')
-        cy.get(this.cartSummaryPageUpsellPriceCross).should('contain', '$2.77')
-        cy.get(this.cartSummaryPageCrossSellName).should('contain', '100')
-        cy.get(this.cartSummaryPageCrossSellPrice).should('contain', '$3.55')
+        cy.get(this.cartSummaryPageCrossSellName).should('contain', '5')
+        cy.get(this.cartSummaryPageCrossSellPrice).should('contain', '$2.50')
+        cy.get(this.cartSummaryPageCrossSellNameTwo).should('contain', '100')
+        cy.get(this.cartSummaryPageCrossSellPriceTwo).should('contain', '$3.55')
         cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalTKTHQCM)
         cy.get(this.cartSummaryPageSubmitButton).click()
     }
@@ -174,8 +174,8 @@ export class CartSummaryPage{
     proceedToPaymentTKTPRCM(){
         cy.get(this.cartSummaryPageSelectedService).should('contain', '10')
         cy.get(this.cartSummaryPagePackagePrice).should('contain','$6.70')
-        cy.get(this.cartSummaryPageUpsellNameCross).should('contain', '5')
-        cy.get(this.cartSummaryPageUpsellPriceCross).should('contain', '$3.25')
+        cy.get(this.cartSummaryPageUpsellNameNoCross).should('contain', '5')
+        cy.get(this.cartSummaryPageUpsellPriceNoCross).should('contain', '$3.25')
         cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalTKTPRCM)
         cy.get(this.cartSummaryPageSubmitButton).click()
     }
@@ -255,10 +255,10 @@ export class CartSummaryPage{
     proceedToPaymentIGVW(){
         cy.get(this.cartSummaryPageSelectedService).should('contain', '1,000')
         cy.get(this.cartSummaryPagePackagePrice).should('contain','$4.03')
-        cy.get(this.cartSummaryPageUpsellNameCross).should('contain', '500')
-        cy.get(this.cartSummaryPageUpsellPriceCross).should('contain', '$1.75')
-        cy.get(this.cartSummaryPageCrossSellName).should('contain', '100')
-        cy.get(this.cartSummaryPageCrossSellPrice).should('contain', '$2.22')
+        cy.get(this.cartSummaryPageCrossSellName).should('contain', '500')
+        cy.get(this.cartSummaryPageCrossSellPrice).should('contain', '$1.75')
+        cy.get(this.cartSummaryPageCrossSellNameTwo).should('contain', '100')
+        cy.get(this.cartSummaryPageCrossSellPriceTwo).should('contain', '$2.22')
         cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalIGVW)
         cy.get(this.cartSummaryPageSubmitButton).click()
     }
@@ -266,11 +266,11 @@ export class CartSummaryPage{
     //Instagram Comments
     proceedToPaymentIGHQCM(){
         cy.get(this.cartSummaryPageSelectedService).should('contain', '5')
-        cy.get(this.cartSummaryPagePackagePrice).should('contain','$2.33')
-        cy.get(this.cartSummaryPageUpsellNameCross).should('contain', '2')
-        cy.get(this.cartSummaryPageUpsellPriceCross).should('contain', '$1.11')
-        cy.get(this.cartSummaryPageCrossSellName).should('contain', '50')
-        cy.get(this.cartSummaryPageCrossSellPrice).should('contain', '$1.22')
+        cy.get(this.cartSummaryPagePackagePrice).should('contain','$2.99')
+        cy.get(this.cartSummaryPageCrossSellName).should('contain', '2')
+        cy.get(this.cartSummaryPageCrossSellPrice).should('contain', '$1.11')
+        cy.get(this.cartSummaryPageCrossSellNameTwo).should('contain', '50')
+        cy.get(this.cartSummaryPageCrossSellPriceTwo).should('contain', '$1.22')
         cy.get(this.cartSummaryPageCartTotal).should('contain', this.cartTotalIGHQCM)
         cy.get(this.cartSummaryPageSubmitButton).click()
     }
