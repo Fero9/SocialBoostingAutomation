@@ -44,7 +44,7 @@ jobs:
             -H "Authorization: Bearer ${{ secrets.CF_API_KEY }}" \
             --data '[
               {
-                "id": "'"${{ vars.CF_WAF_FILTER_ID }}"'",
+                "id": "${{ vars.CF_WAF_FILTER_ID }}",
                 "expression": "(http.host in {\"wpstaging.socialboosting.com\", \"main-staging.socialboosting.com\", \"sb-core-staging.socialboosting.com\"} and ip.src in {${{ steps.get-ip.outputs.ip_address }}})",
                 "description": "Allow GitHub Runner IP",
                 "paused": false
