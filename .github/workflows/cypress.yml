@@ -45,7 +45,7 @@ jobs:
             --data '[
               {
                 "id": "${{ vars.CF_WAF_FILTER_ID }}",
-                "expression": "(http.host in {\"wpstaging.socialboosting.com\", \"main-staging.socialboosting.com\", \"sb-core-staging.socialboosting.com\"} and ip.src in {${{ steps.get-ip.outputs.ip_address }}})"
+                "expression": "(http.host in {\"wpstaging.socialboosting.com\" \"main-staging.socialboosting.com\" \"sb-core-staging.socialboosting.com\"} and ip.src in {${{ steps.get-ip.outputs.ip_address }}})"
               }
             ]' \
             "https://api.cloudflare.com/client/v4/zones/${{ vars.CF_ZONE_ID }}/filters"
